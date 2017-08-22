@@ -1,7 +1,19 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'wuha'
+            keyPassword 'jia5201314'
+            storeFile file('C:/Users/Jam/Documents/keystore/wuha.jks')
+            storePassword 'jia5201314'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
     defaultConfig {
@@ -11,17 +23,32 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -30,7 +57,20 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:' + rootProject.ext.constraintLayout
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile project(':framworkerlibrary')
 }
 repositories {
     mavenCentral()
 }
+
+//task clearApk(type: Delete) {
+//    delete '../release/' + POM_ARTIFACT_ID + '_' + VERSION_NAME + '.apk'
+//}
+//
+//task makeApk(type: Copy) {
+//    from('build/outputs/apk/')
+//    into('../release/')
+//    include('app-debug.apk')
+//    rename('app-debug.apk', POM_ARTIFACT_ID + '_' + VERSION_NAME + '.apk')
+//}
+//makeApk.dependsOn(clearApk, build)
