@@ -8,7 +8,7 @@ android {
         config {
             keyAlias 'wuha'
             keyPassword 'jia5201314'
-            storeFile file('C:/Users/Jam/Documents/keystore/wuha.jks')
+            storeFile file('C:\\Users\\Chris Li\\Documents\\keystore\\wuha.jks')
             storePassword 'jia5201314'
             v1SigningEnabled true
             v2SigningEnabled true
