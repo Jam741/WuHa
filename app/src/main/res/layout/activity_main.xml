@@ -14,9 +14,9 @@
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tab"
-        android:layout_gravity="bottom"
-        app:tabIndicatorHeight="0dp"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"></android.support.design.widget.TabLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:tabIndicatorHeight="0dp"></android.support.design.widget.TabLayout>
 
 </FrameLayout>

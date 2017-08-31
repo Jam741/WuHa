@@ -13,12 +13,70 @@
             android:name=".main.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <activity android:name=".main.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--================================设置界面============================================-->
+
+
+        <!--关于我们-->
+        <activity android:name=".setting.AboutUsActivity">
+
+        </activity>
+
+        <!--评分-->
+        <activity android:name=".setting.GradeActivity">
+
+        </activity>
+
+        <!--版本号界面-->
+        <activity android:name=".setting.VersionActivity">
+
+        </activity>
+
+        <!--举报投诉-->
+        <activity android:name=".setting.ReportActivity">
+
+        </activity>
+
+        <!--================================设置界面============================================-->
+
+
+        <!--================================我的界面============================================-->
+        <!--设置主界面-->
+        <activity android:name=".setting.SettingActivity">
+
+        </activity>
+
+        <!--我的收藏-->
+        <activity android:name=".collect.CollectActivity">
+
+        </activity>
+
+        <!--意见建议-->
+        <activity android:name=".mine.MessageActivity">
+
+        </activity>
+
+        <!--联系我们-->
+        <activity android:name=".mine.CallActivity">
+
+        </activity>
+
+        <!--分享app-->
+        <activity android:name=".mine.ShareActivity">
+
+        </activity>
+        <!--================================我的界面============================================-->
+
+
     </application>
 
 </manifest>
