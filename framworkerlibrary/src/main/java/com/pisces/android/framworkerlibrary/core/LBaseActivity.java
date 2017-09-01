@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +22,9 @@ public class LBaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //取消状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     @Override

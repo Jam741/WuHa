@@ -10,5 +10,8 @@
     <color name="colorBackgroundWhite">#ffffff</color>
     <color name="colorBackgroundMain">#f4f4f4</color>
 
+    <color name="colorMainYellow">#FDC317</color>
+    <color name="colorMainA2">#A2A2A2</color>
+
 
 </resources>

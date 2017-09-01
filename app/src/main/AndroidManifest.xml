@@ -75,6 +75,11 @@
 
         </activity>
         <!--================================我的界面============================================-->
+        
+        <!--店铺详情-->
+        <activity android:name=".shop.ShopDetailsActivity">
+
+        </activity>
 
 
     </application>
