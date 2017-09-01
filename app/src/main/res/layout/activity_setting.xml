@@ -8,7 +8,7 @@
     <include layout="@layout/toolbar" />
 
     <TextView
-        android:id="@+id/a_setting_about_us"
+        android:id="@+id/about_us"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="10dp"
@@ -20,7 +20,7 @@
         android:textSize="@dimen/text_size_main" />
 
     <TextView
-        android:id="@+id/a_setting_grade"
+        android:id="@+id/grade"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
@@ -32,7 +32,7 @@
         android:textSize="@dimen/text_size_main" />
 
     <TextView
-        android:id="@+id/a_setting_version"
+        android:id="@+id/version"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
@@ -44,7 +44,7 @@
         android:textSize="@dimen/text_size_main" />
 
     <TextView
-        android:id="@+id/a_setting_report"
+        android:id="@+id/report"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
@@ -57,7 +57,7 @@
 
 
     <Button
-        android:id="@+id/a_setting_return"
+        android:id="@+id/setting_return"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginLeft="35dp"

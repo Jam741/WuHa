@@ -8,7 +8,7 @@
     <include layout="@layout/toolbar" />
 
     <com.jcodecraeer.xrecyclerview.XRecyclerView
-        android:id="@+id/collect_recycler_view"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"

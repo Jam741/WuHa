@@ -1,21 +1,24 @@
 package com.pisces.android.wuha.pages
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.function.SearchForActivity
 import com.pisces.android.wuha.main.MedicalFragment
 import com.pisces.android.wuha.main.ServiceFragment
 import kotlinx.android.synthetic.main.home_frag.*
 
 /**
  * Created by Jam on 2017/8/24.
+ * 主页fragment
  */
 class HomeFragment : JBaseFragment() {
+
 
 
     private val tabs by lazy { arrayListOf("医疗", "服务") }
@@ -27,9 +30,24 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initView()
         vp_home.run { adapter = TabAdapter(childFragmentManager, fragments, tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
         }
     }
+
+    private fun initView(){
+//        search_view!!.setOnClickListener(this)
+    }
+
+//    override fun onClick(v: View) {
+//        when(v.id){
+//            R.id.search_view->{
+//                startActivity(Intent(activity, SearchForActivity::class.java))
+//
+//            }
+//        }
+//
+//    }
 }

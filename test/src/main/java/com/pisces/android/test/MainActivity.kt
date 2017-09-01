@@ -2,8 +2,7 @@ package com.pisces.android.test
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.util.Log
+
 import com.pisces.android.test.template.TitleFragment
 import kotlinx.android.synthetic.main.activity_main.*
 

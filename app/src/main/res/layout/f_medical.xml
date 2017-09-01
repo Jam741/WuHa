@@ -12,7 +12,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/f_medical_distance"
+            android:id="@+id/distance"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -22,7 +22,7 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/f_medical_popularity"
+            android:id="@+id/popularity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/f_medical_price"
+            android:id="@+id/price"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
     </LinearLayout>
 
     <com.jcodecraeer.xrecyclerview.XRecyclerView
-        android:id="@+id/f_medical_recycler_view"
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackgroundMain" />

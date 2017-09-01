@@ -11,13 +11,14 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
 
             <LinearLayout
+                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -33,7 +34,7 @@
                     android:background="@color/colorBackgroundWhite">
 
                     <TextView
-                        android:id="@+id/a_shop_site"
+                        android:id="@+id/site"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_left12"
@@ -45,10 +46,10 @@
                         android:textSize="14dp" />
 
                     <TextView
-                        android:id="@+id/a_shop_person"
+                        android:id="@+id/person"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/a_shop_site"
+                        android:layout_below="@+id/site"
                         android:layout_marginLeft="34dp"
                         android:layout_marginTop="7dp"
                         android:text="12345人去过"
@@ -56,28 +57,28 @@
                         android:textSize="12dp" />
 
                     <TextView
-                        android:id="@+id/a_shop_distance"
+                        android:id="@+id/distance"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/margin_right12"
-                        android:layout_toLeftOf="@+id/a_shop_view"
+                        android:layout_toLeftOf="@+id/view"
                         android:text="700米"
                         android:textColor="@color/colorMainA2"
                         android:textSize="12dp" />
 
                     <View
-                        android:id="@+id/a_shop_view"
+                        android:id="@+id/view"
                         android:layout_width="1dp"
                         android:layout_height="50dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/margin_right12"
-                        android:layout_toLeftOf="@+id/a_shop_goto"
+                        android:layout_toLeftOf="@+id/shop_goto"
                         android:background="#dddddd" />
 
                     <TextView
-                        android:id="@+id/a_shop_goto"
+                        android:id="@+id/shop_goto"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
@@ -89,14 +90,14 @@
                 </RelativeLayout>
 
                 <android.support.design.widget.TabLayout
-                    android:id="@+id/a_shop_tab_layout"
+                    android:id="@+id/tab_layout"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_marginTop="10dp"
                     android:background="@color/colorBackgroundWhite" />
 
                 <android.support.v4.view.ViewPager
-                    android:id="@+id/a_shop_view_pager"
+                    android:id="@+id/view_pager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="1dp"
@@ -104,7 +105,7 @@
 
             </LinearLayout>
 
-        </android.support.v4.widget.NestedScrollView>
+        <!--</android.support.v4.widget.NestedScrollView>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -154,14 +155,14 @@
         android:layout_height="?attr/actionBarSize">
 
         <ImageView
-            android:id="@+id/a_shop_return"
+            android:id="@+id/shop_return"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/margin_left"
             android:src="@mipmap/home_return" />
 
         <TextView
-            android:id="@+id/a_shop_name"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -171,7 +172,7 @@
             android:textSize="18dp" />
 
         <ImageView
-            android:id="@+id/a_shop_collect"
+            android:id="@+id/collect"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:padding="@dimen/margin_left"
