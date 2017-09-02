@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--黑色-->
+    <color name="colorBlackC1">#1A1A1A</color>
+    <!--灰色-->
+    <color name="colorGrayC1">#A2A2A2</color>
+    <color name="colorGrayC2">#C2C2C2</color>
+    <color name="colorBackGroundGrayC1">#F0F0F0</color>
+    <!--白色-->
+    <color name="colorWhiteC1">#FFFFFF</color>
+    <!--黄色-->
+    <color name="colorYellowC1">#FDC317</color>
+    <!--红色-->
+    <color name="colorRedC1">#F25A5a</color>
+    <!--蓝色-->
+    <color name="colorBlueC1">#5BA8F4</color>
+</resources>

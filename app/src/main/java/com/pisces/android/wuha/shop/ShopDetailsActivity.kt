@@ -1,18 +1,11 @@
 package com.pisces.android.wuha.shop
 
 import android.os.Bundle
-
-
 import android.view.View
-
-
-import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
-
 import com.pisces.android.wuha.R
-
+import com.pisces.android.wuha.base.LNoToolBaseActivity
 import kotlinx.android.synthetic.main.activity_shop_details.*
-
 
 
 /**
@@ -20,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
  * 商品详情界面
  */
 
-class ShopDetailsActivity : JBaseActivity(), View.OnClickListener {
+class ShopDetailsActivity : LNoToolBaseActivity(), View.OnClickListener {
     private val mTabList by lazy { arrayListOf("服务列表", "客户信息") }
     private val mViewList by lazy { arrayListOf(ServiceListFragment(), ClientMessageFragment()) }
 

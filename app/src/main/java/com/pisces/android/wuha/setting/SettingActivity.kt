@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 
-import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.base.LBaseActivity
 import kotlinx.android.synthetic.main.activity_setting.*
 
 /**
@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_setting.*
  * 设置界面
  */
 
-class SettingActivity : JBaseActivity(), View.OnClickListener {
+class SettingActivity : LBaseActivity(), View.OnClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

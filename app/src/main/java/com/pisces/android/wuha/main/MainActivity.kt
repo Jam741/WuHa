@@ -1,15 +1,14 @@
 package com.pisces.android.wuha.main
 
 import android.os.Bundle
-import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
-import com.pisces.android.wuha.PlaceHolderFragment
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.base.LNoToolBaseActivity
 import com.pisces.android.wuha.pages.HomeFragment
 import com.pisces.android.wuha.pages.PersonageFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : JBaseActivity() {
+class MainActivity : LNoToolBaseActivity() {
 
     private val tabs by lazy { arrayListOf("主页", "我的") }
     private val fragments by lazy({ arrayListOf(HomeFragment(), PersonageFragment()) })

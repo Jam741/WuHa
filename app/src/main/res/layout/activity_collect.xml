@@ -7,12 +7,13 @@
 
     <include layout="@layout/toolbar" />
 
+
     <com.jcodecraeer.xrecyclerview.XRecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorBackgroundMain" />
+        android:background="@color/colorBackgroundMain"
+        android:paddingTop="10dp" />
 
 
 </LinearLayout>

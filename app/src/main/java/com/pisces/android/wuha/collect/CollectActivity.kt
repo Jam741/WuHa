@@ -1,14 +1,11 @@
 package com.pisces.android.wuha.collect
 
-import android.content.Context
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 
-import com.jcodecraeer.xrecyclerview.XRecyclerView
-import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.base.LBaseActivity
 import kotlinx.android.synthetic.main.activity_collect.*
-import kotlinx.android.synthetic.main.activity_personage.*
 
 import java.util.ArrayList
 
@@ -17,7 +14,7 @@ import java.util.ArrayList
  * 我的收藏界面
  */
 
-class CollectActivity : JBaseActivity() {
+class CollectActivity : LBaseActivity() {
 
     private var mData: ArrayList<String>? = null
 

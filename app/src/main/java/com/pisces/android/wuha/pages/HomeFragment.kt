@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.home_frag.*
 class HomeFragment : JBaseFragment() {
 
 
-
     private val tabs by lazy { arrayListOf("医疗", "服务") }
     private val fragments by lazy { arrayListOf(MedicalFragment(), ServiceFragment()) }
 
@@ -30,24 +29,14 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView()
-        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments, tabs) }
+        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment>, tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
         }
+
+        search_view.setOnClickListener { SearchForActivity.start(context) }
+
     }
 
-    private fun initView(){
-//        search_view!!.setOnClickListener(this)
-    }
 
-//    override fun onClick(v: View) {
-//        when(v.id){
-//            R.id.search_view->{
-//                startActivity(Intent(activity, SearchForActivity::class.java))
-//
-//            }
-//        }
-//
-//    }
 }
