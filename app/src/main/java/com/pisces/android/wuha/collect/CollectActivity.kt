@@ -1,5 +1,7 @@
 package com.pisces.android.wuha.collect
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 
@@ -15,6 +17,13 @@ import java.util.ArrayList
  */
 
 class CollectActivity : LBaseActivity() {
+
+    companion object {
+        fun start(context: Context) {
+            var intent = Intent(context, CollectActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
 
     private var mData: ArrayList<String>? = null
 

@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorBackgroundWhite"
+        android:background="@color/colorBackGroundWhiteC1"
         android:orientation="horizontal">
 
         <TextView
@@ -17,8 +17,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="距离"
-            android:textColor="#fdc317"
-            android:textSize="15dp" />
+            android:textColor="@color/colorYellowC1"
+            android:textSize="@dimen/text_size_16" />
 
         <TextView
             android:id="@+id/popularity"
@@ -27,8 +27,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="人气"
-            android:textColor="#a2a2a2"
-            android:textSize="15dp" />
+            android:textColor="@color/colorGrayC1"
+            android:textSize="@dimen/text_size_16" />
 
         <TextView
             android:id="@+id/price"
@@ -37,8 +37,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="价格"
-            android:textColor="#a2a2a2"
-            android:textSize="15dp" />
+            android:textColor="@color/colorGrayC1"
+            android:textSize="@dimen/text_size_16" />
 
     </LinearLayout>
 
@@ -46,6 +46,6 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackgroundMain" />
+        android:background="@color/colorBackGroundGrayC1" />
 
 </LinearLayout>

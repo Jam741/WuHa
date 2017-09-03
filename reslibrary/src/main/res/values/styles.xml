@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -20,11 +20,11 @@
 
     <style name="ToolBarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
 
-        <item name="actionMenuTextColor">@color/colorBackgroundWhite</item>
+        <item name="actionMenuTextColor">@color/colorBackGroundWhiteC1</item>
 
         <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
 
-        <item name="android:textColorPrimary">@color/colorBackgroundWhite</item>
+        <item name="android:textColorPrimary">@color/colorBackGroundWhiteC1</item>
 
         <!--设置标题的颜色 -->
 
@@ -41,5 +41,4 @@
         <item name="android:textSize">20sp</item>
 
     </style>
-
 </resources>

@@ -3,107 +3,127 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackgroundMain"
+    android:background="@color/colorBackGroundGrayC1"
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="227dp"
-        android:background="@mipmap/mine_top_bg"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/search_view"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="31dp"
-            android:background="@drawable/search_bg">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="227dp"
+                android:background="@mipmap/mine_top_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_34"
+                    android:layout_marginLeft="@dimen/margin_size_40"
+                    android:layout_marginRight="@dimen/margin_size_40"
+                    android:layout_marginTop="@dimen/margin_size_32"
+                    android:background="@drawable/search_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_size_16"
+                        android:drawableLeft="@mipmap/home_icon_search"
+                        android:drawablePadding="@dimen/margin_size_10"
+                        android:gravity="center_vertical"
+                        android:text="搜索你感兴趣的"
+                        android:textColor="@color/colorWhiteC1" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="156dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_size_24"
+                    android:src="@mipmap/defoult_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_size_20"
+                    android:gravity="center"
+                    android:text="Every little  memory is beautiful\nbecause of you"
+                    android:textColor="#F8E8D3"
+                    android:textSize="@dimen/text_size_14" />
+
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="搜索你感兴趣的" />
+                android:fillViewport="true">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:background="@color/colorBackGroundWhiteC1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/margin_left_right"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/home_icon_address"
+                            android:drawablePadding="@dimen/margin_size_10"
+                            android:gravity="center_vertical"
+                            android:text="成都市高新区天府二街天府鹭洲" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/margin_left_right"
+                            android:src="@mipmap/home_icon_right" />
+                    </LinearLayout>
+
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginTop="@dimen/margin_size_10"
+                        android:background="@color/colorBackGroundWhiteC1"
+                        app:tabIndicatorHeight="3dp" />
+
+                    <com.pisces.android.wuha.view.LViewPager
+                        android:id="@+id/vp_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/colorBackGroundWhiteC1" />
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            </FrameLayout>
         </LinearLayout>
-
-        <ImageView
-            android:layout_width="156dp"
-            android:layout_height="46dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:src="@mipmap/defoult_logo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="Every little  memory is beautiful\nbecause of you"
-            android:textColor="#F8E8D3"
-            android:textSize="13dp" />
-
-
-        <!--<android.support.v7.widget.AppCompatTextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="180dp"-->
-        <!--android:gravity="center"-->
-        <!--android:text="Banner"-->
-        <!--android:textSize="20sp" />-->
-
-    </LinearLayout>
-
-    <!--<android.support.v4.widget.NestedScrollView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-    <!--<LinearLayout-->
-    <!--android:orientation="vertical"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent">-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="46dp"
-        android:background="@color/colorBackgroundWhite"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/margin_left12"
-            android:layout_weight="1"
-            android:drawableLeft="@mipmap/home_icon_address"
-            android:drawablePadding="10dp"
-            android:gravity="center_vertical"
-            android:text="成都市高新区天府二街天府鹭洲" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:paddingRight="@dimen/margin_left12"
-            android:src="@mipmap/home_icon_right" />
-    </LinearLayout>
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab_home"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorBackgroundWhite"
-        app:tabIndicatorHeight="3dp" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="1dp"
-        android:background="@color/colorBackgroundWhite" />
-
-    <!--</LinearLayout>-->
-    <!--</android.support.v4.widget.NestedScrollView>-->
+    </FrameLayout>
 
 
 </LinearLayout>

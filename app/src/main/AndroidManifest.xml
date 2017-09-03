@@ -72,6 +72,11 @@
         <activity android:name=".mine.ShareActivity">
 
         </activity>
+
+        <!--我的账户-->
+        <activity android:name=".setting.AccountActivity">
+
+        </activity>
         <!--================================我的界面============================================-->
 
         <!--店铺详情-->

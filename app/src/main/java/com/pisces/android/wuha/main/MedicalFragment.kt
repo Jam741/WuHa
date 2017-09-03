@@ -21,7 +21,7 @@ import java.util.ArrayList
  * 医疗Fragment
  */
 
-class MedicalFragment : JBaseFragment(), View.OnClickListener {
+class MedicalFragment : JBaseFragment() {
     private val mData = ArrayList<String>()
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -34,10 +34,21 @@ class MedicalFragment : JBaseFragment(), View.OnClickListener {
     }
 
     private fun initView() {
-        distance!!.setOnClickListener(this)
-        popularity!!.setOnClickListener(this)
-        price!!.setOnClickListener(this)
-
+        distance.setOnClickListener {
+            distance.setTextColor(R.color.colorYellowC1)
+            popularity.setTextColor(R.color.colorGrayC1)
+            price.setTextColor(R.color.colorGrayC1)
+        }
+        popularity.setOnClickListener {
+            distance.setTextColor(R.color.colorGrayC1)
+            popularity.setTextColor(R.color.colorYellowC1)
+            price.setTextColor(R.color.colorGrayC1)
+        }
+        price.setOnClickListener {
+            distance.setTextColor(R.color.colorGrayC1)
+            popularity.setTextColor(R.color.colorGrayC1)
+            price.setTextColor(R.color.colorYellowC1)
+        }
         for (i in 0..9) {
             mData.add("")
         }
@@ -45,30 +56,5 @@ class MedicalFragment : JBaseFragment(), View.OnClickListener {
             layoutManager = LinearLayoutManager(activity)
             adapter = MedicalAdapter(activity, mData)
         }
-
-    }
-
-    override fun onClick(v: View) {
-        when (v.id) {
-            R.id.distance -> {
-                distance!!.setTextColor(resources.getColor(R.color.colorMainYellow))
-                popularity!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                price!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                recycler_view!!.adapter!!.notifyDataSetChanged()
-            }
-            R.id.popularity -> {
-                distance!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                popularity!!.setTextColor(this.resources.getColor(R.color.colorMainYellow))
-                price!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                recycler_view!!.adapter!!.notifyDataSetChanged()
-            }
-            R.id.price -> {
-                distance!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                popularity!!.setTextColor(resources.getColor(R.color.colorMainA2))
-                price!!.setTextColor(this.resources.getColor(R.color.colorMainYellow))
-                recycler_view!!.adapter!!.notifyDataSetChanged()
-            }
-        }
-
     }
 }

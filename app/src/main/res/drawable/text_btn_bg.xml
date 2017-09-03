@@ -3,7 +3,7 @@
     <!--点击-->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <gradient android:angle="0" android:endColor="@color/colorMainYellow" android:startColor="@color/colorMainYellow" />
+            <gradient android:angle="0" android:endColor="@color/colorYellowC1" android:startColor="@color/colorYellowC1" />
             <corners android:radius="18dp" />
         </shape>
     </item>
@@ -11,14 +11,14 @@
     <!--聚焦-->
     <item android:state_focused="true">
         <shape android:shape="rectangle">
-            <gradient android:angle="0" android:endColor="@color/colorMainYellow" android:startColor="@color/colorMainYellow" />
+            <gradient android:angle="0" android:endColor="@color/colorYellowC1" android:startColor="@color/colorYellowC1" />
             <corners android:radius="18dp" />
         </shape>
     </item>
     <!--默认-->
     <item>
         <shape>
-            <gradient android:angle="0" android:endColor="@color/colorBackgroundWhite" android:startColor="@color/colorBackgroundWhite" />
+            <gradient android:angle="0" android:endColor="@color/colorBackGroundWhiteC1" android:startColor="@color/colorBackGroundWhiteC1" />
             <corners android:radius="18dp" />
         </shape>
     </item>

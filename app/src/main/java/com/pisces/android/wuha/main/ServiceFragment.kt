@@ -20,10 +20,7 @@ import java.util.ArrayList
  * 服务Fragment
  */
 
-class ServiceFragment : JBaseFragment(),View.OnClickListener {
-    override fun onClick(v: View?) {
-
-    }
+class ServiceFragment : JBaseFragment() {
 
     private val mData = ArrayList<String>()
 

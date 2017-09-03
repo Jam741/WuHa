@@ -1,5 +1,7 @@
 package com.pisces.android.wuha.setting
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 
 import com.pisces.android.wuha.R
@@ -11,6 +13,12 @@ import com.pisces.android.wuha.base.LBaseActivity
  */
 
 class ReportActivity : LBaseActivity() {
+    companion object {
+        fun start(context: Context) {
+            val intent = Intent(context, ReportActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_report)

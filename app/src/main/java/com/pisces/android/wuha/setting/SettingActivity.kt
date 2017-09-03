@@ -1,8 +1,8 @@
 package com.pisces.android.wuha.setting
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 
 import com.pisces.android.wuha.R
@@ -14,7 +14,16 @@ import kotlinx.android.synthetic.main.activity_setting.*
  * 设置界面
  */
 
-class SettingActivity : LBaseActivity(), View.OnClickListener {
+class SettingActivity : LBaseActivity() {
+
+    companion object {
+        fun start(context: Context) {
+            val intent = Intent(context, SettingActivity::class.java)
+            context.startActivity(intent)
+
+        }
+
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,31 +34,12 @@ class SettingActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun initView() {
-        about_us!!.setOnClickListener(this)
-        grade!!.setOnClickListener(this)
-        version!!.setOnClickListener(this)
-        report!!.setOnClickListener(this)
-        setting_return!!.setOnClickListener(this)
+        about_us.setOnClickListener { AboutUsActivity.start(this) }
+        grade.setOnClickListener { GradeActivity.start(this) }
+        version.setOnClickListener { VersionActivity.start(this) }
+        report.setOnClickListener { ReportActivity.start(this) }
+        setting_return.setOnClickListener { Toast.makeText(this, "点击了退出", Toast.LENGTH_SHORT).show() }
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
-            R.id.about_us -> {
-                startActivity(Intent(this, AboutUsActivity::class.java))
-            }
-            R.id.grade -> {
-                startActivity(Intent(this, GradeActivity::class.java))
-            }
-            R.id.version -> {
-                startActivity(Intent(this, VersionActivity::class.java))
-            }
-            R.id.report -> {
-                startActivity(Intent(this, ReportActivity::class.java))
-            }
-            R.id.setting_return -> {
-                Toast.makeText(this, "点击了退出", Toast.LENGTH_SHORT).show()
-            }
-        }
 
-    }
 }

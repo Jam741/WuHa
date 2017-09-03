@@ -3,11 +3,5 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include layout="@layout/toolbar"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:text="这是版本号界面"
-        android:textSize="45dp"
-        android:gravity="center"
-        android:layout_height="match_parent" />
 
 </LinearLayout>

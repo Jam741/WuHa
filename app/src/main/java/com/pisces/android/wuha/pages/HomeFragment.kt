@@ -1,7 +1,7 @@
 package com.pisces.android.wuha.pages
 
-import android.content.Intent
 import android.os.Bundle
+import android.support.v4.app.FragmentManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,13 +29,23 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment>, tabs) }
+        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments, tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
         }
 
-        search_view.setOnClickListener { SearchForActivity.start(context) }
+        search_view.setOnClickListener {
+            SearchForActivity.start(context)
+//            replaceFragment(SearchForFragment())
+        }
 
+    }
+
+    fun replaceFragment(fragment: JBaseFragment) {
+        val fragment1: FragmentManager = fragmentManager
+        val transaction = fragment1.beginTransaction()
+        transaction.replace(R.id.frame_layout, fragment)
+        transaction.commit()
     }
 
 
