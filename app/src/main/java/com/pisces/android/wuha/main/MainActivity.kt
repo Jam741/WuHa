@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.main
 
 import android.os.Bundle
+
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LNoToolBaseActivity
