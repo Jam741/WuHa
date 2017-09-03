@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="WUHA" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="36dp"
+        android:text="哈哈你居然点了进来 哈哈我是不是很叼啊h
+        hhhhhhhhhhhhhhhh我是第二行数据哈哈哈哈哈哈哈哈哈哈哈啊楼上的房间哦i啊释迦佛
+        i叫我i而激情渴望放假啊空间佛卡就哦耳机烹饪么我看分配上大怕饿啊佛牌咯我发脾气文
+        凭渴望" />
+
+</LinearLayout>

@@ -1,1 +1,1 @@
-include ':app', ':test', ':framworkerlibrary', ':reslibrary', ':xrecyclerview'
+include ':app', ':test', ':framworkerlibrary', ':reslibrary', ':xrecyclerview', ':ltaskpicture'
