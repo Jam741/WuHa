@@ -5,4 +5,5 @@ package com.pisces.android.wuha.net.api
  */
 interface ApiService {
 
+
 }

@@ -18,18 +18,16 @@ import java.util.ArrayList
  */
 
 internal class MedicalAdapter(private val mContext: Context, private val mData: ArrayList<String>) : RecyclerView.Adapter<MedicalAdapter.MyViewHolder>() {
-    private val mInflater: LayoutInflater
-
-    init {
-        mInflater = LayoutInflater.from(mContext)
-    }
+    private val mInflater: LayoutInflater = LayoutInflater.from(mContext)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(mInflater.inflate(R.layout.i_medical, parent, false))
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.setOnClickListener { mContext.startActivity(Intent(mContext, ShopDetailsActivity::class.java)) }
+        holder.itemView.setOnClickListener {
+            ShopDetailsActivity.start(mContext)
+        }
 
     }
 

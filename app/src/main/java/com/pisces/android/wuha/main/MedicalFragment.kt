@@ -2,14 +2,11 @@ package com.pisces.android.wuha.main
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-
-import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
+import com.pisces.android.framworkerlibrary.core.JBaseView
 import com.pisces.android.wuha.R
 import kotlinx.android.synthetic.main.f_medical.*
 
@@ -21,8 +18,12 @@ import java.util.ArrayList
  * 医疗Fragment
  */
 
-class MedicalFragment : JBaseFragment() {
+class MedicalFragment : JBaseFragment(), JBaseView {
     private val mData = ArrayList<String>()
+
+
+    val presenter by lazy { MPresenter(activity) }
+
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.f_medical, container, false)
@@ -54,7 +55,7 @@ class MedicalFragment : JBaseFragment() {
         }
         recycler_view.run {
             layoutManager = LinearLayoutManager(activity)
-            adapter = MedicalAdapter(activity, mData)
+            adapter = presenter.adapter
         }
     }
 }

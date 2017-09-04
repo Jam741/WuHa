@@ -1,5 +1,7 @@
 package com.pisces.android.wuha.shop
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
@@ -14,6 +16,13 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
  */
 
 class ShopDetailsActivity : LNoToolBaseActivity(), View.OnClickListener {
+    companion object {
+        fun start(context: Context) {
+            val intent = Intent(context, ShopDetailsActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
     private val mTabList by lazy { arrayListOf("服务列表", "客户信息") }
     private val mViewList by lazy { arrayListOf(ServiceListFragment(), ClientMessageFragment()) }
 

@@ -33,20 +33,9 @@ class HomeFragment : JBaseFragment() {
         tab_home.run {
             setupWithViewPager(vp_home)
         }
-
         search_view.setOnClickListener {
             SearchForActivity.start(context)
-//            replaceFragment(SearchForFragment())
         }
-
     }
-
-    fun replaceFragment(fragment: JBaseFragment) {
-        val fragment1: FragmentManager = fragmentManager
-        val transaction = fragment1.beginTransaction()
-        transaction.replace(R.id.frame_layout, fragment)
-        transaction.commit()
-    }
-
 
 }

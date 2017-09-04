@@ -12,98 +12,98 @@
         android:orientation="vertical">
 
         <!--<android.support.v4.widget.NestedScrollView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
 
-            <LinearLayout
-                android:layout_weight="1"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@mipmap/mine_top_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:background="@color/colorBackGroundWhiteC1">
+
+                <TextView
+                    android:id="@+id/site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_right"
+                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:drawableLeft="@mipmap/home_icon_address2"
+                    android:drawablePadding="@dimen/margin_size_10"
+                    android:text="高新区创业路300号"
+                    android:textColor="@color/colorGrayC1"
+                    android:textSize="@dimen/margin_size_14" />
+
+                <TextView
+                    android:id="@+id/person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/site"
+                    android:layout_marginLeft="@dimen/margin_size_34"
+                    android:layout_marginTop="@dimen/margin_size_8"
+                    android:text="12345人去过"
+                    android:textColor="@color/colorGrayC1"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/distance"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:layout_toLeftOf="@+id/view"
+                    android:text="700米"
+                    android:textColor="@color/colorGrayC1"
+                    android:textSize="@dimen/text_size_12" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:layout_toLeftOf="@+id/shop_goto"
+                    android:background="#dddddd" />
+
+                <TextView
+                    android:id="@+id/shop_goto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_right"
+                    android:text="去这里"
+                    android:textColor="#5ba8f4"
+                    android:textSize="@dimen/text_size_12" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="@dimen/margin_size_10"
+                android:background="@color/colorBackGroundWhiteC1" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_marginTop="1dp"
+                android:background="@color/colorBackGroundWhiteC1" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="230dp"
-                    android:background="@mipmap/mine_top_bg" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="74dp"
-                    android:background="@color/colorBackGroundWhiteC1">
-
-                    <TextView
-                        android:id="@+id/site"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_left_right"
-                        android:layout_marginTop="@dimen/margin_size_10"
-                        android:drawableLeft="@mipmap/home_icon_address2"
-                        android:drawablePadding="@dimen/margin_size_10"
-                        android:text="高新区创业路300号"
-                        android:textColor="@color/colorGrayC1"
-                        android:textSize="@dimen/margin_size_14" />
-
-                    <TextView
-                        android:id="@+id/person"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/site"
-                        android:layout_marginLeft="@dimen/margin_size_34"
-                        android:layout_marginTop="@dimen/margin_size_8"
-                        android:text="12345人去过"
-                        android:textColor="@color/colorGrayC1"
-                        android:textSize="@dimen/text_size_12" />
-
-                    <TextView
-                        android:id="@+id/distance"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="@dimen/margin_left_right"
-                        android:layout_toLeftOf="@+id/view"
-                        android:text="700米"
-                        android:textColor="@color/colorGrayC1"
-                        android:textSize="@dimen/text_size_12" />
-
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="1dp"
-                        android:layout_height="50dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="@dimen/margin_left_right"
-                        android:layout_toLeftOf="@+id/shop_goto"
-                        android:background="#dddddd" />
-
-                    <TextView
-                        android:id="@+id/shop_goto"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="@dimen/margin_left_right"
-                        android:text="去这里"
-                        android:textColor="#5ba8f4"
-                        android:textSize="@dimen/text_size_12" />
-                </RelativeLayout>
-
-                <android.support.design.widget.TabLayout
-                    android:id="@+id/tab_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:layout_marginTop="@dimen/margin_size_10"
-                    android:background="@color/colorBackGroundWhiteC1" />
-
-                <android.support.v4.view.ViewPager
-                    android:id="@+id/view_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="1dp"
-                    android:background="@color/colorBackGroundWhiteC1" />
-
-            </LinearLayout>
+        </LinearLayout>
 
         <!--</android.support.v4.widget.NestedScrollView>-->
 
