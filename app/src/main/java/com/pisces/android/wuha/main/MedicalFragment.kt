@@ -55,7 +55,8 @@ class MedicalFragment : JBaseFragment(), JBaseView {
         }
         recycler_view.run {
             layoutManager = LinearLayoutManager(activity)
-            adapter = presenter.adapter
+//            adapter = presenter.adapter
+            adapter = MedicalAdapter(activity, mData)
         }
     }
 }

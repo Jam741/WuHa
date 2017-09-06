@@ -60,19 +60,20 @@
                     android:text="Every little  memory is beautiful\nbecause of you"
                     android:textColor="#F8E8D3"
                     android:textSize="@dimen/text_size_14" />
+                ，
 
 
             </LinearLayout>
 
-            <!--<android.support.v4.widget.NestedScrollView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:fillViewport="true">-->
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
 
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:orientation="vertical">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -112,8 +113,8 @@
                         android:layout_marginTop="1dp"
                         android:background="@color/colorBackGroundWhiteC1" />
 
-                <!--</LinearLayout>-->
-            <!--</android.support.v4.widget.NestedScrollView>-->
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
 
         </LinearLayout>
     </FrameLayout>
