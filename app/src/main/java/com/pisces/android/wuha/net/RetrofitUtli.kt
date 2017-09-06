@@ -1,11 +1,12 @@
 package com.pisces.android.wuha.net
 
 import android.util.Log
-import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
+//import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * Created by Jam on 2017/9/2.

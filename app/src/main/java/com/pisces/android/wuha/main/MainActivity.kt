@@ -1,13 +1,14 @@
 package com.pisces.android.wuha.main
 
-import android.os.Bundle
 
+import android.os.Bundle
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LNoToolBaseActivity
 import com.pisces.android.wuha.pages.HomeFragment
 import com.pisces.android.wuha.pages.PersonageFragment
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : LNoToolBaseActivity() {
 
@@ -25,5 +26,7 @@ class MainActivity : LNoToolBaseActivity() {
         setFullscreen()
     }
 
+    public data class Test(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 
 }
+
