@@ -1,4 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="btn_height_default">31dp</dimen>
+    <!--字体大小-->
+    <dimen name="text_size_10">10dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_20">20dp</dimen>
+
+
+    <!--间距-->
+    <dimen name="margin_left_right">12dp</dimen>
+    <dimen name="margin_size_8">8dp</dimen>
+    <dimen name="margin_size_10">10dp</dimen>
+    <dimen name="margin_size_12">12dp</dimen>
+    <dimen name="margin_size_14">14dp</dimen>
+    <dimen name="margin_size_16">16dp</dimen>
+    <dimen name="margin_size_18">18dp</dimen>
+    <dimen name="margin_size_20">20dp</dimen>
+    <dimen name="margin_size_22">22dp</dimen>
+    <dimen name="margin_size_24">24dp</dimen>
+    <dimen name="margin_size_26">26dp</dimen>
+    <dimen name="margin_size_28">28dp</dimen>
+    <dimen name="margin_size_30">30dp</dimen>
+    <dimen name="margin_size_32">32dp</dimen>
+    <dimen name="margin_size_34">34dp</dimen>
+    <dimen name="margin_size_36">36dp</dimen>
+    <dimen name="margin_size_38">38dp</dimen>
+    <dimen name="margin_size_40">40dp</dimen>
+
+
 </resources>
+

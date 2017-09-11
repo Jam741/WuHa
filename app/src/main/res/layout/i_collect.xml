@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="143dp"
-    android:layout_marginBottom="10dp"
-    android:layout_marginLeft="@dimen/margin_left"
-    android:layout_marginRight="@dimen/margin_right"
-    android:background="@color/colorBackgroundWhite"
+    android:layout_marginBottom="@dimen/margin_size_10"
+    android:layout_marginLeft="@dimen/margin_left_right"
+    android:layout_marginRight="@dimen/margin_left_right"
+    android:background="@color/colorBackGroundWhiteC1"
     android:orientation="horizontal">
 
     <ImageView
@@ -18,37 +18,37 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="@dimen/margin_size_10"
         android:layout_weight="2">
 
         <TextView
             android:id="@+id/i_collect_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_size_20"
             android:text="爱奇艺宠物医院"
-            android:textColor="#232323"
-            android:textSize="14dp" />
+            android:textColor="@color/colorBlackC1"
+            android:textSize="@dimen/text_size_14" />
 
         <TextView
             android:id="@+id/i_collect_site"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/i_collect_name"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/margin_size_12"
             android:text="爱奇艺区古城小区西苑中学"
-            android:textColor="#a2a2a2"
-            android:textSize="12dp" />
+            android:textColor="@color/colorGrayC1"
+            android:textSize="@dimen/text_size_12" />
 
         <TextView
             android:id="@+id/i_collect_person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/i_collect_site"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/text_size_12"
             android:text="1245人去过"
-            android:textColor="#a2a2a2"
-            android:textSize="12dp" />
+            android:textColor="@color/colorGrayC1"
+            android:textSize="@dimen/text_size_12" />
 
         <TextView
             android:id="@+id/i_collect_distance"
@@ -56,22 +56,22 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/i_collect_person"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/margin_right"
-            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/margin_size_12"
             android:drawableLeft="@mipmap/home_icon_address"
             android:text="700m"
-            android:textColor="#a2a2a2"
-            android:textSize="12dp" />
+            android:textColor="@color/colorGrayC1"
+            android:textSize="@dimen/text_size_12" />
 
         <TextView
             android:id="@+id/i_collect_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="@dimen/margin_size_16"
             android:text="￥30"
-            android:textColor="#f35a5a"
-            android:textSize="16dp" />
+            android:textColor="@color/colorRedC1"
+            android:textSize="@dimen/text_size_16" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,16 +80,16 @@
             android:layout_toRightOf="@+id/i_collect_price"
             android:paddingLeft="1dp"
             android:text="起"
-            android:textColor="#f35a5a"
-            android:textSize="11dp" />
+            android:textColor="@color/colorRedC1"
+            android:textSize="@dimen/text_size_12" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="15dp"
-            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginBottom="@dimen/margin_size_16"
+            android:layout_marginRight="@dimen/margin_left_right"
             android:src="@mipmap/mine_icon_collect_pre" />
 
     </RelativeLayout>

@@ -2,70 +2,70 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackgroundMain"
+    android:background="@color/colorBackGroundGrayC1"
     android:orientation="vertical">
 
     <include layout="@layout/toolbar" />
 
     <TextView
-        android:id="@+id/a_setting_about_us"
+        android:id="@+id/about_us"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/margin_size_10"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left"
+        android:paddingLeft="@dimen/margin_left_right"
         android:text="关于我们"
         android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_main" />
+        android:textSize="@dimen/text_size_16" />
 
     <TextView
-        android:id="@+id/a_setting_grade"
+        android:id="@+id/grade"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left"
+        android:paddingLeft="@dimen/margin_left_right"
         android:text="给我评分"
         android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_main" />
+        android:textSize="@dimen/text_size_16" />
 
     <TextView
-        android:id="@+id/a_setting_version"
+        android:id="@+id/version"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left"
+        android:paddingLeft="@dimen/margin_left_right"
         android:text="版本"
         android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_main" />
+        android:textSize="@dimen/text_size_16" />
 
     <TextView
-        android:id="@+id/a_setting_report"
+        android:id="@+id/report"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_marginTop="1dp"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left"
+        android:paddingLeft="@dimen/margin_left_right"
         android:text="举报投诉"
         android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_main" />
+        android:textSize="@dimen/text_size_16" />
 
 
     <Button
-        android:id="@+id/a_setting_return"
+        android:id="@+id/setting_return"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginLeft="@dimen/margin_size_36"
+        android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="48dp"
         android:background="@drawable/btn_selector_yellow"
         android:text="退出"
         android:textColor="@color/colorTextWhite"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_16" />
 
 </LinearLayout>

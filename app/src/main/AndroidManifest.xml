@@ -6,48 +6,48 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/mine_icon_delete"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".main.MainActivity"
+            android:name="com.pisces.android.wuha.function.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
-
-        <activity android:name=".main.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <!--<activity android:name=".main.HomeActivity">-->
+       <!---->
+
+        <!--</activity>-->
+
         <!--================================设置界面============================================-->
 
 
         <!--关于我们-->
-        <activity android:name=".setting.AboutUsActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.AboutUsActivity">
 
         </activity>
 
         <!--评分-->
-        <activity android:name=".setting.GradeActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.GradeActivity">
 
         </activity>
 
         <!--版本号界面-->
-        <activity android:name=".setting.VersionActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.VersionActivity">
 
         </activity>
 
         <!--举报投诉-->
-        <activity android:name=".setting.ReportActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.ReportActivity">
 
         </activity>
 
@@ -56,33 +56,43 @@
 
         <!--================================我的界面============================================-->
         <!--设置主界面-->
-        <activity android:name=".setting.SettingActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.SettingActivity">
 
         </activity>
 
         <!--我的收藏-->
-        <activity android:name=".collect.CollectActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.collect.CollectActivity">
 
         </activity>
 
         <!--意见建议-->
-        <activity android:name=".mine.MessageActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.MessageActivity">
 
         </activity>
 
         <!--联系我们-->
-        <activity android:name=".mine.CallActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.CallActivity">
 
         </activity>
 
         <!--分享app-->
-        <activity android:name=".mine.ShareActivity">
+        <activity android:name="com.pisces.android.wuha.function.main.personage.ShareActivity">
+
+        </activity>
+
+        <!--我的账户-->
+        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.AccountActivity">
 
         </activity>
         <!--================================我的界面============================================-->
-        
+
         <!--店铺详情-->
-        <activity android:name=".shop.ShopDetailsActivity">
+        <activity android:name="com.pisces.android.wuha.function.shop.ShopDetailsActivity">
+
+        </activity>
+
+        <!--搜索界面-->
+        <activity android:name=".function.SearchForActivity">
 
         </activity>
 
