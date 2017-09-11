@@ -9,30 +9,17 @@ import com.google.gson.annotations.SerializedName;
 
 public class ApiModel<T> {
 
-    public String error;
+//    private T
 
-    public String message;
-
-    @SerializedName("succ")
-    public boolean success;
-
-    public T data;
-
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    /**
-     * 0 - success
-     * 1 - fail
-     */
-    @SerializedName("stateCode")
-    public int errorCode;
-
+//    {
+//        "ServiceProvider":Array[1],
+//            "ErrorCode":0,
+//            "Message":"SUCCESS",
+//            "DebugMessage":"NONE",
+//            "CurrentPageIndex":1,
+//            "NumberOfTitlesFound":4,
+//            "NumberOfResultsPerPage":1,
+//            "TotalNumberOfPages":4
+//    }
 
 }

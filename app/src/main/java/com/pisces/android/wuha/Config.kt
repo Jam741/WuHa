@@ -7,4 +7,6 @@ package com.pisces.android.wuha
 object Config {
 
     val host = "http://www.paotuixiao2.com/api/"
+
+    val pageSize = 10
 }

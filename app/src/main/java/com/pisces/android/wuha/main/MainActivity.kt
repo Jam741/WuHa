@@ -26,7 +26,7 @@ class MainActivity : LNoToolBaseActivity() {
         setFullscreen()
     }
 
-    public data class Test(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
+     data class Test(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 
 }
 

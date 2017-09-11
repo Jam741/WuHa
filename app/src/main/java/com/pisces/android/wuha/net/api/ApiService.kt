@@ -1,5 +1,6 @@
 package com.pisces.android.wuha.net.api
 
+import com.pisces.android.wuha.entity.BodyForServicePrice
 import com.pisces.android.wuha.main.MainActivity
 import okhttp3.ResponseBody
 import retrofit2.http.Body
@@ -11,7 +12,10 @@ import rx.Observable
  */
 interface ApiService {
     @POST("ServiceProvider/GetServiceProviderByDistance")
-    fun test(@Body test: MainActivity.Test): Observable<ResponseBody>
+    fun getServiceFromLocation(@Body test: MainActivity.Test): Observable<ResponseBody>
 
+
+    @POST("ServiceProvider/GetServiceProviderByStartingPrice")
+    fun getServiceFromPrice(@Body bodyForServicePrice: BodyForServicePrice):Observable<ResponseBody>
 
 }
