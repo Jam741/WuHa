@@ -1,12 +1,12 @@
-package com.pisces.android.wuha.main
+package com.pisces.android.wuha.function
 
 
 import android.os.Bundle
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LNoToolBaseActivity
-import com.pisces.android.wuha.pages.HomeFragment
-import com.pisces.android.wuha.pages.PersonageFragment
+import com.pisces.android.wuha.function.main.HomeFragment
+import com.pisces.android.wuha.function.main.PersonageFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 

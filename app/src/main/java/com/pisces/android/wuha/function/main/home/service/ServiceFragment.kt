@@ -1,15 +1,14 @@
-package com.pisces.android.wuha.main
+package com.pisces.android.wuha.function.main.home.service
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 
-import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.function.main.home.medical.MedicalAdapter
 import kotlinx.android.synthetic.main.f_service.*
 
 import java.util.ArrayList

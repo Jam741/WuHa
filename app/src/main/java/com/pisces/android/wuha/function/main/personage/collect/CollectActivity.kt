@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.collect
+package com.pisces.android.wuha.function.main.personage.collect
 
 import android.content.Context
 import android.content.Intent

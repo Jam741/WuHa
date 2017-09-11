@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorAccent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.pisces.android.wuha.main.MainActivity">
+    tools:context=".function.MainActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPage"

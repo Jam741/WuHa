@@ -1,24 +1,17 @@
-package com.pisces.android.wuha.pages
+package com.pisces.android.wuha.function.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.entity.BodyForServiceByPrice
 
 import com.pisces.android.wuha.function.SearchForActivity
-import com.pisces.android.wuha.main.MainActivity
-import com.pisces.android.wuha.main.MedicalFragment
-import com.pisces.android.wuha.main.ServiceFragment
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import com.pisces.android.wuha.function.main.home.medical.MedicalFragment
+import com.pisces.android.wuha.function.main.home.service.ServiceFragment
 import kotlinx.android.synthetic.main.home_frag.*
-import okhttp3.ResponseBody
 
 
 /**
@@ -45,21 +38,6 @@ class HomeFragment : JBaseFragment() {
             SearchForActivity.start(context)
         }
 
-        val body = MainActivity.Test(1,104.085237f,30.663835f,1,1)
-
-        val body2 = BodyForServiceByPrice(2,1,1)
-
-        val ob = Api.service.getServiceFromLocation(body)
-
-
-        val ob2 =  Api.service.getServiceFromPrice(body2)
-
-
-        HttpUtli.toSubscribe(ob,  object : ProgressSubscriber<ResponseBody>(activity) {
-            override fun onSuccess(t: ResponseBody?) {
-                Log.d("JJJJ","SUCESS")
-            }
-        })
     }
 
 }

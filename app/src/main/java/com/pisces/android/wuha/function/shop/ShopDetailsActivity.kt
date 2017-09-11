@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.shop
+package com.pisces.android.wuha.function.shop
 
 import android.content.Context
 import android.content.Intent

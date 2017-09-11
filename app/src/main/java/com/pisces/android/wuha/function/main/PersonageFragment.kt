@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.pages
+package com.pisces.android.wuha.function.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.collect.CollectActivity
-import com.pisces.android.wuha.mine.CallActivity
-import com.pisces.android.wuha.mine.MessageActivity
-import com.pisces.android.wuha.mine.ShareActivity
-import com.pisces.android.wuha.setting.AccountActivity
-import com.pisces.android.wuha.setting.SettingActivity
+import com.pisces.android.wuha.function.main.personage.CallActivity
+import com.pisces.android.wuha.function.main.personage.MessageActivity
+import com.pisces.android.wuha.function.main.personage.ShareActivity
+import com.pisces.android.wuha.function.main.personage.collect.CollectActivity
+import com.pisces.android.wuha.function.main.personage.setting.AccountActivity
+import com.pisces.android.wuha.function.main.personage.setting.SettingActivity
 import kotlinx.android.synthetic.main.activity_personage.*
 
 /**

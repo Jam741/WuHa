@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.main
+package com.pisces.android.wuha.function.main.home.medical
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager

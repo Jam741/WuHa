@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.shop
+package com.pisces.android.wuha.function.shop
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,13 +11,12 @@ import com.pisces.android.wuha.R
 
 /**
  * Created by Chris Li on 2017/9/1.
- * 商家详情界面里面的商家信息界面
+ * 商家详情里面的服务列表界面
  */
 
-class ClientMessageFragment : JBaseFragment() {
+class ServiceListFragment : JBaseFragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.f_client_message, container, false)
-
+        return inflater!!.inflate(R.layout.f_service_list, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.mine
+package com.pisces.android.wuha.function.main.personage
 
 import android.content.Context
 import android.content.Intent

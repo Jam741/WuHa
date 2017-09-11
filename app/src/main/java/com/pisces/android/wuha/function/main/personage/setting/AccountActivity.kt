@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.setting
+package com.pisces.android.wuha.function.main.personage.setting
 
 import android.content.Context
 import android.content.Intent
