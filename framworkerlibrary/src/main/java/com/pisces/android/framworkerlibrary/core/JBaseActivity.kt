@@ -8,7 +8,7 @@ import rx.subjects.PublishSubject
 /**
  * Created by Jam on 2017/8/21.
  */
-open class JBaseActivity:AppCompatActivity() {
+open class JBaseActivity : AppCompatActivity() {
 
     val lifecycleSubject = PublishSubject.create<ActivityLifeCycleEvent>()
 
@@ -51,7 +51,9 @@ open class JBaseActivity:AppCompatActivity() {
     /**
      * 关闭当前页
      */
-    fun close(){
+    fun close() {
         ActivityCompat.finishAfterTransition(this)
     }
+
+
 }
