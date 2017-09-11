@@ -3,7 +3,7 @@ package com.pisces.android.wuha.entity
 /**
  * Created by Chris Li on 2017/9/6.
  */
-data class BodyForServicePrice (val ServiceProviderType:Int,val CurrentPageIndex:Int,val NumberOfResultsPerPage:Int)
+data class BodyForServiceByDistance(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 
 
 //{

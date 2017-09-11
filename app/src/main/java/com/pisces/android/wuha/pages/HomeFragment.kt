@@ -5,11 +5,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.entity.BodyForServicePrice
+import com.pisces.android.wuha.entity.BodyForServiceByPrice
 
 import com.pisces.android.wuha.function.SearchForActivity
 import com.pisces.android.wuha.main.MainActivity
@@ -48,7 +47,7 @@ class HomeFragment : JBaseFragment() {
 
         val body = MainActivity.Test(1,104.085237f,30.663835f,1,1)
 
-        val body2 = BodyForServicePrice(2,1,1)
+        val body2 = BodyForServiceByPrice(2,1,1)
 
         val ob = Api.service.getServiceFromLocation(body)
 
@@ -56,7 +55,7 @@ class HomeFragment : JBaseFragment() {
         val ob2 =  Api.service.getServiceFromPrice(body2)
 
 
-        HttpUtli.toSubscribe(ob2,  object : ProgressSubscriber<ResponseBody>(activity) {
+        HttpUtli.toSubscribe(ob,  object : ProgressSubscriber<ResponseBody>(activity) {
             override fun onSuccess(t: ResponseBody?) {
                 Log.d("JJJJ","SUCESS")
             }

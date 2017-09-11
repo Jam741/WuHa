@@ -39,15 +39,15 @@ final class GsonResponseBodyConverter<T> implements Converter<ResponseBody, Obje
     public Object convert(ResponseBody value) throws IOException {
         try {
             ApiModel apiModel = (ApiModel) adapter.fromJson(value.charStream());
-            if (!apiModel.success) {
+            if (apiModel.ErrorCode != 0) {
                 // 特定 API 的错误，在相应的 Subscriber 的 onError 的方法中进行处理
-                throw new ApiException(apiModel.errorCode, apiModel.message);
-            } else if (apiModel.success) {
-                return apiModel.data;
+                throw new ApiException(apiModel.ErrorCode, apiModel.Message, apiModel.DebugMessage);
+            } else {
+                return apiModel;
             }
         } finally {
             value.close();
+            return null;
         }
-        return null;
     }
 }

@@ -5,4 +5,4 @@ package com.pisces.android.framworkerlibrary.net.exception
  * Describe:
  */
 
-class ApiException(var error_codel: Int, var error_message: String?) : RuntimeException()
+class ApiException(var error_codel: Int, var error_message: String?, var debug_message: String?) : RuntimeException()
