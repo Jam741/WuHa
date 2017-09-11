@@ -1,22 +1,15 @@
 package com.pisces.android.wuha.pages
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.orhanobut.logger.Logger
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.main.MainActivity
 import com.pisces.android.wuha.main.MedicalFragment
 import com.pisces.android.wuha.main.ServiceFragment
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import kotlinx.android.synthetic.main.home_frag.*
-import okhttp3.ResponseBody
 
 /**
  * Created by Jam on 2017/8/24.
