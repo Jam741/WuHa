@@ -4,13 +4,13 @@ package com.pisces.android.wuha.function
 import android.os.Bundle
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.base.LNoToolBaseActivity
+import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.function.main.HomeFragment
 import com.pisces.android.wuha.function.main.PersonageFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : LNoToolBaseActivity() {
+class MainActivity : LBaseActivity() {
 
     private val tabs by lazy { arrayListOf("主页", "我的") }
     private val fragments by lazy({ arrayListOf(HomeFragment(), PersonageFragment()) })
@@ -23,10 +23,7 @@ class MainActivity : LNoToolBaseActivity() {
             adapter = TabAdapter(supportFragmentManager, fragments, tabs)
         }
         tab.setupWithViewPager(viewPage)
-        setFullscreen()
     }
-
-     data class Test(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 
 }
 

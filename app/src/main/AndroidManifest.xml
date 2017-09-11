@@ -32,22 +32,22 @@
 
 
         <!--关于我们-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.AboutUsActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.AboutUsActivity">
 
         </activity>
 
         <!--评分-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.GradeActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.GradeActivity">
 
         </activity>
 
         <!--版本号界面-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.VersionActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.VersionActivity">
 
         </activity>
 
         <!--举报投诉-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.ReportActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.ReportActivity">
 
         </activity>
 
@@ -56,32 +56,32 @@
 
         <!--================================我的界面============================================-->
         <!--设置主界面-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.SettingActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.SettingActivity">
 
         </activity>
 
         <!--我的收藏-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.collect.CollectActivity">
+        <activity android:name="com.pisces.android.wuha.function.collect.CollectActivity">
 
         </activity>
 
         <!--意见建议-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.MessageActivity">
+        <activity android:name="com.pisces.android.wuha.function.personage.MessageActivity">
 
         </activity>
 
         <!--联系我们-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.CallActivity">
+        <activity android:name="com.pisces.android.wuha.function.personage.CallActivity">
 
         </activity>
 
         <!--分享app-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.ShareActivity">
+        <activity android:name="com.pisces.android.wuha.function.personage.ShareActivity">
 
         </activity>
 
         <!--我的账户-->
-        <activity android:name="com.pisces.android.wuha.function.main.personage.setting.AccountActivity">
+        <activity android:name="com.pisces.android.wuha.function.setting.AccountActivity">
 
         </activity>
         <!--================================我的界面============================================-->

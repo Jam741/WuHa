@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.personage.collect
+package com.pisces.android.wuha.function.collect
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView

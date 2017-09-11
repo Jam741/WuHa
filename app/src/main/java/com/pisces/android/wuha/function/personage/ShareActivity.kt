@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.personage
+package com.pisces.android.wuha.function.personage
 
 import android.content.Context
 import android.content.Intent
@@ -23,6 +23,6 @@ class ShareActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_share)
-        setToolbarTitle("分享app")
+//        setToolbarTitle("分享app")
     }
 }

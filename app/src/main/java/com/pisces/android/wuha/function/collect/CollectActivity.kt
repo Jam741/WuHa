@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.personage.collect
+package com.pisces.android.wuha.function.collect
 
 import android.content.Context
 import android.content.Intent
@@ -31,7 +31,7 @@ class CollectActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_collect)
-        setToolbarTitle("我的收藏")
+//        setToolbarTitle("我的收藏")
         initView()
 
     }

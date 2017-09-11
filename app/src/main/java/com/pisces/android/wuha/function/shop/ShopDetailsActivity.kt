@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.base.LNoToolBaseActivity
+import com.pisces.android.wuha.base.LBaseActivity
 import kotlinx.android.synthetic.main.activity_shop_details.*
 
 
@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
  * 商品详情界面
  */
 
-class ShopDetailsActivity : LNoToolBaseActivity(), View.OnClickListener {
+class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, ShopDetailsActivity::class.java)
@@ -31,7 +31,6 @@ class ShopDetailsActivity : LNoToolBaseActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_details)
         initView()
-        setFullscreen()
     }
 
     private fun initView() {

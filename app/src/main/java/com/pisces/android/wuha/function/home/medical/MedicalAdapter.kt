@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.home.medical
+package com.pisces.android.wuha.function.home.medical
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView

@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.function.main.personage.CallActivity
-import com.pisces.android.wuha.function.main.personage.MessageActivity
-import com.pisces.android.wuha.function.main.personage.ShareActivity
-import com.pisces.android.wuha.function.main.personage.collect.CollectActivity
-import com.pisces.android.wuha.function.main.personage.setting.AccountActivity
-import com.pisces.android.wuha.function.main.personage.setting.SettingActivity
+import com.pisces.android.wuha.function.personage.CallActivity
+import com.pisces.android.wuha.function.personage.MessageActivity
+import com.pisces.android.wuha.function.personage.ShareActivity
+import com.pisces.android.wuha.function.collect.CollectActivity
+import com.pisces.android.wuha.function.setting.AccountActivity
+import com.pisces.android.wuha.function.setting.SettingActivity
 import kotlinx.android.synthetic.main.activity_personage.*
 
 /**

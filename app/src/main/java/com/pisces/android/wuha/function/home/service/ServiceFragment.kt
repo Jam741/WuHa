@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.home.service
+package com.pisces.android.wuha.function.home.service
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.function.main.home.medical.MedicalAdapter
+import com.pisces.android.wuha.function.home.medical.MedicalAdapter
 import kotlinx.android.synthetic.main.f_service.*
 
 import java.util.ArrayList

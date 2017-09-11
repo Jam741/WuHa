@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function.main.personage.setting
+package com.pisces.android.wuha.function.setting
 
 import android.content.Context
 import android.content.Intent
@@ -29,7 +29,6 @@ class SettingActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
-        setToolbarTitle("设置")
         initView()
     }
 

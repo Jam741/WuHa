@@ -9,8 +9,8 @@ import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 
 import com.pisces.android.wuha.function.SearchForActivity
-import com.pisces.android.wuha.function.main.home.medical.MedicalFragment
-import com.pisces.android.wuha.function.main.home.service.ServiceFragment
+import com.pisces.android.wuha.function.home.medical.MedicalFragment
+import com.pisces.android.wuha.function.home.service.ServiceFragment
 import kotlinx.android.synthetic.main.home_frag.*
 
 
