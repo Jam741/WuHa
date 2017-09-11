@@ -12,13 +12,12 @@ import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  * Created by Chris Li on 2017/9/2.
- * 能隐藏状态栏的基础activity
  */
 open class LBaseActivity : JBaseActivity() {
 
-    val progressDialog by lazy { WuHaProgressDialog(this) }
+    private val progressDialog by lazy { WuHaProgressDialog(this) }
 
-    var toast: Toast? = null
+    private var toast: Toast? = null
 
 
     fun toastWith(message: String) {
@@ -27,10 +26,17 @@ open class LBaseActivity : JBaseActivity() {
         toast!!.show()
     }
 
-    fun toastWith(messageRes:Int){
+    fun toastWith(messageRes: Int) {
         if (toast == null) toast = Toast.makeText(this, messageRes, Toast.LENGTH_SHORT)
         else toast!!.setText(messageRes)
         toast!!.show()
     }
 
+    fun showDialog(){
+        progressDialog.show()
+    }
+
+    fun dismissDialog(){
+        progressDialog.dismiss()
+    }
 }

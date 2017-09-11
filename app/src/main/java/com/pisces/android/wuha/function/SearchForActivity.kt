@@ -21,7 +21,7 @@ class SearchForActivity : LBaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search_for)
-        setToolbarTitle("搜索")
+        setContentView(R.layout.search_frag)
+//        setToolbarTitle("搜索")
     }
 }
