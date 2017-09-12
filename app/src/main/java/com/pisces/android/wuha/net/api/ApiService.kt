@@ -3,7 +3,6 @@ package com.pisces.android.wuha.net.api
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
 import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
-import com.pisces.android.wuha.main.MainActivity
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable

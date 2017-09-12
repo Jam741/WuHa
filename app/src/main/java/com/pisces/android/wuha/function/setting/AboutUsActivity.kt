@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function
+package com.pisces.android.wuha.function.setting
 
 import android.content.Context
 import android.content.Intent
@@ -8,20 +8,19 @@ import com.pisces.android.wuha.base.LBaseActivity
 
 /**
  * Created by Chris Li on 2017/9/2.
- * 搜索界面
+ * 关于我们界面
  */
-class SearchForActivity : LBaseActivity() {
-
+class AboutUsActivity : LBaseActivity() {
     companion object {
         fun start(context: Context) {
-            val  stater = Intent(context,SearchForActivity::class.java)
-            context.startActivity(stater)
+            val intent = Intent(context, AboutUsActivity::class.java)
+            context.startActivity(intent)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.search_frag)
-//        setToolbarTitle("搜索")
+        setContentView(R.layout.activity_about_us)
     }
+
 }

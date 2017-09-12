@@ -4,38 +4,39 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.pisces.android.framworkerlibrary.R
 import com.pisces.android.framworkerlibrary.core.JBaseActivity
+import com.pisces.android.wuha.widget.WuHaProgressDialog
 import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  * Created by Chris Li on 2017/9/2.
- * 能隐藏状态栏的基础activity
  */
 open class LBaseActivity : JBaseActivity() {
 
+    private val progressDialog by lazy { WuHaProgressDialog(this) }
 
-//    private var mToolbar: ImageView? = null
+    private var toast: Toast? = null
 
 
-    /**
-     * 设置通用的ActionBar Chris Li
-     */
-    fun setToolbarTitle(title: String) {
-
-//        if (mToolbar == null) {
-//            mToolbar = findViewById(R.id.toolbar) as ImageView
-//            mToolbar!!.visibility = View.VISIBLE
-//            mToolbar!!.setOnClickListener { finish() }
-//        }
-        toolbar.run {
-            visibility = View.VISIBLE
-            setOnClickListener { finish() }
-        }
-
-        name.run { text = title }
-
+    fun toastWith(message: String) {
+        if (toast == null) toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+        else toast!!.setText(message)
+        toast!!.show()
     }
 
+    fun toastWith(messageRes: Int) {
+        if (toast == null) toast = Toast.makeText(this, messageRes, Toast.LENGTH_SHORT)
+        else toast!!.setText(messageRes)
+        toast!!.show()
+    }
 
+    fun showDialog(){
+        progressDialog.show()
+    }
+
+    fun dismissDialog(){
+        progressDialog.dismiss()
+    }
 }
