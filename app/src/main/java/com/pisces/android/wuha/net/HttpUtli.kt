@@ -6,8 +6,6 @@ import rx.Observable
 import rx.Subscriber
 import rx.schedulers.Schedulers
 import rx.android.schedulers.AndroidSchedulers
-import android.widget.Toast
-import com.pisces.android.framworkerlibrary.net.exception.ApiException
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import rx.functions.Action1
 

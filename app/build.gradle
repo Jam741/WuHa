@@ -48,6 +48,7 @@ android {
 }
 
 dependencies {
+
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -59,6 +60,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile project(':framworkerlibrary')
     compile project(':reslibrary')
+
+    /*定位*/
+    compile project(':locationlibrary')
 }
 repositories {
     mavenCentral()

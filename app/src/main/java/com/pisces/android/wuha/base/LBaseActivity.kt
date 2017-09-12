@@ -1,14 +1,9 @@
 package com.pisces.android.wuha.base
 
-import android.support.v7.app.AppCompatActivity
-import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
-import com.pisces.android.framworkerlibrary.R
 import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.wuha.widget.WuHaProgressDialog
-import kotlinx.android.synthetic.main.toolbar.*
+
 
 /**
  * Created by Chris Li on 2017/9/2.
