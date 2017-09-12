@@ -1,6 +1,5 @@
 package com.pisces.android.wuha.net.subscriber
 
-import android.app.ProgressDialog
 import android.content.Context
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.widget.WuHaProgressDialog
