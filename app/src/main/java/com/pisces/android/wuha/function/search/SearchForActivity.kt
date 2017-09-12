@@ -1,4 +1,4 @@
-package com.pisces.android.wuha.function
+package com.pisces.android.wuha.function.search
 
 import android.content.Context
 import android.content.Intent

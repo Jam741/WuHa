@@ -8,9 +8,9 @@ import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 
-import com.pisces.android.wuha.function.SearchForActivity
 import com.pisces.android.wuha.function.home.medical.MedicalFragment
 import com.pisces.android.wuha.function.home.service.ServiceFragment
+import com.pisces.android.wuha.function.search.SearchForActivity
 import kotlinx.android.synthetic.main.home_frag.*
 
 
@@ -35,8 +35,7 @@ class HomeFragment : JBaseFragment() {
             setupWithViewPager(vp_home)
         }
         search_view.setOnClickListener {
-            (activity as MainActivity).showSearchLayout(true)
-//            SearchForActivity.start(context)
+            SearchForActivity.start(context)
         }
 
     }
