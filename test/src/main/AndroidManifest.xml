@@ -24,6 +24,12 @@
             </intent-filter>
         </activity>
 
+        <!--高德地图key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="1d6c24e7f1f384fb2e508d5907fb774e" />
+
+
     </application>
 
 </manifest>

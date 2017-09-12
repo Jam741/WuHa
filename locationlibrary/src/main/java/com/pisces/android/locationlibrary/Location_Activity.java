@@ -9,7 +9,6 @@ import com.amap.api.location.AMapLocationListener;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -17,11 +16,10 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
 /**
  * Created by Chris Li on 2017/9/12.
+ * 定位界面
  */
 public class Location_Activity extends CheckPermissionsActivity
         implements

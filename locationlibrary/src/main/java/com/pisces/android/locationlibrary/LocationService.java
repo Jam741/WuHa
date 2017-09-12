@@ -188,9 +188,9 @@ public class LocationService extends APSService implements AMapLocationListener 
                     AMapLocation loc = (AMapLocation) msg.obj;
                     boolean b = GetLocationStr(loc);
                     if (b) {
-                        Log.i(TAG, "定位成功" + locationString);
+                        Log.i(TAG, "定位成功\n" + locationString);
                     } else {
-                        Log.i(TAG, "定位失败" + locationString);
+                        Log.i(TAG, "定位失败\n" + locationString);
 
                     }
 
@@ -211,7 +211,6 @@ public class LocationService extends APSService implements AMapLocationListener 
         }
         StringBuffer sb = new StringBuffer();
         if (location.getErrorCode() == 0) {
-            sb.append("定位类型: " + location.getLocationType() + "\n");
             sb.append("经    度    : " + location.getLongitude() + "\n");
             sb.append("纬    度    : " + location.getLatitude() + "\n");
             sb.append("省            : " + location.getProvince() + "\n");

@@ -28,9 +28,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true">
 
-        <meta-data
-            android:name="com.amap.api.v2.apikey"
-            android:value="23725a498c0b75fbb7681d49632435b5" />
         <service android:name=".LocationService">
 
         </service>
