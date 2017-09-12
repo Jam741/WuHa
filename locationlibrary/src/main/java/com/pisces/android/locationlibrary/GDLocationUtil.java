@@ -1,7 +1,7 @@
 package com.pisces.android.locationlibrary;
 
 import android.content.Context;
-import android.widget.Toast;
+
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
@@ -77,7 +77,6 @@ public class GDLocationUtil {
         }
         // 设置定位监听
         mLocationClient.setLocationListener(new AMapLocationListener() {
-
             @Override
             public void onLocationChanged(AMapLocation location) {
                 if (location != null) {
@@ -88,7 +87,6 @@ public class GDLocationUtil {
                 } else {
                     //获取定位数据失败
                     listener.fail("定位失败");
-
                 }
             }
         });
@@ -102,5 +100,4 @@ public class GDLocationUtil {
     public static void destroy() {
         mLocationClient.onDestroy();
     }
-
 }

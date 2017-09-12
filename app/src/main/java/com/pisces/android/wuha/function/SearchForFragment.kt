@@ -13,7 +13,7 @@ import com.pisces.android.wuha.R
 class SearchForFragment : JBaseFragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater!!.inflate(R.layout.activity_search_for, container, false)
+        return inflater!!.inflate(R.layout.search_frag, container, false)
 
     }
 

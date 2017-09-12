@@ -35,7 +35,8 @@ class HomeFragment : JBaseFragment() {
             setupWithViewPager(vp_home)
         }
         search_view.setOnClickListener {
-            SearchForActivity.start(context)
+            (activity as MainActivity).showSearchLayout(true)
+//            SearchForActivity.start(context)
         }
 
     }

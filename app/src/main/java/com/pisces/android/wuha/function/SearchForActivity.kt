@@ -14,14 +14,15 @@ class SearchForActivity : LBaseActivity() {
 
     companion object {
         fun start(context: Context) {
-            val  stater = Intent(context,SearchForActivity::class.java)
+            val stater = Intent(context, SearchForActivity::class.java)
             context.startActivity(stater)
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search_for)
+
+        setContentView(R.layout.search_frag)
 //        setToolbarTitle("搜索")
     }
 }

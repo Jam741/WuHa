@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="12dp"
+            android:src="@mipmap/home_return2" />
+
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/edSearchView"
+            android:layout_width="match_parent"
+            android:background="#f3f3f3"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"
+            android:queryHint="请输入店铺名称或者服务类型"
+            android:layout_height="wrap_content"></android.support.v7.widget.SearchView>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/colorBlackC1"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
