@@ -95,7 +95,7 @@
         </activity>
 
         <!--搜索界面-->
-        <activity android:name=".function.SearchForActivity">
+        <activity android:name=".function.search.SearchForActivity">
 
         </activity>
 
