@@ -63,9 +63,13 @@ dependencies {
 
     /*定位*/
     compile project(':locationlibrary')
+    compile name:'SMSSDK-3.0.0',ext:'aar'
 }
 repositories {
     mavenCentral()
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
 }
 
 //task clearApk(type: Delete) {
