@@ -87,12 +87,17 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
             check(R.id.rad_distance)
             setOnCheckedChangeListener { group, checkedId ->
                 when (checkedId) {
-                    R.id.rad_distance -> ""
-                    R.id.rad_rq -> ""
-                    R.id.rad_price -> ""
+                    R.id.rad_distance ->
+                        loadData()
+                    R.id.rad_rq ->
+                        loadData()
+                    R.id.rad_price ->
+                        loadData()
                 }
+
             }
         }
+        loadData()
     }
 
     fun loadData() {

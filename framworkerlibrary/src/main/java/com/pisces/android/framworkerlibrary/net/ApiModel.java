@@ -1,6 +1,9 @@
 package com.pisces.android.framworkerlibrary.net;
 
-import com.google.gson.annotations.SerializedName;
+
+import com.pisces.android.framworkerlibrary.utlis.T;
+
+import java.util.ArrayList;
 
 /**
  * Created by Jam on 2017/2/17 下午5:31.
@@ -8,29 +11,12 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class ApiModel {
-
-//    private T
-
-//    {
-//        "ServiceProvider":Array[1],
-//            "ErrorCode":0,
-//            "Message":"SUCCESS",
-//            "DebugMessage":"NONE",
-//            "CurrentPageIndex":1,
-//            "NumberOfTitlesFound":4,
-//            "NumberOfResultsPerPage":1,
-//            "TotalNumberOfPages":4
-//    }
-
-
-//    var ErrorCode: Int = 0
-//    var Message: String = "SUCCESS"
-//    var DebugMessage: String = "NONE"
-
-
-    public int ErrorCode = 0;
-    public String Message = "SUCCESS";
-    public String DebugMessage = "NONE";
-
-
+//    public ArrayList<T> datas;
+//    public int errorCode;
+//    public String message;
+//    public String debugMessage;
+//    public int currentPageIndex;
+//    public int numberOfTitlesFound;
+//    public int numberOfResultsPerPage;
+//    public int totalNumberOfPages;
 }
