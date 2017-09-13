@@ -1,24 +1,35 @@
 package com.pisces.android.wuha.entity.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by jamisonline on 2017/9/11.
- *
+ * <p>
  * 服务提供者的响应数据
  */
 
-public class ServiceProviderResponse extends BaseEntity{
+public class ServiceProviderResponse extends BaseEntity {
 
 
-//    ArrayList<>
+    @SerializedName("ServiceProvider")
+    private ArrayList<ServiceProvider> data;
 
+    public ArrayList<ServiceProvider> getData() {
+        return data;
+    }
+
+    public void setData(ArrayList<ServiceProvider> data) {
+        this.data = data;
+    }
 
     /**
      * 服务提供者
      */
-    public static class ServiceProvider{
+    public static class ServiceProvider {
 
 
         /**

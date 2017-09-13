@@ -38,7 +38,7 @@ class ServiceFragment : JBaseFragment() {
             mData.add("")
         }
         recycler_view.run {
-            layoutManager = LinearLayoutManager(activity)
+            layoutManager = LinearLayoutManager(context)
             adapter = MedicalAdapter(activity, mData)
         }
 

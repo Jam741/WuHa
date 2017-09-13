@@ -98,6 +98,15 @@ class RecyclerViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
 
 
 
+    fun setImageUrl(viewId: Int, url: String): RecyclerViewHolder {
+        val view = getViewWith(viewId) as ImageView
+        TODO("set url to imageview")
+        return this
+    }
+
+
+
+
     fun setBackgroundColor(viewId: Int, color: Int): RecyclerViewHolder {
         val view = getViewWith(viewId)
         view.setBackgroundColor(color)

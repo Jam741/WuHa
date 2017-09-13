@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/radio_group"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="horizontal">
+
+
+    <RadioButton
+        style="@style/home_filter_rad"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="距离" />
+
+    <RadioButton
+        style="@style/home_filter_rad"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="人气" />
+
+    <RadioButton
+        style="@style/home_filter_rad"
+        android:layout_width="wrap_content"
+
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="价格" />
+
+
+</RadioGroup>

@@ -41,4 +41,7 @@
         <item name="android:textSize">20sp</item>
 
     </style>
+
+    <!--主页筛选按钮样式-->
+    <style name="home_filter_rad"></style>
 </resources>

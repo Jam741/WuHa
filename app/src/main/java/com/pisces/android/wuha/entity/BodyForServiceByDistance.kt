@@ -2,6 +2,7 @@ package com.pisces.android.wuha.entity
 
 /**
  * Created by Chris Li on 2017/9/6.
+ * 根据距离返回相应的商铺信息实体类
  */
 data class BodyForServiceByDistance(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 

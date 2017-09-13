@@ -1,8 +1,10 @@
 package com.pisces.android.wuha.net.api
 
+import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
 import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
+import com.pisces.android.wuha.function.collect.BodyCollect
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable
@@ -38,4 +40,22 @@ interface ApiService {
     @POST("ServiceProvider/GetServiceProviderByStartingPrice")
     fun getServiceFromPrice(@Body bodyForServiceByPrice: BodyForServiceByPrice): Observable<ServiceProviderResponse>
 
+
+    /**
+     * 根据人气查询服务商列表
+     *
+     * @param bodyForServiceByCount
+     */
+    @POST("ServiceProvider/GetServiceProviderByViewingCount")
+    fun getServiceFromCount(@Body bodyForServiceByCount: BodyForServiceByCount): Observable<ServiceProviderResponse>
+
+
+    /**
+     * 根据UserId查询个人收藏
+     *
+     * @param bodyCollect
+     *
+     */
+    @POST("UserInfo/GetUserFavorites")
+    fun getUserFavorites(@Body bodyCollect: BodyCollect): Observable<ServiceProviderResponse>
 }

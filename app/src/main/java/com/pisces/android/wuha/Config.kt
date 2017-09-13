@@ -8,5 +8,10 @@ object Config {
 
     val host = "http://www.paotuixiao2.com/api/"
 
+    val page = 1
+
     val pageSize = 10
+
+    val location_address = ""
+
 }
