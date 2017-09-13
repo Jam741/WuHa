@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/framworkerlibrary/framworkerlibrary.iml" filepath="$PROJECT_DIR$/framworkerlibrary/framworkerlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationlibrary/locationlibrary.iml" filepath="$PROJECT_DIR$/locationlibrary/locationlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locationlibrary/locationlibrary.iml" filepath="$PROJECT_DIR$/locationlibrary/locationlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" filepath="$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/reslibrary/reslibrary.iml" filepath="$PROJECT_DIR$/reslibrary/reslibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
