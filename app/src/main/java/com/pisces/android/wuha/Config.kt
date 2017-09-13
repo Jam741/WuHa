@@ -14,4 +14,8 @@ object Config {
 
     val location_address = ""
 
+    val MOB_APP_KEY = "20f7428769ccf"
+    val MOB_APP_SECRET = "a786887c5dd5568d2d3c5c3857a7ac0e"
+
+
 }

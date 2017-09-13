@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Describe:
  */
 
-public class ApiModel {
+public class ApiModel<T> {
 
 //    private T
 
@@ -22,15 +22,10 @@ public class ApiModel {
 //            "TotalNumberOfPages":4
 //    }
 
-
-//    var ErrorCode: Int = 0
-//    var Message: String = "SUCCESS"
-//    var DebugMessage: String = "NONE"
-
-
-    public int ErrorCode = 0;
-    public String Message = "SUCCESS";
-    public String DebugMessage = "NONE";
+    public T datas;
+    public int errorCode = 0;
+    public String message = "SUCCESS";
+    public String debugMessage = "NONE";
 
 
 }

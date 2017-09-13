@@ -3,9 +3,8 @@ package com.pisces.android.wuha.net.api
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
-import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
+import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.collect.BodyCollect
-import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable
@@ -27,7 +26,7 @@ interface ApiService {
      * @return
      */
     @POST("ServiceProvider/GetServiceProviderByDistance")
-    fun getServiceFromLocation(@Body bodyForServiceByDistance: BodyForServiceByDistance): Observable<ServiceProviderResponse>
+    fun getServiceFromLocation(@Body bodyForServiceByDistance: BodyForServiceByDistance): Observable<ArrayList<ServiceProvider>>
 
 
     /**
@@ -39,7 +38,7 @@ interface ApiService {
      * @return
      */
     @POST("ServiceProvider/GetServiceProviderByStartingPrice")
-    fun getServiceFromPrice(@Body bodyForServiceByPrice: BodyForServiceByPrice): Observable<ServiceProviderResponse>
+    fun getServiceFromPrice(@Body bodyForServiceByPrice: BodyForServiceByPrice): Observable<ArrayList<ServiceProvider>>
 
 
     /**
@@ -48,7 +47,7 @@ interface ApiService {
      * @param bodyForServiceByCount
      */
     @POST("ServiceProvider/GetServiceProviderByViewingCount")
-    fun getServiceFromCount(@Body bodyForServiceByCount: BodyForServiceByCount): Observable<ServiceProviderResponse>
+    fun getServiceFromCount(@Body bodyForServiceByCount: BodyForServiceByCount): Observable<ArrayList<ServiceProvider>>
 
 
     /**
@@ -58,17 +57,7 @@ interface ApiService {
      *
      */
     @POST("UserInfo/GetUserFavorites")
-    fun getUserFavorites(@Body bodyCollect: BodyCollect): Observable<ServiceProviderResponse>
-
-
-
-    /**
-     * 根据人气查询服务商列表
-     *
-     * @param bodyForServiceByCount
-     */
-    @POST("ServiceProvider/GetServiceProviderByViewingCount")
-    fun test(@Body bodyForServiceByCount: BodyForServiceByCount): Observable<ResponseBody>
+    fun getUserFavorites(@Body bodyCollect: BodyCollect): Observable<ArrayList<ServiceProvider>>
 
 
 }
