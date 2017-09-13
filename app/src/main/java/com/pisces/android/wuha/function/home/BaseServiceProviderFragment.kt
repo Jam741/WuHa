@@ -13,6 +13,7 @@ import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import kotlinx.android.synthetic.main.service_provider_frag.*
+import kotlinx.android.synthetic.main.service_provider_header.*
 
 /**
  * Created by Chris Li on 2017/9/12.
@@ -79,6 +80,18 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
                     loadData()
                 }
             })
+        }
+
+
+        radio_group.run {
+            check(R.id.rad_distance)
+            setOnCheckedChangeListener { group, checkedId ->
+                when (checkedId) {
+                    R.id.rad_distance -> ""
+                    R.id.rad_rq -> ""
+                    R.id.rad_price -> ""
+                }
+            }
         }
     }
 

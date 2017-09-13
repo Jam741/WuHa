@@ -43,5 +43,8 @@
     </style>
 
     <!--主页筛选按钮样式-->
-    <style name="home_filter_rad"></style>
+    <style name="home_filter_rad">
+        <item name="android:textColor">@drawable/text_change_color</item>
+
+    </style>
 </resources>

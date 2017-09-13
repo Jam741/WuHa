@@ -8,15 +8,29 @@ import android.view.View
 import android.view.ViewGroup
 import com.amap.api.location.AMapLocation
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
+import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.locationlibrary.GDLocationUtil
+import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.entity.BodyForServiceByCount
+import com.pisces.android.wuha.entity.BodyForServiceByDistance
+import com.pisces.android.wuha.entity.BodyForServiceByPrice
 
 import com.pisces.android.wuha.function.home.medical.MedicalFragment
 import com.pisces.android.wuha.function.home.service.ServiceFragment
 import com.pisces.android.wuha.function.search.SearchForActivity
+import com.pisces.android.wuha.net.HttpUtli
+import com.pisces.android.wuha.net.api.ApiService
 import kotlinx.android.synthetic.main.home_frag.*
+import okhttp3.ResponseBody
+import retrofit2.Retrofit
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
+import rx.Scheduler
+import rx.Subscriber
+import rx.android.schedulers.AndroidSchedulers
+import rx.schedulers.Schedulers
 
 /**
  * Created by Jam on 2017/8/24.
@@ -43,6 +57,30 @@ class HomeFragment : JBaseFragment() {
 
         initLocation()
 
+        var service = Retrofit.Builder()
+                .baseUrl(Config.host)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ApiService::class.java)
+
+        service.test(BodyForServiceByCount(1, 1, 1))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : Subscriber<ResponseBody>() {
+                    override fun onCompleted() {
+                        Log.i("lyx", "completed")
+                    }
+
+                    override fun onError(e: Throwable?) {
+                        Log.i("lyx", "onError")
+                    }
+
+                    override fun onNext(t: ResponseBody?) {
+                        Log.i("lyx", "onNext")
+                    }
+
+                })
 
     }
 
