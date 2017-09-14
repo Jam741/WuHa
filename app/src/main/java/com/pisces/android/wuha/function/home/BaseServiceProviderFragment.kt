@@ -97,6 +97,8 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
 
             }
         }
+
+        loadData()
     }
 
     fun loadData() {

@@ -9,7 +9,7 @@ import com.pisces.android.wuha.net.RetrofitUtli
 class Api {
 
     private object ApiServiceINSTANCE {
-        val INSTANCE =RetrofitUtli.instance.baseUrl(Config.host).create(ApiService::class.java)
+        val INSTANCE =RetrofitUtli.instance.retrofit(Config.host).create(ApiService::class.java)
     }
 
     companion object {

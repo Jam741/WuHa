@@ -8,7 +8,11 @@ import android.view.ViewGroup
 
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.entity.bean.ServiceProvider
+import com.pisces.android.wuha.function.home.BaseServiceProviderFragment
 import com.pisces.android.wuha.function.home.medical.MedicalAdapter
+import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
+import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
 import kotlinx.android.synthetic.main.f_service.*
 
 import java.util.ArrayList
@@ -19,28 +23,22 @@ import java.util.ArrayList
  * 服务Fragment
  */
 
-class ServiceFragment : JBaseFragment() {
+class ServiceFragment : BaseServiceProviderFragment() {
 
-    private val mData = ArrayList<String>()
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.f_service, container, false)
+    override fun serviceProviderType(): Int {
+        return 2
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initView()
-    }
+    override fun createAdapter(): CommonRecyclerAdapter<ServiceProvider> {
+        return object : CommonRecyclerAdapter<ServiceProvider>(this, null, R.layout.i_medical) {
+            override fun convert(holder: RecyclerViewHolder, t: ServiceProvider, position: Int) {
+                holder.run {
+                    setTextWith(R.id.i_medical_name, t.name)
 
-
-    private fun initView() {
-        for (i in 0..9) {
-            mData.add("")
+                }
+            }
         }
-        recycler_view.run {
-            layoutManager = LinearLayoutManager(context)
-            adapter = MedicalAdapter(activity, mData)
-        }
-
     }
+
 }
