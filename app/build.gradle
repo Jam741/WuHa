@@ -63,6 +63,7 @@ dependencies {
 
     /*定位*/
     compile project(':locationlibrary')
+    compile project(':ltaskpicture')
     compile name:'SMSSDK-3.0.0',ext:'aar'
 }
 repositories {

@@ -48,7 +48,6 @@ class ServiceProviderPresenter(val view: BaseServiceProviderContract.View, val c
                 , object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 Log.d("RESULT", "" + t)
-//                Logger.d(t)
                 if (t == null) return Unit
                 view.showEmpty(bodyForServiceByCount.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
                 view.onLoadCompleted(bodyForServiceByCount.CurrentPageIndex, ListUtil.isEmpty(t))

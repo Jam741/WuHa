@@ -5,11 +5,15 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.amap.api.location.AMapLocation
 import com.jcodecraeer.xrecyclerview.XRecyclerView
+import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseFragment
 import com.pisces.android.wuha.entity.BodyForServiceByCount
+import com.pisces.android.wuha.entity.BodyForServiceByDistance
+import com.pisces.android.wuha.entity.BodyForServiceByPrice
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import kotlinx.android.synthetic.main.service_provider_frag.*
@@ -29,7 +33,12 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
     val adapter by lazy { createAdapter() }
 
     val type by lazy { serviceProviderType() }
+//    val distance by lazy { serviceProviderDistance() }
 
+
+    var way: Int = 1
+
+//    abstract fun serviceProviderDistance(): AMapLocation//定位
 
     abstract fun serviceProviderType(): Int
 
@@ -87,12 +96,23 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
             check(R.id.rad_distance)
             setOnCheckedChangeListener { group, checkedId ->
                 when (checkedId) {
-                    R.id.rad_distance ->
+                    R.id.rad_distance -> {
+                        way = 1
+                        page = 1
                         loadData()
-                    R.id.rad_rq ->
+                    }
+                    R.id.rad_rq -> {
+                        page = 1
+                        way = 2
                         loadData()
-                    R.id.rad_price ->
+                    }
+
+                    R.id.rad_price -> {
+                        page = 1
+                        way = 3
                         loadData()
+                    }
+
                 }
 
             }
@@ -102,7 +122,11 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
     }
 
     fun loadData() {
-        presenter.loadDataForBodyByCount(BodyForServiceByCount(type, page, 1))
+        when (way) {
+            1 -> presenter.loadDataForBodyByDistance(BodyForServiceByDistance(type, Constant.getGpsX(), Constant.getGpsY(), page, page_size))
+            2 -> presenter.loadDataForBodyByCount(BodyForServiceByCount(type, page, page_size))
+            3 -> presenter.loadDataForBodyByPrice(BodyForServiceByPrice(type, page, page_size))
+        }
     }
 
 }
