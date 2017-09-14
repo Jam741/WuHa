@@ -30,5 +30,7 @@
     <dimen name="margin_size_40">40dp</dimen>
 
 
+    <dimen name="font_input">14sp</dimen>
+
 </resources>
 

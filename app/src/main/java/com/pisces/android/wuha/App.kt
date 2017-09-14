@@ -10,7 +10,6 @@ import com.pisces.android.locationlibrary.GDLocationUtil
 class App : JBaseApplication() {
     override fun onCreate() {
         super.onCreate()
-        MobSDK.init(this,Config.MOB_APP_KEY,Config.MOB_APP_SECRET)
         GDLocationUtil.init(this)
     }
 

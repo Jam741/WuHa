@@ -3,8 +3,10 @@ package com.pisces.android.wuha.net.api
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
+import com.pisces.android.wuha.entity.bean.LoginResponse
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.collect.BodyCollect
+import com.pisces.android.wuha.function.user.BodyForLogin
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable
@@ -60,4 +62,11 @@ interface ApiService {
     fun getUserFavorites(@Body bodyCollect: BodyCollect): Observable<ArrayList<ServiceProvider>>
 
 
+    /**
+     * 登陆
+     *
+     * @param bodyForLogin
+     */
+    @POST("/api/Account/AccountLogin")
+    fun login(@Body bodyForLogin: BodyForLogin): Observable<LoginResponse>
 }

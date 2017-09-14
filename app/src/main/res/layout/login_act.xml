@@ -8,27 +8,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/login_bg"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/login_bg" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="50dp"
         android:scaleType="centerInside"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -38,38 +36,59 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/input"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="23dp"
         android:layout_marginLeft="23dp"
         android:layout_marginRight="23dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="51dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:background="@drawable/input_border_selecter"
+        android:hint="请输入手机号码"
+        android:inputType="phone"
+        android:maxLength="11"
         app:layout_constraintLeft_toLeftOf="@+id/imageView"
         app:layout_constraintRight_toRightOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="124dp"
-        android:layout_height="wrap_content"
+        style="@style/input"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="19dp"
-        android:ems="10"
-        android:inputType="textPassword"
+        android:hint="请输入验证码"
+        android:inputType="numberSigned"
+        android:maxLength="4"
         app:layout_constraintLeft_toLeftOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="75dp"
-        android:layout_height="31dp"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="0dp"
-        android:text="Button"
+        android:background="@drawable/btn_bg_drak"
+        android:text="获取验证码"
+        android:textColor="@color/colorWhiteC1"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toRightOf="@+id/editText2"
         app:layout_constraintRight_toRightOf="@+id/editText"
         app:layout_constraintTop_toTopOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="31dp"
+        android:background="@drawable/btn_bg_drak"
+        android:text="登陆"
+        android:textColor="@color/colorWhiteC1"
+        app:layout_constraintLeft_toLeftOf="@+id/editText2"
+        app:layout_constraintRight_toRightOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 </android.support.constraint.ConstraintLayout>

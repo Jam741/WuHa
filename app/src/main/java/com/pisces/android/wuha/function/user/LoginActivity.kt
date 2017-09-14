@@ -1,79 +1,119 @@
 package com.pisces.android.wuha.function.user
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import com.pisces.android.wuha.base.LBaseActivity
-import cn.smssdk.SMSSDK.getNewFriendsCount
-import cn.smssdk.SMSSDK.registerEventHandler
-import com.mob.tools.utils.UIHandler.sendMessage
-import android.widget.Toast
-import com.mob.MobSDK
-import cn.smssdk.SMSSDK.setAskPermisionOnReadContact
-
+import android.support.v4.app.ActivityCompat
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
-import android.os.Handler
-import android.os.Handler.Callback
-import android.os.Message
+import com.mob.MobSDK
+import com.pisces.android.wuha.Config
+import com.pisces.android.wuha.R
+import com.pisces.android.wuha.base.LBaseActivity
+import kotlinx.android.synthetic.main.login_act.*
 
 
 /**
  * Created by Jam on 2017/9/13.
  */
-class LoginActivity:LBaseActivity() {
+class LoginActivity : LBaseActivity(), LoginContract.View {
 
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-    }
+    val presenter by lazy { LoginPresenter(this, this) }
 
-    private fun registerSDK() {
-        // 在尝试读取通信录时以弹窗提示用户（可选功能）
-        SMSSDK.setAskPermisionOnReadContact(true)
-
-        val handler = Handler(object :Callback{
-            override fun handleMessage(msg: Message?): Boolean {
-//                if (pd != null && pd.isShowing()) {
-//                    pd.dismiss()
-//                }
-//
-//                val event = msg.arg1
-//                val result = msg.arg2
-//                val data = msg.obj
-//                if (event == SMSSDK.EVENT_SUBMIT_USER_INFO) {
-//                    // 短信注册成功后，返回MainActivity,然后提示新好友
-//                    if (result == SMSSDK.RESULT_COMPLETE) {
-//                        Toast.makeText(this, R.string.smssdk_user_info_submited, Toast.LENGTH_SHORT).show()
-//                    } else {
-//                        (data as Throwable).printStackTrace()
-//                    }
-//                } else if (event == SMSSDK.EVENT_GET_NEW_FRIENDS_COUNT) {
-//                    if (result == SMSSDK.RESULT_COMPLETE) {
-//                        refreshViewCount(data)
-//                        gettingFriends = false
-//                    } else {
-//                        (data as Throwable).printStackTrace()
-//                    }
-//                }
-                return false            }
-        })
-        val eventHandler = object : EventHandler() {
-//            fun afterEvent(event: Int, result: Int, data: Any) {
-//                val msg = Message()
-//                msg.arg1 = event
-//                msg.arg2 = result
-//                msg.obj = data
-//                handler.sendMessage(msg)
-//            }
+    companion object {
+        fun start(context: Context) {
+            val starter = Intent(context, LoginActivity::class.java)
+            ActivityCompat.startActivity(context, starter, Bundle.EMPTY)
         }
-        // 注册回调监听接口
-        SMSSDK.registerEventHandler(eventHandler)
-//        ready = true
-
-        // 获取新好友个数
-        showDialog()
-        SMSSDK.getNewFriendsCount()
-//        gettingFriends = true
     }
 
+
+    override fun setTextWithSendButton(text: String) {
+        button.text = text
+    }
+
+    override fun resetSendButton() {
+        button.text = "重新发送"
+    }
+
+    override fun lockSendButton(lock: Boolean) {
+        button.isEnabled = !lock
+    }
+
+    override fun loginSuccess() {
+        close()
+    }
+
+    override fun showMsg(msg: String) {
+        toastWith(msg)
+    }
+
+    var eh: EventHandler = object : EventHandler() {
+
+        override fun afterEvent(event: Int, result: Int, data: Any?) {
+            if (result == SMSSDK.RESULT_COMPLETE) {
+                //回调完成
+                when (event) {
+                    SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
+                        //提交验证码成功
+                        presenter.login(phoneValue())
+                    }
+                    SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
+                        //获取验证码成功
+                        toastWith("短信验证码发送成功")
+                    }
+                    SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
+                        //返回支持发送验证码的国家列表
+                    }
+                }
+            } else {
+                (data as Throwable).printStackTrace()
+            }
+        }
+    }
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.login_act)
+        MobSDK.init(this, Config.MOB_APP_KEY, Config.MOB_APP_SECRET)
+        SMSSDK.registerEventHandler(eh)
+
+        //发送验证码
+        button.setOnClickListener {
+            SMSSDK.getVerificationCode("86", "17602881290")
+        }
+
+        btnLogin.setOnClickListener {
+            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
+                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
+            }
+        }
+    }
+
+
+    override fun onDestroy() {
+        SMSSDK.unregisterEventHandler(eh)
+        super.onDestroy()
+    }
+
+
+    fun phoneValue(): String {
+        return editText.text.toString()
+    }
+
+    fun smsCodeValue(): String {
+        return editText2.text.toString()
+    }
+
+    fun verifyPhone(phone: String): Boolean {
+        TODO("error")
+        return true
+    }
+
+    fun verifySmsCode(smsCode: String): Boolean {
+        TODO("error")
+        return true
+    }
 }

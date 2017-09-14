@@ -45,6 +45,15 @@
     <!--主页筛选按钮样式-->
     <style name="home_filter_rad">
         <item name="android:textColor">@drawable/text_change_color</item>
+    </style>
 
+
+    <style name="input">
+        <item name="android:background">@drawable/input_border_selecter</item>
+        <item name="android:textSize">@dimen/font_input</item>
+        <item name="android:textColor">@color/font_input</item>
+        <item name="android:textColorHint">@color/font_input_hint</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
     </style>
 </resources>

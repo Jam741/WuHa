@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 
 
 android {
@@ -64,6 +65,10 @@ dependencies {
     /*定位*/
     compile project(':locationlibrary')
     compile name:'SMSSDK-3.0.0',ext:'aar'
+
+    /*数据库*/
+    compile 'org.greenrobot:greendao:3.2.2' // add library
+
 }
 repositories {
     mavenCentral()
