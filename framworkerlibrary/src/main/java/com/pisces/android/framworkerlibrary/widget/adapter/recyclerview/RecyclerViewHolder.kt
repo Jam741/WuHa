@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable
 import android.os.Build
 import android.support.annotation.IdRes
 import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.RecyclerView
 import android.text.TextUtils
 import android.text.util.Linkify
@@ -17,6 +16,7 @@ import android.util.SparseArray
 import android.view.*
 import android.view.animation.AlphaAnimation
 import android.widget.*
+import com.pisces.adnroid.ltaskpicture.LImg
 import com.yingwumeijia.commonlibrary.utils.ScreenUtils
 
 /**
@@ -97,14 +97,11 @@ class RecyclerViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
     }
 
 
-
     fun setImageUrl(viewId: Int, url: String): RecyclerViewHolder {
         val view = getViewWith(viewId) as ImageView
-        TODO("set url to imageview")
+        LImg.with(mContext).load(url).into(view)
         return this
     }
-
-
 
 
     fun setBackgroundColor(viewId: Int, color: Int): RecyclerViewHolder {

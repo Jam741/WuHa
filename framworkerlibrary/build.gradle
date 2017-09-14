@@ -57,6 +57,7 @@ dependencies {
 
 
     compile project(':xrecyclerview')
+    compile project(':ltaskpicture')
 
 }
 repositories {

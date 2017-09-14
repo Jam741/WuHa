@@ -3,7 +3,9 @@ package com.pisces.android.wuha.net.api
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
+import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.LoginResponse
+import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.collect.BodyCollect
 import com.pisces.android.wuha.function.user.BodyForLogin
@@ -69,4 +71,10 @@ interface ApiService {
      */
     @POST("/api/Account/AccountLogin")
     fun login(@Body bodyForLogin: BodyForLogin): Observable<LoginResponse>
+
+
+    @POST("ServiceProvider/GetServiceProviderDetail")
+    fun getServiceProviderDetail(@Body bodyForServiceByDistance: BodyForServiceDetailById):Observable<ServiceDetailProvider>
+
+
 }

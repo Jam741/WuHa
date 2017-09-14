@@ -43,11 +43,8 @@ class CollectActivity : LBaseActivity() {
     private fun initView() {
 //        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1")), object : ProgressSubscriber<ServiceProvider>(this) {
 //            override fun onSuccess(t: ServiceProvider?) {
-//                if (t != null) {
-//                }
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 //            }
-//
-//
 //        })
         mData = arrayListOf()
         for (i in 0..9) {

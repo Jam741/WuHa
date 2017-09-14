@@ -18,7 +18,8 @@ import com.yingwumeijia.commonlibrary.utils.ListUtil
  */
 class ServiceProviderPresenter(val view: BaseServiceProviderContract.View, val context: Context) : BaseServiceProviderContract.Presenter {
     override fun loadDataForBodyByDistance(bodyForServiceByDistance: BodyForServiceByDistance) {
-        HttpUtli.toSubscribe(Api.service.getServiceFromLocation(bodyForServiceByDistance), object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
+        HttpUtli.toSubscribe(Api.service.getServiceFromLocation(bodyForServiceByDistance)
+                , object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 if (t == null) return Unit
                 view.showEmpty(bodyForServiceByDistance.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
@@ -48,7 +49,6 @@ class ServiceProviderPresenter(val view: BaseServiceProviderContract.View, val c
                 , object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 Log.d("RESULT", "" + t)
-//                Logger.d(t)
                 if (t == null) return Unit
                 view.showEmpty(bodyForServiceByCount.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
                 view.onLoadCompleted(bodyForServiceByCount.CurrentPageIndex, ListUtil.isEmpty(t))

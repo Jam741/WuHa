@@ -4,7 +4,7 @@ package com.pisces.android.wuha.entity
  * Created by Chris Li on 2017/9/6.
  * 根据价格返回相应的商铺信息实体类
  */
-data class BodyForServiceByPrice(var ServiceProviderType: Int, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
+data class BodyForServiceByPrice(var ServiceProviderType: Int, var CurrentLatitude: Float, var CurrentLongitude: Float, var CurrentPageIndex: Int, var NumberOfResultsPerPage: Int)
 
 
 //{

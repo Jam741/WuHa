@@ -8,6 +8,7 @@ package com.pisces.android.framworkerlibrary.net;
 
 
 public class ApiModel<T> {
+
     private T datas;
     private int errorCode;
     private String message;

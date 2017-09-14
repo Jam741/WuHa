@@ -33,6 +33,7 @@ public class LocationService extends APSService implements AMapLocationListener 
     private AlarmManager alarm = null;
     private static final String LOCATION = "LOCATION";
     private String locationString = "";
+    AMapLocation mLocation;
 
     @Nullable
     @Override
@@ -150,7 +151,7 @@ public class LocationService extends APSService implements AMapLocationListener 
          */
         locationOption.setGpsFirst(true);
         String strInterval;
-        strInterval = "" + 1000 * 2;
+        strInterval = "" + 1000 * 60*3;
 
         if (!TextUtils.isEmpty(strInterval)) {
             /*设置发送定位请求的时间间隔，最小为1000，如果小于1000，按1000算*/
@@ -189,6 +190,9 @@ public class LocationService extends APSService implements AMapLocationListener 
                     boolean b = GetLocationStr(loc);
                     if (b) {
                         Log.i(TAG, "定位成功\n" + locationString);
+                        Constant.setLocation(mLocation.getAddress());
+                        Constant.setGpsX(mLocation.getLongitude());
+                        Constant.setGpsY(mLocation.getLatitude());
                     } else {
                         Log.i(TAG, "定位失败\n" + locationString);
 
@@ -220,6 +224,7 @@ public class LocationService extends APSService implements AMapLocationListener 
             sb.append("定位时间: " + Utils.formatUTC(location.getTime(), "yyyy-MM-dd HH:mm:ss") + "\n");
             //定位之后的回调时间
             sb.append("回调时间: " + Utils.formatUTC(System.currentTimeMillis(), "yyyy-MM-dd HH:mm:ss") + "\n");
+            mLocation = location;
             locationString = sb.toString();
             return true;
         } else {

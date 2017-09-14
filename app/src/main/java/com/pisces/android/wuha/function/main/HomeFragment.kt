@@ -1,5 +1,6 @@
 package com.pisces.android.wuha.function.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -12,6 +13,7 @@ import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.locationlibrary.GDLocationUtil
+import com.pisces.android.locationlibrary.LocationService
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.entity.BodyForServiceByCount
@@ -24,6 +26,7 @@ import com.pisces.android.wuha.function.search.SearchForActivity
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.ApiService
 import kotlinx.android.synthetic.main.home_frag.*
+import kotlinx.android.synthetic.main.placeholder_frag.*
 import okhttp3.ResponseBody
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
@@ -47,7 +50,7 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment> , tabs) }
+        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment>, tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
         }
@@ -56,31 +59,10 @@ class HomeFragment : JBaseFragment() {
         }
 
         initLocation()
-
-//        var service = Retrofit.Builder()
-//                .baseUrl(Config.host)
-//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build()
-//                .create(ApiService::class.java)
-//
-////        service.test(BodyForServiceByCount(1, 1, 1))
-////                .subscribeOn(Schedulers.io())
-////                .observeOn(AndroidSchedulers.mainThread())
-////                .subscribe(object : Subscriber<ResponseBody>() {
-////                    override fun onCompleted() {
-////                        Log.i("lyx", "completed")
-////                    }
-////
-////                    override fun onError(e: Throwable?) {
-////                        Log.i("lyx", "onError")
-////                    }
-////
-////                    override fun onNext(t: ResponseBody?) {
-////                        Log.i("lyx", "onNext")
-////                    }
-////
-////                })
+        tx_location.setOnClickListener {
+            initLocation()
+        }
+        activity.startService(Intent(activity, LocationService::class.java))
 
     }
 
