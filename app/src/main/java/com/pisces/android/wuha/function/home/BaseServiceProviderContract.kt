@@ -5,7 +5,7 @@ import com.pisces.android.framworkerlibrary.core.JBaseView
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
-import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
+import com.pisces.android.wuha.entity.bean.ServiceProvider
 
 /**
  * Created by Chris Li on 2017/9/12.
@@ -14,7 +14,7 @@ interface BaseServiceProviderContract {
 
     interface View : JBaseView {
 
-        fun onResponse(data: ArrayList<ServiceProviderResponse.ServiceProvider>)
+        fun onResponse(data: ArrayList<ServiceProvider>)
 
         fun onLoadCompleted(page: Int, empty: Boolean)
 

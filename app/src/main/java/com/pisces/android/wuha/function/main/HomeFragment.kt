@@ -64,23 +64,23 @@ class HomeFragment : JBaseFragment() {
                 .build()
                 .create(ApiService::class.java)
 
-        service.test(BodyForServiceByCount(1, 1, 1))
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Subscriber<ResponseBody>() {
-                    override fun onCompleted() {
-                        Log.i("lyx", "completed")
-                    }
-
-                    override fun onError(e: Throwable?) {
-                        Log.i("lyx", "onError")
-                    }
-
-                    override fun onNext(t: ResponseBody?) {
-                        Log.i("lyx", "onNext")
-                    }
-
-                })
+//        service.test(BodyForServiceByCount(1, 1, 1))
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(object : Subscriber<ResponseBody>() {
+//                    override fun onCompleted() {
+//                        Log.i("lyx", "completed")
+//                    }
+//
+//                    override fun onError(e: Throwable?) {
+//                        Log.i("lyx", "onError")
+//                    }
+//
+//                    override fun onNext(t: ResponseBody?) {
+//                        Log.i("lyx", "onNext")
+//                    }
+//
+//                })
 
     }
 

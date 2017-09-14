@@ -1,8 +1,6 @@
 package com.pisces.android.framworkerlibrary.net;
 
 
-import com.pisces.android.framworkerlibrary.utlis.T;
-
 import java.util.ArrayList;
 
 /**
@@ -10,13 +8,14 @@ import java.util.ArrayList;
  * Describe:
  */
 
-public class ApiModel {
-//    public ArrayList<T> datas;
-//    public int errorCode;
-//    public String message;
-//    public String debugMessage;
-//    public int currentPageIndex;
-//    public int numberOfTitlesFound;
-//    public int numberOfResultsPerPage;
-//    public int totalNumberOfPages;
+
+public class ApiModel<T> {
+    public ArrayList<T> datas;
+    public int errorCode;
+    public String message;
+    public String debugMessage;
+
+//    public int errorCode = 0;
+//    public String message = "SUCCESS";
+//    public String debugMessage = "NONE";
 }

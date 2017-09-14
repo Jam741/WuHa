@@ -10,7 +10,7 @@ import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseFragment
 import com.pisces.android.wuha.entity.BodyForServiceByCount
-import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
+import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import kotlinx.android.synthetic.main.service_provider_frag.*
 import kotlinx.android.synthetic.main.service_provider_header.*
@@ -33,9 +33,9 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
 
     abstract fun serviceProviderType(): Int
 
-    abstract fun createAdapter(): CommonRecyclerAdapter<ServiceProviderResponse.ServiceProvider>
+    abstract fun createAdapter(): CommonRecyclerAdapter<ServiceProvider>
 
-    override fun onResponse(data: ArrayList<ServiceProviderResponse.ServiceProvider>) {
+    override fun onResponse(data: ArrayList<ServiceProvider>) {
         if (page == Config.page) {
             adapter.refresh(data)
         } else {
@@ -97,11 +97,10 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
 
             }
         }
-        loadData()
     }
 
     fun loadData() {
-        presenter.loadDataForBodyByCount(BodyForServiceByCount(type, page, page_size))
+        presenter.loadDataForBodyByCount(BodyForServiceByCount(type, page, 1))
     }
 
 }
