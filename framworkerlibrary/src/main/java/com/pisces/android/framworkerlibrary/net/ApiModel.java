@@ -1,7 +1,6 @@
 package com.pisces.android.framworkerlibrary.net;
 
 
-import java.util.ArrayList;
 
 /**
  * Created by Jam on 2017/2/17 下午5:31.
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 
 
 public class ApiModel<T> {
-    public ArrayList<T> datas;
+    public T datas;
     public int errorCode;
     public String message;
     public String debugMessage;
