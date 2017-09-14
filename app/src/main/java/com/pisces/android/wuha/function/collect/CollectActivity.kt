@@ -7,8 +7,8 @@ import android.support.v7.widget.LinearLayoutManager
 
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
-import com.pisces.android.wuha.entity.BodyForServiceByCount
-import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
+import com.pisces.android.wuha.entity.bean.ServiceProvider
+
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
@@ -41,15 +41,14 @@ class CollectActivity : LBaseActivity() {
     }
 
     private fun initView() {
-        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1")), object : ProgressSubscriber<ServiceProviderResponse>(this) {
-            override fun onSuccess(t: ServiceProviderResponse?) {
-                if (t != null) {
-                    t.DebugMessage
-                }
-            }
-
-
-        })
+//        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1")), object : ProgressSubscriber<ServiceProvider>(this) {
+//            override fun onSuccess(t: ServiceProvider?) {
+//                if (t != null) {
+//                }
+//            }
+//
+//
+//        })
         mData = arrayListOf()
         for (i in 0..9) {
             mData!!.add("")

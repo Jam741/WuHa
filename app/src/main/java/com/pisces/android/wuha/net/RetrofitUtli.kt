@@ -12,7 +12,7 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
  */
 class RetrofitUtli private constructor() {
 
-    fun baseUrl(baseUrl: String): Retrofit {
+    fun retrofit(baseUrl: String): Retrofit {
         return Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

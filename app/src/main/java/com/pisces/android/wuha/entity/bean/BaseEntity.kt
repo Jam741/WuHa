@@ -7,4 +7,4 @@ import com.pisces.android.framworkerlibrary.net.ApiModel
  *
  * 通过接口请求返回数据的基类
  */
- open class BaseEntity : ApiModel()
+ open class BaseEntity<T> : ApiModel<T>()

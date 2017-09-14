@@ -1,27 +1,10 @@
 package com.pisces.android.wuha.function.home.medical
 
-import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import com.amap.api.location.AMapLocation
-import com.pisces.android.framworkerlibrary.core.JBaseFragment
-import com.pisces.android.framworkerlibrary.core.JBaseView
-import com.pisces.android.locationlibrary.GDLocationUtil
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.entity.BodyForServiceByCount
-import com.pisces.android.wuha.entity.BodyForServiceByDistance
-import com.pisces.android.wuha.entity.bean.ServiceProviderResponse
-import com.pisces.android.wuha.function.home.BaseServiceProviderContract
+import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.home.BaseServiceProviderFragment
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
-import kotlinx.android.synthetic.main.f_medical.*
 
 
 /**
@@ -37,9 +20,9 @@ override fun serviceProviderType(): Int {
     return 1
 }
 
-override fun createAdapter(): CommonRecyclerAdapter<ServiceProviderResponse.ServiceProvider> {
-    return object :CommonRecyclerAdapter<ServiceProviderResponse.ServiceProvider>(this,null,R.layout.i_medical){
-        override fun convert(holder: RecyclerViewHolder, t: ServiceProviderResponse.ServiceProvider, position: Int) {
+override fun createAdapter(): CommonRecyclerAdapter<ServiceProvider> {
+    return object :CommonRecyclerAdapter<ServiceProvider>(this,null,R.layout.i_medical){
+        override fun convert(holder: RecyclerViewHolder, t: ServiceProvider, position: Int) {
                 holder.run {
                     setTextWith(R.id.i_medical_name,t.name)
 
