@@ -1,6 +1,8 @@
 package com.pisces.android.wuha.function.home
 
 import android.content.Context
+import android.util.Log
+import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
@@ -45,6 +47,8 @@ class ServiceProviderPresenter(val view: BaseServiceProviderContract.View, val c
         HttpUtli.toSubscribe(Api.service.getServiceFromCount(bodyForServiceByCount)
                 , object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
+                Log.d("RESULT", "" + t)
+//                Logger.d(t)
                 if (t == null) return Unit
                 view.showEmpty(bodyForServiceByCount.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
                 view.onLoadCompleted(bodyForServiceByCount.CurrentPageIndex, ListUtil.isEmpty(t))

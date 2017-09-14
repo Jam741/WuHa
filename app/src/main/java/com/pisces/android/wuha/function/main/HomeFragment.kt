@@ -47,7 +47,7 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments, tabs) }
+        vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment> , tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
         }
@@ -57,30 +57,30 @@ class HomeFragment : JBaseFragment() {
 
         initLocation()
 
-        var service = Retrofit.Builder()
-                .baseUrl(Config.host)
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(ApiService::class.java)
-
-//        service.test(BodyForServiceByCount(1, 1, 1))
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(object : Subscriber<ResponseBody>() {
-//                    override fun onCompleted() {
-//                        Log.i("lyx", "completed")
-//                    }
+//        var service = Retrofit.Builder()
+//                .baseUrl(Config.host)
+//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build()
+//                .create(ApiService::class.java)
 //
-//                    override fun onError(e: Throwable?) {
-//                        Log.i("lyx", "onError")
-//                    }
-//
-//                    override fun onNext(t: ResponseBody?) {
-//                        Log.i("lyx", "onNext")
-//                    }
-//
-//                })
+////        service.test(BodyForServiceByCount(1, 1, 1))
+////                .subscribeOn(Schedulers.io())
+////                .observeOn(AndroidSchedulers.mainThread())
+////                .subscribe(object : Subscriber<ResponseBody>() {
+////                    override fun onCompleted() {
+////                        Log.i("lyx", "completed")
+////                    }
+////
+////                    override fun onError(e: Throwable?) {
+////                        Log.i("lyx", "onError")
+////                    }
+////
+////                    override fun onNext(t: ResponseBody?) {
+////                        Log.i("lyx", "onNext")
+////                    }
+////
+////                })
 
     }
 
