@@ -3,6 +3,8 @@ package com.pisces.android.wuha.net.api
 import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
+import com.pisces.android.wuha.entity.BodyForServiceDetailById
+import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.collect.BodyCollect
 import retrofit2.http.Body
@@ -58,6 +60,10 @@ interface ApiService {
      */
     @POST("UserInfo/GetUserFavorites")
     fun getUserFavorites(@Body bodyCollect: BodyCollect): Observable<ArrayList<ServiceProvider>>
+
+
+    @POST("ServiceProvider/GetServiceProviderDetail")
+    fun getServiceProviderDetail(@Body bodyForServiceByDistance: BodyForServiceDetailById):Observable<ServiceDetailProvider>
 
 
 }

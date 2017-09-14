@@ -37,13 +37,16 @@
                     android:id="@+id/site"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/margin_left_right"
-                    android:layout_marginTop="@dimen/margin_size_10"
+                    android:layout_marginLeft="12dp"
                     android:drawableLeft="@mipmap/home_icon_address2"
                     android:drawablePadding="@dimen/margin_size_10"
                     android:text="高新区创业路300号"
                     android:textColor="@color/colorGrayC1"
-                    android:textSize="@dimen/margin_size_14" />
+                    android:textSize="@dimen/margin_size_14"
+                    android:layout_alignTop="@+id/view"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="12dp" />
 
                 <TextView
                     android:id="@+id/person"

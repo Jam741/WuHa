@@ -30,12 +30,17 @@ class MedicalFragment : BaseServiceProviderFragment() {
                     setTextWith(R.id.i_medical_site, t.serviceProviderAddress.mainAddressLine)
                     setTextWith(R.id.i_medical_price, "￥" + t.startingPrice)
                     setTextWith(R.id.i_medical_person, t.viewingCount.toString() + "人去过")
-                    setTextWith(R.id.i_medical_distance, t.distance.toString() + "m")
+                    var dis: Int = t.distance.toInt()
+                    if (dis > 1000) {
+                        setTextWith(R.id.i_medical_distance, (dis / 1000).toString() + "km")
+                    } else {
+                        setTextWith(R.id.i_medical_distance, dis.toString() + "m")
+                    }
                     setImageUrl(R.id.i_medical_img, t.serviceProviderCertificationInfo.legalPersonInfoImagePath)
                 }
                 holder.setOnItemClickListener(object : RecyclerViewHolder.OnItemCliceListener {
                     override fun itemClick(itemView: View, position: Int) {
-                        ShopDetailsActivity.start(getContext())
+                        ShopDetailsActivity.start(getContext(), t.id)
                     }
                 })
             }

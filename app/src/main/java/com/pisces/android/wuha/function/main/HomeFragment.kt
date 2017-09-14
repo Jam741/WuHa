@@ -1,5 +1,6 @@
 package com.pisces.android.wuha.function.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -12,6 +13,7 @@ import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.locationlibrary.GDLocationUtil
+import com.pisces.android.locationlibrary.LocationService
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.entity.BodyForServiceByCount
@@ -60,6 +62,7 @@ class HomeFragment : JBaseFragment() {
         tx_location.setOnClickListener {
             initLocation()
         }
+        activity.startService(Intent(activity, LocationService::class.java))
 
     }
 

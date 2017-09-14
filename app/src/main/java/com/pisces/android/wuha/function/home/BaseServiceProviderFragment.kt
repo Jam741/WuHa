@@ -124,8 +124,8 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
     fun loadData() {
         when (way) {
             1 -> presenter.loadDataForBodyByDistance(BodyForServiceByDistance(type, Constant.getGpsX(), Constant.getGpsY(), page, page_size))
-            2 -> presenter.loadDataForBodyByCount(BodyForServiceByCount(type, page, page_size))
-            3 -> presenter.loadDataForBodyByPrice(BodyForServiceByPrice(type, page, page_size))
+            2 -> presenter.loadDataForBodyByCount(BodyForServiceByCount(type, Constant.getGpsX(), Constant.getGpsY(), page, page_size))
+            3 -> presenter.loadDataForBodyByPrice(BodyForServiceByPrice(type, Constant.getGpsX(), Constant.getGpsY(), page, page_size))
         }
     }
 

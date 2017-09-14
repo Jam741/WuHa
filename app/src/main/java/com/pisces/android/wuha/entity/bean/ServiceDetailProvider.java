@@ -3,9 +3,11 @@ package com.pisces.android.wuha.entity.bean;
 import java.util.List;
 
 /**
- * 服务提供者
+ * Created by Chris Li on 2017/9/14.
  */
-public class ServiceProvider {
+
+public class ServiceDetailProvider {
+
 
     /**
      * Id : 5361304320953356438
@@ -19,7 +21,7 @@ public class ServiceProvider {
      * ViewingCount : 3
      * CreateTime : 2017-08-26T00:00:00
      * ServiceProviderType : 1
-     * Distance : 1598.905826674661
+     * Distance : 134411.8749150157
      */
 
     private String Id;
@@ -442,6 +444,5 @@ public class ServiceProvider {
             }
         }
     }
+
 }
-
-
