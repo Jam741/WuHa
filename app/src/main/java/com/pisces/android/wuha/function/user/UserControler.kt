@@ -1,6 +1,8 @@
 package com.pisces.android.wuha.function.user
 
 import android.content.Context
+import com.pisces.android.framworkerlibrary.utlis.SPUtils
+import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.entity.bean.LoginResponse
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
@@ -13,6 +15,24 @@ import rx.functions.Action1
  * 用户级别权限操作  控制器 ：数据对外，逻辑不对外
  */
 object UserControler {
+
+    /**
+     * 设置用户登录状态
+     *
+     * @param loginStatus 登录状态
+     */
+    fun setLoginStatus(context: Context, loginStatus: Boolean) {
+        SPUtils.put(context, Constant.KEY_LOGIN_STATUS, loginStatus)
+    }
+
+    /**
+     * 返回用户登录状态
+     *
+     * @return 是否登录
+     */
+    fun isLogined(context: Context): Boolean {
+        return SPUtils.get(context, Constant.KEY_LOGIN_STATUS, false) as Boolean
+    }
 
 
     /**

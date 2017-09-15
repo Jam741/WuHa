@@ -6,5 +6,4 @@ import android.content.Context
 /**
  * Created by Jam on 2017/9/2.
  */
-class WuHaProgressDialog(context:Context) :ProgressDialog(context) {
-}
+class WuHaProgressDialog(context:Context) :ProgressDialog(context)

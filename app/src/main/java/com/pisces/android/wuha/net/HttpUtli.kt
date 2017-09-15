@@ -3,6 +3,7 @@ package com.pisces.android.wuha.net
 import android.content.Context
 import android.widget.Toast
 import com.pisces.android.framworkerlibrary.net.exception.ApiException
+import com.pisces.android.wuha.BuildConfig
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import rx.Observable
 import rx.Subscriber
@@ -38,10 +39,14 @@ object HttpUtli {
      * 网络请求异常同意处理
      */
     fun disposeHttpException(context: Context, e: Throwable?) {
-
+        e!!.printStackTrace()
         val message: String?
         if (e is ApiException) {
-            message = e.error_message
+            if (BuildConfig.DEBUG) {
+                message = e.debug_message
+            } else {
+                message = e.error_message
+            }
         } else if (e is ConnectException) {
             message = "网络连接异常，请重试"
         } else if (e is SocketTimeoutException) {
@@ -49,7 +54,6 @@ object HttpUtli {
         } else {
             message = "网络异常"
         }
-        e!!.printStackTrace()
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 

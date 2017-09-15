@@ -32,9 +32,10 @@ abstract class ProgressSubscriber<T>(val context: Context) : Subscriber<T>() {
     }
 
     override fun onError(e: Throwable?) {
+        e!!.printStackTrace()
+        progress.dismiss()
         if (!onFail(e))
             HttpUtli.disposeHttpException(context, e)
-        progress.dismiss()
     }
 
 }

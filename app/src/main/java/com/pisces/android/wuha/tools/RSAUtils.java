@@ -3,6 +3,9 @@ package com.pisces.android.wuha.tools;
 import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.KeyFactory;
@@ -16,6 +19,9 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
+
 /**
  * Created by Jam on 2016/11/11 上午10:46.
  * Describe:
@@ -23,152 +29,82 @@ import javax.crypto.NoSuchPaddingException;
 
 public class RSAUtils {
 
-    public static final String PUBLIC_KEY_VL = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCBG3UFPAxh+a0NLv6Plvjo5YPDdnlbED8dI4GP21DdFKvXVFcPb0lSRrht5Xrg7ck4PJ/fovfSi7k8MYqPY52g9tnPzkAthVOs99Tw6DVe22vV2hcs7dXvtk+TxKy4IqMjZA77hiH8wMYcJur+o4R770mrVP4fP88x53EQ4PaayQIDAQAB";
+    /** 指定加密算法为RSA */
+    private static final String ALGORITHM = "RSA";
+    /** 指定公钥存放文件 */
+    private static String PUBLIC_KEY_FILE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZh0gBaAkPGB8FmQnT7xEl4+Uta8vYN7qQHywa1vrdDBoSHsegnDt15hq1gTdrEq7XS3yDtZQbgJM1QyeT2/y1vpunVSZUzApJsfc+dLmwFBuZbGjW8UqfDLuz0Msar5GAtSbh2q4pxhXoL17N9TiwtqTlTjwBmjfhncGnsTOORwIDAQAB";
+    /** 指定私钥存放文件 */
+    private static String PRIVATE_KEY_FILE = "PrivateKey";
+
+    public static void main(String[] args) throws Exception {
+
+        String source = "你好nihao";// 要加密的字符串
+        System.out.println("准备用公钥加密的字符串为：" + source);
+
+        String cryptograph = encrypt(source);// 生成的密文
+        System.out.print("用公钥加密后的结果为:" + cryptograph);
+        System.out.println();
+
+        String target = decrypt(cryptograph);// 解密密文
+        System.out.println("用私钥解密后的字符串为：" + target);
+        System.out.println();
+    }
 
     /**
-     * 加密算法RSA
-     */
-    public static final String KEY_ALGORITHM = "RSA";
-
-    /**
-     * 签名算法
-     */
-    public static final String SIGNATURE_ALGORITHM = "MD5withRSA";
-
-    /**
-     * 获取公钥的key
-     */
-    private static final String PUBLIC_KEY = "RSAPublicKey";
-
-    /**
-     * 获取私钥的key
-     */
-    private static final String PRIVATE_KEY = "RSAPrivateKey";
-
-    /**
-     * RSA最大加密明文大小
-     */
-    private static final int MAX_ENCRYPT_BLOCK = 117;
-
-    /**
-     * RSA最大解密密文大小
-     */
-    private static final int MAX_DECRYPT_BLOCK = 128;
-
-    /**
-     * <p>
-     * 公钥加密
-     * </p>
-     *
-     * @param data      源数据
-     * @param publicKey 公钥(BASE64编码)
+     * 加密方法
+     * @param source 源数据
      * @return
      * @throws Exception
      */
-    public static byte[] encryptByPublicKey(byte[] data, String publicKey)
-            throws Exception {
-        byte[] keyBytes = Base64Utils.decryptBASE64(publicKey);
-        X509EncodedKeySpec x509KeySpec = new X509EncodedKeySpec(keyBytes);
-        KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-        Key publicK = keyFactory.generatePublic(x509KeySpec);
-        // 对数据加密
-        Log.d("jam","=============="+keyFactory.getAlgorithm());
-        Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-        cipher.init(Cipher.ENCRYPT_MODE, publicK);
-        int inputLen = data.length;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        int offSet = 0;
-        byte[] cache;
-        int i = 0;
-        // 对数据分段加密
-        while (inputLen - offSet > 0) {
-            if (inputLen - offSet > MAX_ENCRYPT_BLOCK) {
-                cache = cipher.doFinal(data, offSet, MAX_ENCRYPT_BLOCK);
-            } else {
-                cache = cipher.doFinal(data, offSet, inputLen - offSet);
-            }
-            out.write(cache, 0, cache.length);
-            i++;
-            offSet = i * MAX_ENCRYPT_BLOCK;
-        }
-        byte[] encryptedData = out.toByteArray();
-        out.close();
-        return encryptedData;
+    public static String encrypt(String source) throws Exception {
+
+        Key publicKey = getKey(PUBLIC_KEY_FILE);
+
+        /** 得到Cipher对象来实现对源数据的RSA加密 */
+        Cipher cipher = Cipher.getInstance(ALGORITHM);
+        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+        byte[] b = source.getBytes();
+        /** 执行加密操作 */
+        byte[] b1 = cipher.doFinal(b);
+        BASE64Encoder encoder = new BASE64Encoder();
+        return encoder.encode(b1);
     }
-
-
-    public static String encryptByPublicKey(String s) {
-        try {
-            byte[] data = encryptByPublicKey(s.getBytes(), PUBLIC_KEY_VL);
-            String str = Base64Utils.encryptBASE64(data);
-            System.out.println(str);
-            str.replaceAll("\\n", "");
-            return str;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-
-    }
-
-
 
     /**
-     * 从字符串中加载公钥
-     *
-     * @param publicKeyStr 公钥数据字符串
-     * @throws Exception 加载公钥时产生的异常
-     */
-    public static RSAPublicKey loadPublicKeyByStr(String publicKeyStr)
-            throws Exception {
-        try {
-            byte[] buffer = Base64Utils.decryptBASE64(publicKeyStr);
-            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(buffer);
-            return (RSAPublicKey) keyFactory.generatePublic(keySpec);
-        } catch (NoSuchAlgorithmException e) {
-            throw new Exception("无此算法");
-        } catch (InvalidKeySpecException e) {
-            throw new Exception("公钥非法");
-        } catch (NullPointerException e) {
-            throw new Exception("公钥数据为空");
-        }
-    }
-
-
-    /**
-     * 公钥加密过程
-     *
-     * @param publicKey     公钥
-     * @param plainTextData 明文数据
+     * 解密算法
+     * @param cryptograph    密文
      * @return
-     * @throws Exception 加密过程中的异常信息
+     * @throws Exception
      */
-    public static byte[] encrypt(RSAPublicKey publicKey, byte[] plainTextData)
-            throws Exception {
-        if (publicKey == null) {
-            throw new Exception("加密公钥为空, 请设置");
-        }
-        Cipher cipher = null;
-        try {
-            // 使用默认RSA
-             cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-            // cipher= Cipher.getInstance("RSA", new BouncyCastleProvider());
-            cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-            byte[] output = cipher.doFinal(plainTextData);
-            return output;
-        } catch (NoSuchAlgorithmException e) {
-            throw new Exception("无此加密算法");
-        } catch (NoSuchPaddingException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InvalidKeyException e) {
-            throw new Exception("加密公钥非法,请检查");
-        } catch (IllegalBlockSizeException e) {
-            throw new Exception("明文长度非法");
-        } catch (BadPaddingException e) {
-            throw new Exception("明文数据已损坏");
-        }
+    public static String decrypt(String cryptograph) throws Exception {
+
+        Key privateKey = getKey(PRIVATE_KEY_FILE);
+
+        /** 得到Cipher对象对已用公钥加密的数据进行RSA解密 */
+        Cipher cipher = Cipher.getInstance(ALGORITHM);
+        cipher.init(Cipher.DECRYPT_MODE, privateKey);
+        BASE64Decoder decoder = new BASE64Decoder();
+        byte[] b1 = decoder.decodeBuffer(cryptograph);
+
+        /** 执行解密操作 */
+        byte[] b = cipher.doFinal(b1);
+        return new String(b);
     }
 
+    private static Key getKey(String fileName) throws Exception, IOException {
+        Key key;
+        ObjectInputStream ois = null;
+        try {
+            /** 将文件中的私钥对象读出 */
+            ois = new ObjectInputStream(new FileInputStream(fileName));
+
+
+            key = (Key) ois.readObject();
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            ois.close();
+        }
+        return key;
+    }
 }
