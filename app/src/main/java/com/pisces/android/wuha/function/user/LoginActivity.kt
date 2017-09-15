@@ -10,6 +10,7 @@ import com.mob.MobSDK
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import kotlinx.android.synthetic.main.login_act.*
 
 
@@ -82,9 +83,11 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
         //发送验证码
         button.setOnClickListener {
-            SMSSDK.getVerificationCode("86", "17602881290")
+            if (verifyPhone(phoneValue()))
+                SMSSDK.getVerificationCode("86", phoneValue())
         }
 
+        //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
             if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
                 SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
@@ -107,13 +110,19 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
         return editText2.text.toString()
     }
 
-    fun verifyPhone(phone: String): Boolean {
-        TODO("error")
+    fun verifyPhone(phone: String?): Boolean {
+        if (VerifyUtils.verifyMobilePhoneNumber(phone)) {
+            toastWith("验证码错误")
+            return false
+        }
         return true
     }
 
-    fun verifySmsCode(smsCode: String): Boolean {
-        TODO("error")
+    fun verifySmsCode(smsCode: String?): Boolean {
+        if (VerifyUtils.verifySmsCode(smsCode)) {
+            toastWith("验证码错误")
+            return false
+        }
         return true
     }
 }

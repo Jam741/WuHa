@@ -9,6 +9,7 @@ import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.yingwumeijia.commonlibrary.utils.AppInfo
+import rx.functions.Action1
 
 /**
  * Created by Jam on 2017/9/14.
@@ -21,12 +22,9 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         bodyForLogin.deviceName = Build.DEVICE
         bodyForLogin.currentDeviceIdentificationNumber = Installation.id(context)
         bodyForLogin.mobliePhoneNumber = phone
-        HttpUtli.toSubscribe(Api.service.login(bodyForLogin), object : ProgressSubscriber<LoginResponse>(context) {
-            override fun onSuccess(t: LoginResponse?) {
-                if (t == null) return
-                AccountManager.refreshIdentityToken(context, t.identityToken)
-                view.loginSuccess()
-            }
+
+        UserControler.login(context, bodyForLogin, Action1<LoginResponse> {
+            view.loginSuccess()
         })
     }
 
@@ -35,7 +33,6 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         view.lockSendButton(true)
         view.setTextWithSendButton("60s")
     }
-
 
 
 }

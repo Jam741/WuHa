@@ -1,6 +1,8 @@
 package com.pisces.android.wuha.net
 
 import android.content.Context
+import android.widget.Toast
+import com.pisces.android.framworkerlibrary.net.exception.ApiException
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import rx.Observable
 import rx.Subscriber
@@ -8,6 +10,8 @@ import rx.schedulers.Schedulers
 import rx.android.schedulers.AndroidSchedulers
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import rx.functions.Action1
+import java.net.ConnectException
+import java.net.SocketTimeoutException
 
 
 /**
@@ -35,23 +39,18 @@ object HttpUtli {
      */
     fun disposeHttpException(context: Context, e: Throwable?) {
 
-//        val message: String?
-//        if (!NetUtils.isConnected(context)) {
-//            message = "网络异常"
-//        } else if (e is ApiException) {
-//            message = e.error_message
-//        } else if (e is ConnectException) {
-//            message = "网络连接异常，请重试"
-//        } else if (e is SocketTimeoutException) {
-//            message = "网络请求超时，请重试"
-//        } else if (e is NotLoginThrowable) {
-//            message = "请登录"
-//            LoginActivity.Companion.startCurrent(context)
-//        } else {
-//            message = "网络异常"
-//        }
+        val message: String?
+        if (e is ApiException) {
+            message = e.error_message
+        } else if (e is ConnectException) {
+            message = "网络连接异常，请重试"
+        } else if (e is SocketTimeoutException) {
+            message = "网络请求超时，请重试"
+        } else {
+            message = "网络异常"
+        }
         e!!.printStackTrace()
-//        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
     }
 
 

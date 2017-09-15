@@ -1,6 +1,5 @@
 package com.pisces.android.wuha
 
-import com.mob.MobSDK
 import com.pisces.android.framworkerlibrary.JBaseApplication
 import com.pisces.android.locationlibrary.GDLocationUtil
 
