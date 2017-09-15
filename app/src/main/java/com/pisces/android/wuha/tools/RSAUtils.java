@@ -32,7 +32,7 @@ public class RSAUtils {
     /** 指定加密算法为RSA */
     private static final String ALGORITHM = "RSA";
     /** 指定公钥存放文件 */
-    private static String PUBLIC_KEY_FILE = "PublicKey";
+    private static String PUBLIC_KEY_FILE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZh0gBaAkPGB8FmQnT7xEl4+Uta8vYN7qQHywa1vrdDBoSHsegnDt15hq1gTdrEq7XS3yDtZQbgJM1QyeT2/y1vpunVSZUzApJsfc+dLmwFBuZbGjW8UqfDLuz0Msar5GAtSbh2q4pxhXoL17N9TiwtqTlTjwBmjfhncGnsTOORwIDAQAB";
     /** 指定私钥存放文件 */
     private static String PRIVATE_KEY_FILE = "PrivateKey";
 
@@ -97,6 +97,8 @@ public class RSAUtils {
         try {
             /** 将文件中的私钥对象读出 */
             ois = new ObjectInputStream(new FileInputStream(fileName));
+
+
             key = (Key) ois.readObject();
         } catch (Exception e) {
             throw e;

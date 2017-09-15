@@ -11,6 +11,7 @@ import com.pisces.android.wuha.entity.bean.LoginResponse
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import com.pisces.android.wuha.tools.JRSAUtils
 import com.pisces.android.wuha.tools.KeyPairGenUtil
 import com.pisces.android.wuha.tools.RSAUtils
 import rx.functions.Action1
@@ -40,20 +41,19 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
 
     override fun login(phone: String) {
         val bodyForLogin = BodyForLogin()
-        bodyForLogin.deviceName = Build.DEVICE
+        bodyForLogin.deviceName = android.os.Build.MODEL
+        val currentDeviceIdentificationNumber = JRSAUtils.encryptByPublicKey(Installation.id(context))
+        Logger.d(currentDeviceIdentificationNumber)
+        Log.d("JAM", currentDeviceIdentificationNumber)
+        bodyForLogin.currentDeviceIdentificationNumber = currentDeviceIdentificationNumber
+        val phone = JRSAUtils.encryptByPublicKey(phone)
+        Logger.d(phone)
+        Log.d("JAM", phone)
+        bodyForLogin.mobliePhoneNumber = phone
+        UserControler.login(context, bodyForLogin, Action1 {
+            view.loginSuccess()
+        })
 
-//        val currentDeviceIdentificationNumber = RSAUtils.encryptByPublicKey(Installation.id(context))
-//        Logger.d(currentDeviceIdentificationNumber)
-//        Log.d("JAM", currentDeviceIdentificationNumber)
-//        bodyForLogin.currentDeviceIdentificationNumber = currentDeviceIdentificationNumber
-//        val phone = RSAUtils.encryptByPublicKey(phone)
-//        Logger.d(phone)
-//        Log.d("JAM", phone)
-//        bodyForLogin.mobliePhoneNumber = phone
-//        UserControler.login(context, bodyForLogin, Action1<LoginResponse> {
-//            view.loginSuccess()
-//        })
-//
 //        HttpUtli.toSubscribe(Api.service.login(bodyForLogin), object : ProgressSubscriber<LoginResponse>(context) {
 //            override fun onSuccess(t: LoginResponse?) {
 //                if (t == null) return
@@ -62,10 +62,6 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
 //            }
 //        })
 
-
-        val keyP = KeyPairGenUtil()
-
-        keyP.run()
     }
 
     override fun sendSmsCode(phone: String) {

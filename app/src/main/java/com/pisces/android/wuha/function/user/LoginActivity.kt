@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
 import com.mob.MobSDK
+import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
@@ -24,20 +25,26 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
     val presenter by lazy { LoginPresenter(this, this) }
 
-    val handler = object : Handler() {
+    val handler by lazy {
+        createHandler()
+    }
 
-        override fun handleMessage(msg: Message?) {
-            //回调完成
-            when (msg!!.what) {
-                SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
-                    //提交验证码成功
-//                    presenter.login(phoneValue())
-                }
-                SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
-                    //获取验证码成功
-                }
-                SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
-                    //返回支持发送验证码的国家列表
+    private fun createHandler(): Handler {
+        return object : Handler(this.mainLooper) {
+
+            override fun handleMessage(msg: Message?) {
+                //回调完成
+                when (msg!!.what) {
+                    SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
+                        //提交验证码成功
+                        presenter.login(phoneValue())
+                    }
+                    SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
+                        //获取验证码成功
+                    }
+                    SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
+                        //返回支持发送验证码的国家列表
+                    }
                 }
             }
         }
@@ -75,11 +82,14 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     var eh: EventHandler = object : EventHandler() {
 
         override fun afterEvent(event: Int, result: Int, data: Any?) {
-            if (result == SMSSDK.RESULT_COMPLETE) {
-                handler.handleMessage(Message().apply { what = event })
-            } else {
-                (data as Throwable).printStackTrace()
-            }
+           runOnUiThread {
+               Logger.d(data)
+               if (result == SMSSDK.RESULT_COMPLETE) {
+                   handler.handleMessage(Message().apply { what = event })
+               } else {
+                   (data as Throwable).printStackTrace()
+               }
+           }
         }
     }
 
@@ -87,7 +97,6 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_act)
-        MobSDK.init(this, Config.MOB_APP_KEY, Config.MOB_APP_SECRET)
         SMSSDK.registerEventHandler(eh)
 
         //发送验证码
@@ -98,11 +107,9 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
         //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
-            //            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
-//                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
-//            }
-
-            presenter.login(phoneValue())
+            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
+                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
+            }
         }
     }
 
