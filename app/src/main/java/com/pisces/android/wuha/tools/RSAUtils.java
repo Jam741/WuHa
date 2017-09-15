@@ -10,8 +10,11 @@ import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.InvalidKeySpecException;
+import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 import javax.crypto.BadPaddingException;
@@ -29,12 +32,18 @@ import sun.misc.BASE64Encoder;
 
 public class RSAUtils {
 
-    /** 指定加密算法为RSA */
+    /**
+     * 指定加密算法为RSA
+     */
     private static final String ALGORITHM = "RSA";
-    /** 指定公钥存放文件 */
-    private static String PUBLIC_KEY_FILE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZh0gBaAkPGB8FmQnT7xEl4+Uta8vYN7qQHywa1vrdDBoSHsegnDt15hq1gTdrEq7XS3yDtZQbgJM1QyeT2/y1vpunVSZUzApJsfc+dLmwFBuZbGjW8UqfDLuz0Msar5GAtSbh2q4pxhXoL17N9TiwtqTlTjwBmjfhncGnsTOORwIDAQAB";
-    /** 指定私钥存放文件 */
-    private static String PRIVATE_KEY_FILE = "PrivateKey";
+    /**
+     * 指定公钥存放文件
+     */
+    private static String PUBLIC_KEY_FILE = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7/iS3ZkZiuj0Tzx3G3yTUmdSrxqLfjqLOGZWfiegY5WjfnNno5WBGugarFGAgOIA39r+GC/52QTxGgKjgxJ3DHLWf9JtYCZE9YIXtVJmnlwdndI7T9468PlWHVplCeUgYq1jbItE29IJ2q4EUxnCOMQFC5Ylr2LRENEnjr0WdOwIDAQAB";
+    /**
+     * 指定私钥存放文件
+     */
+    private static String PRIVATE_KEY_FILE = "MIICXAIBAAKBgQC7/iS3ZkZiuj0Tzx3G3yTUmdSrxqLfjqLOGZWfiegY5WjfnNno5WBGugarFGAgOIA39r+GC/52QTxGgKjgxJ3DHLWf9JtYCZE9YIXtVJmnlwdndI7T9468PlWHVplCeUgYq1jbItE29IJ2q4EUxnCOMQFC5Ylr2LRENEnjr0WdOwIDAQABAoGAL1YA/MUd+AIZGwHN56OMbJQHfvFXVZ9e0zKSAEgDTzGExLmEDSakpWp1/2H0CmjvsCfLdf9TJYerm70NyPr5FheIow/vjoFDwDm5WzFmCDCFH5fskIbAqNrS4wH91lq6WXla7Nr8ns+jjQ32yzCIgqYRSLMDfbjqy4I3cfOzrTECQQDe1OhCQlLrzl5v8Qu+a/Dqu7hutzU7QpbSg5j6f6bc9QLHRb/DfVbT42nT8J3pH/j9bpRw3ZutxDbnSoMOH2bNAkEA1/mvR5NntLONOVhlcA8YxTh5+3IoAe8CteJopxvt8kHU5ReiLx7asZpK1zHA342n3tctGfpEkq60FXH8pOjEJwJADOq8l/KuSdsJoGWRr7UkHwdItqpKHKhMg+F7AbJaot5VDeYeKp/eY6QAI3gEP1pKHa7GThCakKUaJagtFql9VQJBAJB/9c4lyZUVLL/ZbMT01NXfW33oeuwQRff7a5mjDiiv8wj0Lwbn1dpOKRShrTHlTRPDU+G1mHurd8GBak/LjLECQGN0xN2mU0tQ4iPn+f/JEvZXdlNi4IlCf12Z/XPd+FI3IprtjsGsQy5rH95MS5XBN+ZziwKsbbnV+NHG4oQkFhU=";
 
     public static void main(String[] args) throws Exception {
 
@@ -52,13 +61,14 @@ public class RSAUtils {
 
     /**
      * 加密方法
+     *
      * @param source 源数据
      * @return
      * @throws Exception
      */
     public static String encrypt(String source) throws Exception {
 
-        Key publicKey = getKey(PUBLIC_KEY_FILE);
+        Key publicKey = getPubKey();
 
         /** 得到Cipher对象来实现对源数据的RSA加密 */
         Cipher cipher = Cipher.getInstance(ALGORITHM);
@@ -72,13 +82,14 @@ public class RSAUtils {
 
     /**
      * 解密算法
-     * @param cryptograph    密文
+     *
+     * @param cryptograph 密文
      * @return
      * @throws Exception
      */
     public static String decrypt(String cryptograph) throws Exception {
 
-        Key privateKey = getKey(PRIVATE_KEY_FILE);
+        Key privateKey = getPrivateKey();
 
         /** 得到Cipher对象对已用公钥加密的数据进行RSA解密 */
         Cipher cipher = Cipher.getInstance(ALGORITHM);
@@ -107,4 +118,59 @@ public class RSAUtils {
         }
         return key;
     }
+
+
+
+
+    /**
+     * 实例化公钥
+     *
+     * @return
+     */
+    private static PublicKey getPubKey() {
+        PublicKey publicKey = null;
+        try {
+            // 自己的公钥(测试)
+            String pubKey = PUBLIC_KEY_FILE;
+            java.security.spec.X509EncodedKeySpec bobPubKeySpec = new java.security.spec.X509EncodedKeySpec(
+                    new BASE64Decoder().decodeBuffer(pubKey));
+            // RSA对称加密算法
+            java.security.KeyFactory keyFactory;
+            keyFactory = java.security.KeyFactory.getInstance("RSA");
+            // 取公钥匙对象
+            publicKey = keyFactory.generatePublic(bobPubKeySpec);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return publicKey;
+    }
+
+
+    /**
+     * 实例化私钥
+     *
+     * @return
+     */
+    private static PrivateKey getPrivateKey() {
+        PrivateKey privateKey = null;
+        String priKey = PRIVATE_KEY_FILE;
+        PKCS8EncodedKeySpec priPKCS8;
+        try {
+            priPKCS8 = new PKCS8EncodedKeySpec(new BASE64Decoder().decodeBuffer(priKey));
+            KeyFactory keyf = KeyFactory.getInstance("RSA");
+            privateKey = keyf.generatePrivate(priPKCS8);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        }
+        return privateKey;
+    }
+
 }

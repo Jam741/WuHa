@@ -20,8 +20,32 @@
         android:layout_gravity="bottom"
         app:tabIndicatorHeight="0dp"></android.support.design.widget.TabLayout>
 
-    <FrameLayout
-        android:id="@+id/container_search"
+
+    <RadioGroup
+        android:id="@+id/group_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rad_home"
+            style="@style/rad_main"
+            android:layout_width="0dp"
+            android:checked="true"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/rad_home_img_selecter"
+            android:text="主页"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/rad_mine"
+            style="@style/rad_main"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/rad_home_img_selecter"
+            android:text="我的"></RadioButton>
+
+    </RadioGroup>
 </FrameLayout>

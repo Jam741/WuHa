@@ -77,6 +77,8 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
             loadData()
             layoutManager = LinearLayoutManager(context)
             adapter = this@BaseServiceProviderFragment.adapter
+            setPullRefreshEnabled(false)
+            setLoadingMoreEnabled(true)
             setLoadingListener(object : XRecyclerView.LoadingListener {
                 override fun onRefresh() {
                     page = 1

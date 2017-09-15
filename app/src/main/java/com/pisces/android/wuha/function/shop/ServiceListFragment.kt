@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 
 import com.pisces.android.wuha.R
-import kotlinx.android.synthetic.main.f_service.*
+import kotlinx.android.synthetic.main.f_service_list.*
 
 /**
  * Created by Chris Li on 2017/9/1.
