@@ -24,26 +24,4 @@
     </item>
 
 
-    <!--<item android:state_pressed="true">&lt;!&ndash;&ndash;&gt;-->
-        <!--<color android:color="@color/colorWhiteC1" />-->
-    <!--</item>-->
-    <!--<item android:state_selected="true">&lt;!&ndash;选中&ndash;&gt;-->
-        <!--<color android:color="@color/colorWhiteC1" />-->
-    <!--</item>-->
-    <!--<item android:state_checked="true">&lt;!&ndash;&ndash;&gt;-->
-        <!--<color android:color="@color/colorWhiteC1" />-->
-    <!--</item>-->
-    <!--<item android:state_focused="true">&lt;!&ndash;&ndash;&gt;-->
-        <!--<color android:color="@color/colorWhiteC1" />-->
-    <!--</item>-->
-
-
-    <!--<item android:state_active="true">&lt;!&ndash;&ndash;&gt;-->
-        <!--<color android:color="@color/colorGrayC2" />-->
-    <!--</item>-->
-    <!--<item>-->
-        <!--<color android:color="@color/colorGrayC2" />-->
-    <!--</item>-->
-
-
 </selector>

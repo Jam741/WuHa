@@ -73,8 +73,11 @@ interface ApiService {
     fun login(@Body bodyForLogin: BodyForLogin): Observable<LoginResponse>
 
 
+    /**
+     * 根据id获取商铺详情
+     */
     @POST("ServiceProvider/GetServiceProviderDetail")
-    fun getServiceProviderDetail(@Body bodyForServiceByDistance: BodyForServiceDetailById):Observable<ServiceDetailProvider>
+    fun getServiceProviderDetail(@Body bodyForServiceByDistance: BodyForServiceDetailById): Observable<ServiceDetailProvider>
 
 
 }

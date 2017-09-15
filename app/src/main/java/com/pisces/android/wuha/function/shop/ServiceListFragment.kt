@@ -2,7 +2,6 @@ package com.pisces.android.wuha.function.shop
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,6 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
-import kotlinx.android.synthetic.main.activity_personage.*
 import kotlinx.android.synthetic.main.f_service_list.*
 
 /**
