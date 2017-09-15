@@ -3,6 +3,8 @@ package com.pisces.android.wuha.function.user
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Message
 import android.support.v4.app.ActivityCompat
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
@@ -21,6 +23,26 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
 
     val presenter by lazy { LoginPresenter(this, this) }
+
+    val handler = object : Handler() {
+
+        override fun handleMessage(msg: Message?) {
+            //回调完成
+            when (msg!!.what) {
+                SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
+                    //提交验证码成功
+//                    presenter.login(phoneValue())
+                }
+                SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
+                    //获取验证码成功
+                }
+                SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
+                    //返回支持发送验证码的国家列表
+                }
+            }
+        }
+    }
+
 
     companion object {
         fun start(context: Context) {
@@ -54,20 +76,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
         override fun afterEvent(event: Int, result: Int, data: Any?) {
             if (result == SMSSDK.RESULT_COMPLETE) {
-                //回调完成
-                when (event) {
-                    SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
-                        //提交验证码成功
-                        presenter.login(phoneValue())
-                    }
-                    SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
-                        //获取验证码成功
-                        toastWith("短信验证码发送成功")
-                    }
-                    SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
-                        //返回支持发送验证码的国家列表
-                    }
-                }
+                handler.handleMessage(Message().apply { what = event })
             } else {
                 (data as Throwable).printStackTrace()
             }
@@ -84,14 +93,16 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
         //发送验证码
         button.setOnClickListener {
             if (verifyPhone(phoneValue()))
-                SMSSDK.getVerificationCode("86", phoneValue())
+                presenter.sendSmsCode(phoneValue())
         }
 
         //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
-            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
-                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
-            }
+            //            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
+//                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
+//            }
+
+            presenter.login(phoneValue())
         }
     }
 
@@ -111,15 +122,15 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     }
 
     fun verifyPhone(phone: String?): Boolean {
-        if (VerifyUtils.verifyMobilePhoneNumber(phone)) {
-            toastWith("验证码错误")
+        if (!VerifyUtils.verifyMobilePhoneNumber(phone)) {
+            toastWith("手机号码错误")
             return false
         }
         return true
     }
 
     fun verifySmsCode(smsCode: String?): Boolean {
-        if (VerifyUtils.verifySmsCode(smsCode)) {
+        if (!VerifyUtils.verifySmsCode(smsCode)) {
             toastWith("验证码错误")
             return false
         }

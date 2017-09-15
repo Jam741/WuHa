@@ -28,7 +28,6 @@ interface LoginContract {
 
         fun sendSmsCode(phone: String)
 
-
     }
 
 
