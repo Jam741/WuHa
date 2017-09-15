@@ -16,8 +16,6 @@
 
 package com.pisces.android.framworkerlibrary.net.converter;
 
-import android.util.Log;
-
 import com.google.gson.TypeAdapter;
 import com.pisces.android.framworkerlibrary.net.ApiModel;
 import com.pisces.android.framworkerlibrary.net.exception.ApiException;

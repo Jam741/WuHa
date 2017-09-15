@@ -31,8 +31,27 @@
             android:background="@drawable/text_btn_bg"
             android:gravity="center"
             android:text="手术"
-            android:textIsSelectable="true"
-            android:textColor="@drawable/textcolor_selector" />
+            android:textColor="@drawable/textcolor_selector"
+            android:textIsSelectable="true" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

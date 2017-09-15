@@ -62,7 +62,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
                     }
                     SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
                         //获取验证码成功
-                        toastWith("短信验证码发送成功")
+//                        toastWith("短信验证码发送成功")
                     }
                     SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
                         //返回支持发送验证码的国家列表
@@ -111,7 +111,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     }
 
     fun verifyPhone(phone: String?): Boolean {
-        if (VerifyUtils.verifyMobilePhoneNumber(phone)) {
+        if (!VerifyUtils.verifyMobilePhoneNumber(phone)) {
             toastWith("验证码错误")
             return false
         }
@@ -119,7 +119,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     }
 
     fun verifySmsCode(smsCode: String?): Boolean {
-        if (VerifyUtils.verifySmsCode(smsCode)) {
+        if (!VerifyUtils.verifySmsCode(smsCode)) {
             toastWith("验证码错误")
             return false
         }

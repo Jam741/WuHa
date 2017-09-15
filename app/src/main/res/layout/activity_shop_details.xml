@@ -11,11 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--<android.support.v4.widget.NestedScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_weight="1"-->
-        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,16 +32,16 @@
                     android:id="@+id/site"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/view"
                     android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
                     android:drawableLeft="@mipmap/home_icon_address2"
                     android:drawablePadding="@dimen/margin_size_10"
                     android:text="高新区创业路300号"
                     android:textColor="@color/colorGrayC1"
-                    android:textSize="@dimen/margin_size_14"
-                    android:layout_alignTop="@+id/view"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="12dp" />
+                    android:textSize="@dimen/margin_size_14" />
 
                 <TextView
                     android:id="@+id/person"
@@ -108,7 +103,6 @@
 
         </LinearLayout>
 
-        <!--</android.support.v4.widget.NestedScrollView>-->
 
         <LinearLayout
             android:layout_width="match_parent"
