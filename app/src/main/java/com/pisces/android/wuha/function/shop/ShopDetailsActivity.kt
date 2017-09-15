@@ -50,22 +50,22 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsX(), Constant.getGpsY())
         ), object : SimpleSubscriber<ServiceDetailProvider>(this) {
             override fun onSuccess(t: ServiceDetailProvider?) {
-              if (t==null) return Unit
-                Log.i("lyx",t.id)
+                if (t == null) return Unit
+                Log.i("lyx", t.id)
                 bindData(t)
             }
         })
     }
 
     private fun bindData(t: ServiceDetailProvider) {
-        name.text=t.name
-        site.text=t.serviceProviderAddress.mainAddressLine
-        person.text=t.viewingCount.toString()+"人去过"
+        name.text = t.name
+        site.text = t.serviceProviderAddress.mainAddressLine
+        person.text = t.viewingCount.toString() + "人去过"
         val dis: Int = t.distance.toInt()
         if (dis > 1000) {
-            distance.text=(dis/1000).toString()+"km"
-        }else{
-            distance.text=dis.toString()+"m"
+            distance.text = (dis / 1000).toString() + "km"
+        } else {
+            distance.text = dis.toString() + "m"
         }
 
     }
