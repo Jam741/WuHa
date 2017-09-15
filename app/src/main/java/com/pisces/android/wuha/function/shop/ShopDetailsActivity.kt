@@ -11,6 +11,7 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
+import com.pisces.android.wuha.function.home.service.ServiceFragment
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
@@ -23,6 +24,11 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
  */
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+
+    val serviceListFragment by lazy { ServiceListFragment() }
+
+    val clientMessageFragment by lazy { ClientMessageFragment() }
+
     companion object {
         private var id: String = ""
         private lateinit var context: Context
@@ -35,7 +41,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private val mTabList by lazy { arrayListOf("服务列表", "客户信息") }
-    private val mViewList by lazy { arrayListOf(ServiceListFragment(), ClientMessageFragment()) }
+    private val mViewList by lazy { arrayListOf(serviceListFragment,clientMessageFragment ) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +59,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 if (t == null) return Unit
                 Log.i("lyx", t.id)
                 bindData(t)
+                serviceListFragment.setData(t.serviceProviderServiceCategories)
             }
         })
     }

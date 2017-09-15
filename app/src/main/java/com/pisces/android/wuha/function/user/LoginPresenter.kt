@@ -21,7 +21,6 @@ import rx.functions.Action1
  */
 class LoginPresenter(val context: Context, val view: LoginContract.View) : LoginContract.Presenter {
 
-
     val total_time: Long = 60000
     val cycles_time: Long = 1000
 
