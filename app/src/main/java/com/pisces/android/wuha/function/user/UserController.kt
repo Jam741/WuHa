@@ -2,12 +2,17 @@ package com.pisces.android.wuha.function.user
 
 import android.content.Context
 import android.content.Intent
+import android.text.TextUtils
+import com.google.gson.Gson
 import com.pisces.android.framworkerlibrary.utlis.SPUtils
 import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.entity.bean.LoginResponse
+import com.pisces.android.wuha.entity.bean.UserInfoBean
+import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import okhttp3.ResponseBody
 import rx.functions.Action1
 
 /**
@@ -52,7 +57,7 @@ object UserController {
      * 获取UserId
      */
     fun userId(context: Context): Int {
-        return SPUtils.get(context, Constant.KEY_USER_ID_CACHE, null) as Int
+        return SPUtils.get(context, Constant.KEY_USER_ID_CACHE, 0) as Int
     }
 
     /**
@@ -60,6 +65,17 @@ object UserController {
      */
     fun refreshUserId(context: Context, userId: Int) {
         SPUtils.put(context, Constant.KEY_USER_ID_CACHE, userId)
+    }
+
+
+    fun getUserInfoBean(context: Context): UserInfoBean? {
+        val jsonData = SPUtils.get(context, Constant.KEY_USER_INFO_CACHE, "") as String
+        if (TextUtils.isEmpty(jsonData)) return null
+        return Gson().fromJson(jsonData, UserInfoBean::class.java)
+    }
+
+    fun refreshUserInfo(context: Context, userInfoBean: UserInfoBean) {
+        SPUtils.put(context, Constant.KEY_USER_INFO_CACHE, Gson().toJson(userInfoBean))
     }
 
     /**
@@ -74,6 +90,19 @@ object UserController {
                 AccountManager.refreshIdentityToken(context, t.identityToken)
                 subscriber.call(t)
                 sendLoginStatusChangedBroadCast(context, true)
+            }
+        })
+    }
+
+
+    /**
+     * 获取用户信息
+     */
+    fun getUserInfo(context: Context, action1: Action1<UserInfoBean>) {
+        HttpUtli.toSubscribe(Api.service.getUserInfo(BodyForUserInfo().apply { accountId = userId(context) }), object : ProgressSubscriber<UserInfoBean>(context) {
+            override fun onSuccess(t: UserInfoBean?) {
+                refreshUserInfo(context, t!!)
+                action1.call(t!!)
             }
         })
     }

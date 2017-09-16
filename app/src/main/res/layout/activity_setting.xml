@@ -43,18 +43,6 @@
         android:textColor="@color/colorTextMain"
         android:textSize="@dimen/text_size_16" />
 
-    <TextView
-        android:id="@+id/report"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize"
-        android:layout_marginTop="1dp"
-        android:background="@color/colorTextWhite"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left_right"
-        android:text="举报投诉"
-        android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_16" />
-
 
     <Button
         android:id="@+id/setting_return"

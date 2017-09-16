@@ -7,9 +7,16 @@ import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.LoginResponse
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.pisces.android.wuha.entity.bean.ServiceProvider
+import com.pisces.android.wuha.entity.bean.UserInfoBean
 import com.pisces.android.wuha.function.collect.BodyCollect
+
+//import com.pisces.android.wuha.function.setting.bean.FeedBack
+
+import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.function.setting.bean.FeedBack
+
 import com.pisces.android.wuha.function.user.BodyForLogin
+import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable
@@ -70,7 +77,7 @@ interface ApiService {
      *
      * @param bodyForLogin
      */
-    @POST("/api/Account/AccountLogin")
+    @POST("Account/AccountLogin")
     fun login(@Body bodyForLogin: BodyForLogin): Observable<LoginResponse>
 
 
@@ -82,9 +89,17 @@ interface ApiService {
 
 
     /**
+
      * 提交反馈或意见
      */
     @POST("About/AddFeedBack")
     fun addFeedBack(@Body feedBack: FeedBack): Observable<Any>
+
+    /**
+     * 获取用户信息
+     */
+    @POST("UserInfo/GetUserInfo")
+    fun getUserInfo(@Body bodyForUserInfo: BodyForUserInfo): Observable<UserInfoBean>
+
 
 }

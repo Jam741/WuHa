@@ -2,6 +2,7 @@ package com.pisces.android.wuha.function.setting
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 
@@ -37,11 +38,21 @@ class SettingActivity : LBaseActivity() {
     private fun initView() {
         topTitle.text = "设置"
         about_us.setOnClickListener { AboutUsActivity.start(this) }
-        grade.setOnClickListener { GradeActivity.start(this) }
+        grade.setOnClickListener {
+            try {
+                val uri = Uri.parse("market://details?id=" + packageName)
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(this@SettingActivity, "您的手机没有安装Android应用市场", Toast.LENGTH_SHORT).show()
+                e.printStackTrace()
+            }
+        }
         version.setOnClickListener { VersionActivity.start(this) }
-        report.setOnClickListener { ReportActivity.start(this) }
         setting_return.setOnClickListener {
             UserController.loginOut(this)
+            close()
         }
     }
 

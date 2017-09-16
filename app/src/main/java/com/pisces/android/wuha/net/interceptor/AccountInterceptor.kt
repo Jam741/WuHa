@@ -16,7 +16,7 @@ class AccountInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
                 .newBuilder()
-                .addHeader("access-token", "BasicAuth " + AccountManager.IdentityToken)
+                .addHeader("Authorization", "BasicAuth " + AccountManager.identityToken())
                 .build()
         return chain.proceed(request)
     }
