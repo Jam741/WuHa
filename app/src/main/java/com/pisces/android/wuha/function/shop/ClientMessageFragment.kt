@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 
 import com.pisces.android.wuha.R
+import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
+
+import kotlinx.android.synthetic.main.f_client_message.*
 
 /**
  * Created by Chris Li on 2017/9/1.
@@ -22,5 +25,11 @@ class ClientMessageFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    fun setData(mData: ServiceDetailProvider.ServiceProviderIntroductionBean) {
+        message.run {
+            text = mData.description
+        }
     }
 }

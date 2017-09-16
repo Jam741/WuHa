@@ -14,7 +14,19 @@ import rx.functions.Action1
  *
  * 用户级别权限操作  控制器 ：数据对外，逻辑不对外
  */
-object UserControler {
+object UserController {
+
+
+    /**
+     * 用户操作先决条件
+     */
+    fun passPrecondition(context: Context): Boolean {
+        if (!isLogined(context)) {
+            LoginActivity.start(context)
+            return false
+        }
+        return true
+    }
 
     /**
      * 设置用户登录状态
@@ -36,12 +48,27 @@ object UserControler {
 
 
     /**
+     * 获取UserId
+     */
+    fun userId(context: Context): Int {
+        return SPUtils.get(context, Constant.KEY_USER_ID_CACHE, null) as Int
+    }
+
+    /**
+     * 刷新UserId
+     */
+    fun refreshUserId(context: Context, userId: Int) {
+        SPUtils.put(context, Constant.KEY_USER_ID_CACHE, userId)
+    }
+
+    /**
      * 用户登录操作
      */
     fun login(context: Context, bodyForLogin: BodyForLogin, subscriber: Action1<LoginResponse>) {
         HttpUtli.toSubscribe(Api.service.login(bodyForLogin), object : ProgressSubscriber<LoginResponse>(context) {
             override fun onSuccess(t: LoginResponse?) {
                 if (t == null) return
+                refreshUserId(context, t.id)
                 AccountManager.refreshIdentityToken(context, t.identityToken)
                 subscriber.call(t)
             }
@@ -52,7 +79,8 @@ object UserControler {
     /**
      * 用户退出登录操作
      */
-    fun loginOut() {
-
+    fun loginOut(context: Context) {
+        setLoginStatus(context, false)
+        SPUtils.remove(context, Constant.KEY_USER_ID_CACHE)
     }
 }
