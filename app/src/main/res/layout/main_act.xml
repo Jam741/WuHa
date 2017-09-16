@@ -13,13 +13,6 @@
         android:layout_height="match_parent"
         android:layout_marginBottom="?attr/actionBarSize"></android.support.v4.view.ViewPager>
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="bottom"
-        app:tabIndicatorHeight="0dp"></android.support.design.widget.TabLayout>
-
 
     <RadioGroup
         android:id="@+id/group_main"
@@ -32,9 +25,9 @@
             android:id="@+id/rad_home"
             style="@style/rad_main"
             android:layout_width="0dp"
-            android:checked="true"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:checked="true"
             android:drawableTop="@drawable/rad_home_img_selecter"
             android:text="主页"></RadioButton>
 
@@ -44,7 +37,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableTop="@drawable/rad_home_img_selecter"
+            android:drawableTop="@drawable/rad_mine_img_selecter"
             android:text="我的"></RadioButton>
 
     </RadioGroup>

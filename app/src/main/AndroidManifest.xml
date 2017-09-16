@@ -102,7 +102,7 @@
 
         <!--意见建议-->
         <activity
-            android:name="com.pisces.android.wuha.function.personage.MessageActivity"
+            android:name="com.pisces.android.wuha.function.personage.SuggestActivity"
             android:screenOrientation="portrait">
 
         </activity>

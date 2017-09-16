@@ -32,6 +32,7 @@
 
     <dimen name="font_input">14sp</dimen>
     <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_title">18sp</dimen>
 
 
     <dimen name="actionBarSize">48dp</dimen>

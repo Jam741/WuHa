@@ -26,7 +26,7 @@
                 <ImageView
                     android:id="@+id/iv_banner"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="200dp"
                     android:scaleType="centerCrop"
                     android:src="@mipmap/mine_top_bg"
                     app:layout_collapseParallaxMultiplier="0.5" />

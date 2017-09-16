@@ -1,19 +1,12 @@
 package com.pisces.android.wuha.function.user
 
 import android.content.Context
-import android.os.Build
 import android.os.CountDownTimer
 import android.util.Log
 import cn.smssdk.SMSSDK
 import com.orhanobut.logger.Logger
 import com.pisces.android.framworkerlibrary.utlis.Installation
-import com.pisces.android.wuha.entity.bean.LoginResponse
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.tools.JRSAUtils
-import com.pisces.android.wuha.tools.KeyPairGenUtil
-import com.pisces.android.wuha.tools.RSAUtils
 import rx.functions.Action1
 
 /**
@@ -49,7 +42,7 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         Logger.d(phone)
         Log.d("JAM", phone)
         bodyForLogin.mobliePhoneNumber = phone
-        UserControler.login(context, bodyForLogin, Action1 {
+        UserController.login(context, bodyForLogin, Action1 {
             view.loginSuccess()
         })
 

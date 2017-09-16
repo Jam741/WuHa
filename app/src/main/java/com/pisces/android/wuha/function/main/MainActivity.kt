@@ -6,13 +6,15 @@ import android.support.v4.view.ViewPager
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.pisces.android.wuha.function.home.HomeFragment
+import com.pisces.android.wuha.function.mine.MineFragment
 import kotlinx.android.synthetic.main.main_act.*
 
 
 class MainActivity : LBaseActivity() {
 
     private val tabs by lazy { arrayListOf("主页", "我的") }
-    private val fragments by lazy({ arrayListOf(HomeFragment(), PersonageFragment()) })
+    private val fragments by lazy({ arrayListOf(HomeFragment(), MineFragment()) })
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
