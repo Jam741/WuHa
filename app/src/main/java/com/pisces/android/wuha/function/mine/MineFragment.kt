@@ -8,7 +8,6 @@ import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseFragment
 import com.pisces.android.wuha.function.personage.CallActivity
-import com.pisces.android.wuha.function.personage.MessageActivity
 import com.pisces.android.wuha.function.personage.ShareActivity
 import com.pisces.android.wuha.function.collect.CollectActivity
 import com.pisces.android.wuha.function.setting.AccountActivity

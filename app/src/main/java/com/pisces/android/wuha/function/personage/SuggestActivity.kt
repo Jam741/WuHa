@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.function.setting.bean.FeedBack
-import com.pisces.android.wuha.function.user.UserControler
+//import com.pisces.android.wuha.function.user.UserControler
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
@@ -24,6 +24,7 @@ import kotlinx.android.synthetic.main.toolbar.*
 
 
 class SuggestActivity : LBaseActivity() {
+    lateinit var mMessage:String
     companion object {
         fun start(context: Context) {
             val intent = Intent(context, SuggestActivity::class.java)
@@ -45,9 +46,9 @@ class SuggestActivity : LBaseActivity() {
 
         put_in.setOnClickListener {
             if (verifyMessage(messageValue())) {
-                HttpUtli.toSubscribe(Api.service.addFeedBack(FeedBack("意见和建议", mMessage, 0, "")), object : SimpleSubscriber<Any>(this@MessageActivity) {
+                HttpUtli.toSubscribe(Api.service.addFeedBack(FeedBack("意见和建议", mMessage, 0, "")), object : SimpleSubscriber<Any>(this@SuggestActivity) {
                     override fun onSuccess(t: Any?) {
-                        Toast.makeText(this@MessageActivity, "提交成功", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SuggestActivity, "提交成功", Toast.LENGTH_SHORT).show()
                         finish()
                     }
                 })

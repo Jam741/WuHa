@@ -33,12 +33,9 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
     val adapter by lazy { createAdapter() }
 
     val type by lazy { serviceProviderType() }
-//    val distance by lazy { serviceProviderDistance() }
 
 
     var way: Int = 1
-
-//    abstract fun serviceProviderDistance(): AMapLocation//定位
 
     abstract fun serviceProviderType(): Int
 
