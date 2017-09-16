@@ -11,7 +11,7 @@ import com.pisces.android.wuha.Constant
  */
 object AccountManager {
 
-    val IdentityToken: String = SPUtils.get(JBaseApplication.appContext(), Constant.KEY_IDENTITY_TOKEN, null) as String
+    val IdentityToken: String = SPUtils.get(JBaseApplication.appContext(), Constant.KEY_IDENTITY_TOKEN, "") as String
 
     fun refreshIdentityToken(context: Context, identityToken: String) {
         SPUtils.put(context, Constant.KEY_IDENTITY_TOKEN, identityToken)

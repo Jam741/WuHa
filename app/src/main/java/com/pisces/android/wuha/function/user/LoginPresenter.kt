@@ -34,13 +34,7 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
     override fun login(phone: String) {
         val bodyForLogin = BodyForLogin()
         bodyForLogin.deviceName = android.os.Build.MODEL
-        val currentDeviceIdentificationNumber = JRSAUtils.encryptByPublicKey(Installation.id(context))
-        Logger.d(currentDeviceIdentificationNumber)
-        Log.d("JAM", currentDeviceIdentificationNumber)
-        bodyForLogin.currentDeviceIdentificationNumber = currentDeviceIdentificationNumber
-        val phone = JRSAUtils.encryptByPublicKey(phone)
-        Logger.d(phone)
-        Log.d("JAM", phone)
+        bodyForLogin.currentDeviceIdentificationNumber =  Installation.id(context)
         bodyForLogin.mobliePhoneNumber = phone
         UserController.login(context, bodyForLogin, Action1 {
             view.loginSuccess()

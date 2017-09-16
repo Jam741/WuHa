@@ -116,6 +116,8 @@ public class LImg {
     /*显示的image*/
     public void into(ImageView imageViewId) {
         this.imageViewId = imageViewId;
-        Glide.with(context).load(url).crossFade().into(imageViewId);
+
+//        Glide.with(context).load(url).crossFade().into(imageViewId);
+
     }
 }
