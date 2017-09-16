@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="camerasdk_action_bar">#f9f9f9</color>
+    <color name="camerasdk_action_bar_press">#ffffff</color>
+    <color name="camerasdk_divider_color">#cdcdcd</color>
+    <color name="camerasdk_filter_tab_selected">#ffededed</color>
+    <color name="camerasdk_filter_tab_unselected">#ffffffff</color>
+    <color name="camerasdk_main_bg">#e4e4e4</color>
+    <color name="camerasdk_txt_normal">#282828</color>
+    <color name="camerasdk_txt_selected">#e53573</color>
+    <dimen name="camerasdk_actionbar_height">50dip</dimen>
+    <dimen name="folder_cover_size">72dp</dimen>
+    <dimen name="image_size">120dp</dimen>
+    <dimen name="space_size">2dp</dimen>
+    <string name="camerasdk_album">选择相册</string>
+    <string name="camerasdk_album_all">相机胶卷</string>
+    <string name="camerasdk_album_button">相册</string>
+    <string name="camerasdk_app_name">yingwumeijia</string>
+    <string name="camerasdk_back">返回</string>
+    <string name="camerasdk_cancel">取消</string>
+    <string name="camerasdk_delete">删除</string>
+    <string name="camerasdk_images_building">处理图片</string>
+    <string name="camerasdk_msg_amount_limit">已经达到最高选择数量</string>
+    <string name="camerasdk_msg_no_camera">没有系统相机</string>
+    <string name="camerasdk_preview_image">图片预览</string>
+</resources>

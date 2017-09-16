@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_actionbar_root"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="@color/camerasdk_action_bar"
+    android:clickable="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E5E4E4" />
+
+    <RelativeLayout
+        android:id="@+id/camerasdk_title_rlyt_left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/camerasdk_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/camerasdk_selector_actionbar_bg"
+            android:drawableLeft="@drawable/icon_return"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/camerasdk_txt_normal"
+            android:textSize="16dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/camerasdk_title_rlyt_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/camerasdk_title_imgv_right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/camerasdk_selector_actionbar_bg"
+            android:contentDescription="@string/camerasdk_app_name"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:scaleType="centerInside"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/camerasdk_title_txv_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/camerasdk_selector_actionbar_bg"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/camerasdk_txt_normal"
+            android:textSize="16dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/camerasdk_actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:maxLength="15"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:text="@string/camerasdk_album_all"
+        android:textColor="@color/camerasdk_txt_normal"
+        android:textSize="15dp" />
+
+    <LinearLayout
+        android:id="@+id/images_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="65dp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        android:visibility="gone">
+
+        <com.muzhi.mtools.camerasdk.view.HorizontalListView
+            android:id="@+id/images_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
