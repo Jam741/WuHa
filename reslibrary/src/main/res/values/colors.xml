@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FDC317</color>
+    <color name="colorPrimary">#FF4081</color>
     <color name="colorPrimaryDark">#FF4081</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FDC317</color>
 
 
     <!--黑色-->
@@ -24,4 +24,7 @@
 
     <color name="font_input">#1A1A1A</color>
     <color name="font_input_hint">#898989</color>
+
+    <color name="colorTextMain">#1a1a1a</color>
+    <color name="colorTextWhite">#ffffff</color>
 </resources>

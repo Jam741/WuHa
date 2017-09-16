@@ -4,37 +4,37 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_size_38"
-        android:layout_marginBottom="@dimen/margin_size_10"
-        android:layout_marginTop="@dimen/margin_size_10"
-        android:gravity="center">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/margin_size_38"-->
+        <!--android:layout_marginBottom="@dimen/margin_size_10"-->
+        <!--android:layout_marginTop="@dimen/margin_size_10"-->
+        <!--android:gravity="center">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/margin_size_20"
-            android:layout_marginRight="@dimen/margin_size_20"
-            android:layout_weight="1"
-            android:background="@drawable/text_btn_bg"
-            android:gravity="center"
-            android:text="体检"
-            android:textColor="@drawable/textcolor_selector"
-            android:textIsSelectable="true" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="@dimen/margin_size_20"-->
+            <!--android:layout_marginRight="@dimen/margin_size_20"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/text_btn_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="体检"-->
+            <!--android:textColor="@drawable/textcolor_selector"-->
+            <!--android:textIsSelectable="true" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/margin_size_20"
-            android:layout_marginRight="@dimen/margin_size_20"
-            android:layout_weight="1"
-            android:background="@drawable/text_btn_bg"
-            android:gravity="center"
-            android:text="手术"
-            android:textColor="@drawable/textcolor_selector"
-            android:textIsSelectable="true" />
-    </LinearLayout>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="@dimen/margin_size_20"-->
+            <!--android:layout_marginRight="@dimen/margin_size_20"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/text_btn_bg"-->
+            <!--android:gravity="center"-->
+            <!--android:text="手术"-->
+            <!--android:textColor="@drawable/textcolor_selector"-->
+            <!--android:textIsSelectable="true" />-->
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"

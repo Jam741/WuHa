@@ -12,6 +12,7 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
+
 import kotlinx.android.synthetic.main.f_service_list.*
 
 /**

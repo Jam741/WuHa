@@ -23,7 +23,8 @@ import javax.crypto.NoSuchPaddingException;
 
 public class JRSAUtils {
 
-    public static final String PUBLIC_KEY_VL = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZh0gBaAkPGB8FmQnT7xEl4+Uta8vYN7qQHywa1vrdDBoSHsegnDt15hq1gTdrEq7XS3yDtZQbgJM1QyeT2/y1vpunVSZUzApJsfc+dLmwFBuZbGjW8UqfDLuz0Msar5GAtSbh2q4pxhXoL17N9TiwtqTlTjwBmjfhncGnsTOORwIDAQAB";
+    public static final String PUBLIC_KEY_VL = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7/iS3ZkZiuj0Tzx3G3yTUmdSrxqLfjqLOGZWfiegY5WjfnNno5WBGugarFGAgOIA39r+GC/52QTxGgKjgxJ3DHLWf9JtYCZE9YIXtVJmnlwdndI7T9468PlWHVplCeUgYq1jbItE29IJ2q4EUxnCOMQFC5Ylr2LRENEnjr0WdOwIDAQAB";
+
     /**
      * 加密算法RSA
      */

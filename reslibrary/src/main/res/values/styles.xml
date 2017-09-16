@@ -47,6 +47,13 @@
         <item name="android:textColor">@drawable/text_change_color</item>
     </style>
 
+    <style name="rad_main">
+        <item name="android:textColor">@drawable/text_change_checker</item>
+        <item name="android:textSize">@dimen/font_input</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:button">@null</item>
+    </style>
 
     <style name="input">
         <item name="android:background">@drawable/input_border_selecter</item>

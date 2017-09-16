@@ -54,9 +54,11 @@ class HomeFragment : JBaseFragment() {
         tab_home.run {
             setupWithViewPager(vp_home)
         }
-        search_view.setOnClickListener {
+        search_layout.setOnClickListener {
             SearchForActivity.start(context)
         }
+//        search_layout_appbar.setOnClickListener { SearchForActivity.start(context) }
+
 
         initLocation()
         tx_location.setOnClickListener {

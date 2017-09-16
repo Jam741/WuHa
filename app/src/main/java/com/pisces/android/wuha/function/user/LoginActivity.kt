@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.support.v4.app.ActivityCompat
+import android.util.Log
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
 import com.mob.MobSDK
@@ -13,6 +14,8 @@ import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.pisces.android.wuha.tools.JRSAUtils
+import com.pisces.android.wuha.tools.RSAUtils
 import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import kotlinx.android.synthetic.main.login_act.*
 
@@ -108,9 +111,22 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
         //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
-            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
-                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
-            }
+
+
+            Log.d("RSA", JRSAUtils.encryptByPublicKey("13041652801"))
+
+            val str = "123456787654"
+
+            Log.d("RSA", "加密前：" + str)
+            val mss = RSAUtils.encrypt(str)
+            Log.d("RSA", "加密后：" + mss)
+            val jmss = RSAUtils.decrypt(mss)
+            Log.d("RSA", "解密后：" + jmss)
+
+
+//            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
+//                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
+//            }
         }
     }
 

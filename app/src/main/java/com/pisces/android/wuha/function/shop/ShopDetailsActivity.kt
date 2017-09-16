@@ -60,6 +60,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 Log.i("lyx", t.id)
                 bindData(t)
                 serviceListFragment.setData(t.serviceProviderServiceCategories)
+                clientMessageFragment.setData(t.serviceProviderIntroduction)
             }
         })
     }
