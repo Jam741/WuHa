@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="@dimen/actionBarSize"
         android:background="@color/colorBackGroundWhiteC1"
         android:orientation="horizontal">
 

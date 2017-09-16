@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 
 
 /**
@@ -30,6 +31,10 @@ public class LImg {
     private Drawable resourceDrawable;              //控件占位符
     private Priority priority;                      //优先权
     private DiskCacheStrategy cache;                //缓存
+
+    private boolean isCircle = false;//是否为圆形图
+    private boolean isCircleBead = false;//是否为圆形图
+    private int radius = 0;//是否为圆形图
 
     public LImg(Context context) {
         this.context = context;
@@ -59,7 +64,6 @@ public class LImg {
     public static LImg with(android.support.v4.app.Fragment fragment) {
         return new LImg(fragment.getActivity());
     }
-
 
     /*优先权*/
     public LImg priority(Priority priority) {
@@ -98,6 +102,24 @@ public class LImg {
         return this;
     }
 
+    /*是否为圆形图片*/
+    public LImg isCircle(boolean isCircle) {
+        this.isCircle = isCircle;
+        return this;
+    }
+
+    /*是否为圆角*/
+    public LImg isCircleBead(boolean isCircleBead) {
+        this.isCircleBead = isCircleBead;
+        return this;
+    }
+
+    /*是否为圆角*/
+    public LImg isCircleBead(boolean isCircleBead, int radius) {
+        this.isCircleBead = isCircleBead;
+        return this;
+    }
+
 
     /**
      * 缓存机制（glide自带的
@@ -115,9 +137,38 @@ public class LImg {
 
     /*显示的image*/
     public void into(ImageView imageViewId) {
+        RequestOptions options = new RequestOptions().centerCrop();
+        if (resourceDrawable != null) {
+            options.placeholder(resourceDrawable);
+        }
+
+        if (resourceId > 0) {
+            options.placeholder(resourceId);
+        }
+
+        if (errorId > 0) {
+            options.error(errorId);
+        }
+        if (errorDrawable != null) {
+            options.error(errorDrawable);
+        }
+
+        if (priority != null) {
+            options.priority(priority);
+        }
+        if (isCircle) {
+            options.transform(new GlideCircleTransform());
+        } else if (isCircleBead) {
+            if (radius == 0) {
+                options.transform(new GlideRoundTransform());
+            } else {
+                options.transform(new GlideRoundTransform(radius));
+            }
+
+        }
+
         this.imageViewId = imageViewId;
 
-//        Glide.with(context).load(url).crossFade().into(imageViewId);
-
+        Glide.with(context).load(url).apply(options).into(imageViewId);
     }
 }

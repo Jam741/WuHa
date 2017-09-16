@@ -23,7 +23,7 @@
     <Button
         android:id="@+id/put_in"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="@dimen/actionBarSize"
         android:layout_marginLeft="@dimen/margin_size_36"
         android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="@dimen/margin_size_40"
