@@ -111,22 +111,9 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
         //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
-
-
-            Log.d("RSA", JRSAUtils.encryptByPublicKey("13041652801"))
-
-            val str = "123456787654"
-
-            Log.d("RSA", "加密前：" + str)
-            val mss = RSAUtils.encrypt(str)
-            Log.d("RSA", "加密后：" + mss)
-            val jmss = RSAUtils.decrypt(mss)
-            Log.d("RSA", "解密后：" + jmss)
-
-
-//            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
-//                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
-//            }
+            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
+                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
+            }
         }
     }
 

@@ -15,7 +15,6 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
-import com.bumptech.glide.request.RequestOptions;
 
 
 /**
@@ -119,26 +118,6 @@ public class LImg {
     public void into(ImageView imageViewId) {
         this.imageViewId = imageViewId;
 
-
-        RequestOptions options = new RequestOptions()
-                .centerCrop();
-
-        if (resourceId != 0) {
-            options.placeholder(resourceId);
-        } else if (resourceDrawable != null) {
-            options.placeholder(resourceDrawable);
-        }
-        if (priority != null) {
-            options.priority(priority);
-        }
-        if (errorId != 0) {
-            options.error(errorId);
-        } else if (errorDrawable != null) {
-            options.error(errorDrawable);
-        }
-        if (cache != null) {
-            options.diskCacheStrategy(cache);
-        }
-        Glide.with(context).load(url).apply(options).into(imageViewId);
+//        Glide.with(context).load(url).crossFade().into(imageViewId);
     }
 }

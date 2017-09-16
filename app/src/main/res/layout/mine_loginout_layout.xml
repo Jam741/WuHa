@@ -21,14 +21,15 @@
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="2dp" />
 
-        <TextView
-            android:id="@+id/f_personage_top_name"
+        <Button
+            android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ivPortrait"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="我是个小宝宝"
+            android:backgroundTint="@color/colorAccent"
+            android:text="登录"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/text_size_16" />
 

@@ -70,6 +70,7 @@ object UserController {
             override fun onSuccess(t: LoginResponse?) {
                 if (t == null) return
                 refreshUserId(context, t.id)
+                setLoginStatus(context, true)
                 AccountManager.refreshIdentityToken(context, t.identityToken)
                 subscriber.call(t)
                 sendLoginStatusChangedBroadCast(context, true)
