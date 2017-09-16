@@ -8,6 +8,7 @@ import com.pisces.android.wuha.entity.bean.LoginResponse
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.collect.BodyCollect
+import com.pisces.android.wuha.function.setting.bean.FeedBack
 import com.pisces.android.wuha.function.user.BodyForLogin
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -79,5 +80,11 @@ interface ApiService {
     @POST("ServiceProvider/GetServiceProviderDetail")
     fun getServiceProviderDetail(@Body bodyForServiceByDistance: BodyForServiceDetailById): Observable<ServiceDetailProvider>
 
+
+    /**
+     * 提交反馈或意见
+     */
+    @POST("About/AddFeedBack")
+    fun addFeedBack(@Body feedBack: FeedBack): Observable<Any>
 
 }
