@@ -31,6 +31,7 @@
         <activity
             android:name=".function.main.MainActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
 
             <intent-filter>
@@ -42,7 +43,8 @@
 
         </activity>
 
-        <activity android:name=".function.user.LoginActivity"
+        <activity
+            android:name=".function.user.LoginActivity"
             android:screenOrientation="portrait">
 
 
@@ -53,22 +55,30 @@
 
 
         <!--关于我们-->
-        <activity android:name="com.pisces.android.wuha.function.setting.AboutUsActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.AboutUsActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--评分-->
-        <activity android:name="com.pisces.android.wuha.function.setting.GradeActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.GradeActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--版本号界面-->
-        <activity android:name="com.pisces.android.wuha.function.setting.VersionActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.VersionActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--举报投诉-->
-        <activity android:name="com.pisces.android.wuha.function.setting.ReportActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.ReportActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
@@ -77,43 +87,59 @@
 
         <!--================================我的界面============================================-->
         <!--设置主界面-->
-        <activity android:name="com.pisces.android.wuha.function.setting.SettingActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.SettingActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--我的收藏-->
-        <activity android:name="com.pisces.android.wuha.function.collect.CollectActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.collect.CollectActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--意见建议-->
-        <activity android:name="com.pisces.android.wuha.function.personage.MessageActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.personage.MessageActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--联系我们-->
-        <activity android:name="com.pisces.android.wuha.function.personage.CallActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.personage.CallActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--分享app-->
-        <activity android:name="com.pisces.android.wuha.function.personage.ShareActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.personage.ShareActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--我的账户-->
-        <activity android:name="com.pisces.android.wuha.function.setting.AccountActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.setting.AccountActivity"
+            android:screenOrientation="portrait">
 
         </activity>
         <!--================================我的界面============================================-->
 
         <!--店铺详情-->
-        <activity android:name="com.pisces.android.wuha.function.shop.ShopDetailsActivity">
+        <activity
+            android:name="com.pisces.android.wuha.function.shop.ShopDetailsActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 
         <!--搜索界面-->
-        <activity android:name=".function.search.SearchForActivity">
+        <activity
+            android:name=".function.search.SearchForActivity"
+            android:screenOrientation="portrait">
 
         </activity>
 

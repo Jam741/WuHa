@@ -1,5 +1,6 @@
 package com.pisces.android.wuha.entity.bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +36,7 @@ public class ServiceDetailProvider {
     private String CreateTime;
     private int ServiceProviderType;
     private double Distance;
-    private List<ServiceProviderServiceCategoriesBean> ServiceProviderServiceCategories;
+    private ArrayList<ServiceProviderServiceCategoriesBean> ServiceProviderServiceCategories;
 
     public String getId() {
         return Id;
@@ -125,11 +126,11 @@ public class ServiceDetailProvider {
         this.Distance = Distance;
     }
 
-    public List<ServiceProviderServiceCategoriesBean> getServiceProviderServiceCategories() {
+    public ArrayList<ServiceProviderServiceCategoriesBean> getServiceProviderServiceCategories() {
         return ServiceProviderServiceCategories;
     }
 
-    public void setServiceProviderServiceCategories(List<ServiceProviderServiceCategoriesBean> ServiceProviderServiceCategories) {
+    public void setServiceProviderServiceCategories(ArrayList<ServiceProviderServiceCategoriesBean> ServiceProviderServiceCategories) {
         this.ServiceProviderServiceCategories = ServiceProviderServiceCategories;
     }
 
@@ -382,7 +383,7 @@ public class ServiceDetailProvider {
 
         private String Id;
         private String Name;
-        private List<SubCategoriesBean> SubCategories;
+        private ArrayList<SubCategoriesBean> SubCategories;
 
         public String getId() {
             return Id;
@@ -400,11 +401,11 @@ public class ServiceDetailProvider {
             this.Name = Name;
         }
 
-        public List<SubCategoriesBean> getSubCategories() {
+        public ArrayList<SubCategoriesBean> getSubCategories() {
             return SubCategories;
         }
 
-        public void setSubCategories(List<SubCategoriesBean> SubCategories) {
+        public void setSubCategories(ArrayList<SubCategoriesBean> SubCategories) {
             this.SubCategories = SubCategories;
         }
 

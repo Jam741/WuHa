@@ -85,6 +85,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     var eh: EventHandler = object : EventHandler() {
 
         override fun afterEvent(event: Int, result: Int, data: Any?) {
+
             runOnUiThread {
                 Logger.d(data)
                 if (result == SMSSDK.RESULT_COMPLETE) {

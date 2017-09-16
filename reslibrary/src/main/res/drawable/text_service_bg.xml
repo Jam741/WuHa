@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--点击-->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="0" android:endColor="@color/colorWhiteC1" android:startColor="@color/colorWhiteC1" />
+
+        </shape>
+    </item>
+
+    <!--聚焦-->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <gradient android:angle="0" android:endColor="@color/colorWhiteC1" android:startColor="@color/colorWhiteC1" />
+        </shape>
+    </item>
+    <!--默认-->
+    <item>
+        <shape>
+            <gradient android:angle="0" android:endColor="@color/colorGrayC2" android:startColor="@color/colorGrayC2" />
+
+        </shape>
+    </item>
+
+
+</selector>
