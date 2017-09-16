@@ -47,7 +47,7 @@
     <Button
         android:id="@+id/setting_return"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="48dp"
         android:layout_marginLeft="@dimen/margin_size_36"
         android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="48dp"
