@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/f_personage_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@mipmap/mine_top_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/top_logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/mine_top_bg" />
+
+        <TextView
+            android:id="@+id/f_personage_top_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="我是个小宝宝"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_menus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

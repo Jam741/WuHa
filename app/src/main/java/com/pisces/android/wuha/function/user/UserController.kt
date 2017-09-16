@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.user
 
 import android.content.Context
+import android.content.Intent
 import com.pisces.android.framworkerlibrary.utlis.SPUtils
 import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.entity.bean.LoginResponse
@@ -71,6 +72,7 @@ object UserController {
                 refreshUserId(context, t.id)
                 AccountManager.refreshIdentityToken(context, t.identityToken)
                 subscriber.call(t)
+                sendLoginStatusChangedBroadCast(context, true)
             }
         })
     }
@@ -81,6 +83,22 @@ object UserController {
      */
     fun loginOut(context: Context) {
         setLoginStatus(context, false)
+        //清除缓存的用户信息
         SPUtils.remove(context, Constant.KEY_USER_ID_CACHE)
+        //发送用户登录状态改变的广播
+        sendLoginStatusChangedBroadCast(context, false)
+    }
+
+
+    /**
+     * 发送用户登录状态改变的广播
+     *
+     * @param loginStatus 登录状态
+     */
+    fun sendLoginStatusChangedBroadCast(context: Context, loginStatus: Boolean) {
+        val intent = Intent()
+        intent.putExtra(Constant.KEY_LOGIN_STATUS, loginStatus)
+        intent.action = Constant.LOGIN_STATUS_BROADCAST_ACTION
+        context.sendBroadcast(intent)
     }
 }
