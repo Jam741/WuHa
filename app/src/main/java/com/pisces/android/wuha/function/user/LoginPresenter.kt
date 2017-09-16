@@ -40,14 +40,6 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
             view.loginSuccess()
         })
 
-//        HttpUtli.toSubscribe(Api.service.login(bodyForLogin), object : ProgressSubscriber<LoginResponse>(context) {
-//            override fun onSuccess(t: LoginResponse?) {
-//                if (t == null) return
-//                AccountManager.refreshIdentityToken(context, t.identityToken)
-//                view.loginSuccess()
-//            }
-//        })
-
     }
 
     override fun sendSmsCode(phone: String) {

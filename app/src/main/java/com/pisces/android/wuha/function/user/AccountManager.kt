@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.user
 
 import android.content.Context
+import android.util.Log
 import com.pisces.android.framworkerlibrary.JBaseApplication
 import com.pisces.android.framworkerlibrary.utlis.SPUtils
 import com.pisces.android.wuha.App
@@ -11,7 +12,11 @@ import com.pisces.android.wuha.Constant
  */
 object AccountManager {
 
-    val IdentityToken: String = SPUtils.get(JBaseApplication.appContext(), Constant.KEY_IDENTITY_TOKEN, "") as String
+    fun identityToken(): String {
+        val token = SPUtils.get(JBaseApplication.appContext(), Constant.KEY_IDENTITY_TOKEN, "") as String
+        Log.d("TOKEN", token)
+        return token
+    }
 
     fun refreshIdentityToken(context: Context, identityToken: String) {
         SPUtils.put(context, Constant.KEY_IDENTITY_TOKEN, identityToken)

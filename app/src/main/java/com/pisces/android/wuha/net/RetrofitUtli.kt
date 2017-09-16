@@ -2,6 +2,7 @@ package com.pisces.android.wuha.net
 
 import android.util.Log
 import com.pisces.android.framworkerlibrary.net.converter.GsonConverterFactory
+import com.yingwumeijia.baseywmj.utils.net.interceptor.AccountInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -17,7 +18,7 @@ class RetrofitUtli private constructor() {
                 .baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { message: String? -> Log.d("HTTP", message) }).setLevel(HttpLoggingInterceptor.Level.BODY)).build())
+                .client(OkHttpClient.Builder().addInterceptor(AccountInterceptor()).addInterceptor(HttpLoggingInterceptor(HttpLoggingInterceptor.Logger { message: String? -> Log.d("HTTP", message) }).setLevel(HttpLoggingInterceptor.Level.BODY)).build())
                 .build()
     }
 

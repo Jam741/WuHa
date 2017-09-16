@@ -15,8 +15,12 @@ import com.pisces.android.wuha.function.mine.logged.LoggedFragment
 import com.pisces.android.wuha.function.mine.loginout.LoginOutFragment
 import com.pisces.android.wuha.function.user.UserController
 import android.content.IntentFilter
+import android.util.Log
+import android.view.ActionMode
+import com.pisces.android.wuha.entity.bean.UserInfoBean
 import com.pisces.android.wuha.function.setting.SettingActivity
 import kotlinx.android.synthetic.main.mine_frag.*
+import rx.functions.Action1
 
 
 /**
@@ -25,6 +29,7 @@ import kotlinx.android.synthetic.main.mine_frag.*
  */
 
 class MineFragment : LBaseFragment() {
+
 
     private val loggedFragment by lazy { LoggedFragment() }
 
@@ -40,9 +45,9 @@ class MineFragment : LBaseFragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (UserController.isLogined(context)) {
-            childFragmentManager.beginTransaction().add(R.id.frame_content, loggedFragment).commit()
+            childFragmentManager.beginTransaction().add(R.id.frame_content, loggedFragment).commitAllowingStateLoss()
         } else {
-            childFragmentManager.beginTransaction().add(R.id.frame_content, loginOutFragment).commit()
+            childFragmentManager.beginTransaction().add(R.id.frame_content, loginOutFragment).commitAllowingStateLoss()
         }
 
         registerLoginStatusBroadCastReceived()
@@ -52,19 +57,24 @@ class MineFragment : LBaseFragment() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("JAM", "MINE  onResume")
+    }
+
     fun changeContentFragment(fragment: Fragment) {
         if (childFragmentManager.findFragmentById(R.id.frame_content) == fragment) return Unit
         childFragmentManager.beginTransaction().replace(R.id.frame_content, fragment).commitAllowingStateLoss()
     }
 
 
-    fun registerLoginStatusBroadCastReceived() {
+    private fun registerLoginStatusBroadCastReceived() {
         val intentFilter = IntentFilter()
         intentFilter.addAction(Constant.LOGIN_STATUS_BROADCAST_ACTION)
         context.registerReceiver(loginStatusBroadCastReceive, intentFilter)
     }
 
-    fun unRegisterLoginStatusBroadCastReceived() {
+    private fun unRegisterLoginStatusBroadCastReceived() {
         context.unregisterReceiver(loginStatusBroadCastReceive)
     }
 
