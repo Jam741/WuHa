@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v21/notification_template_icon_group.xml"
+    }
+]

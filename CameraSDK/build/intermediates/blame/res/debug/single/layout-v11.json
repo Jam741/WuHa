@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]
