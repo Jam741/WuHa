@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityCompat
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo
 import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.R
@@ -56,9 +57,11 @@ class AccountActivity : LBaseActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                user_name_delete.visibility = if (usernameValue().isNotEmpty()) View.VISIBLE else View.GONE
             }
         })
 
+        user_name_delete.setOnClickListener { et_user_name.setText("") }
     }
 
 
@@ -104,7 +107,7 @@ class AccountActivity : LBaseActivity() {
     }
 
 
-    private fun usernameValue(): String? {
+    private fun usernameValue(): String {
         return et_user_name.text.toString()
     }
 
