@@ -35,7 +35,7 @@ class AccountActivity : LBaseActivity() {
         setContentView(R.layout.activity_account)
         et_user_name.run { isFocusable = true }
 
-        user_img.setOnClickListener {  }
+        user_img.setOnClickListener { editPortrait() }
     }
 
 
