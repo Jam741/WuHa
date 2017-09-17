@@ -74,14 +74,18 @@ object VerifyUtils {
 
 
     /**
-     * 验证用户名
+     * 验证用户名只包含字母，数字，中文
      * @param account
      * @return
      */
-    fun verifyUsername(username: String): Boolean {
+    fun verifyUsername(username: String?): Boolean {
 
-        return if (username.length < 2 || username.length > 16) {
-            false
+        if (TextUtils.isEmpty(username)){
+            return false
+        }
+
+        if (username!!.length < 2 || username!!.length > 16) {
+            return false
         } else {
 
             var value = username.replace("-", "")
@@ -92,9 +96,10 @@ object VerifyUtils {
             val all = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$"
             val p = Pattern.compile(all)
             val m = p.matcher(value)
-            m.matches()
+            return m.matches()
 
         }
+
     }
 }
 

@@ -4,11 +4,15 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo
+import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.squareup.picasso.Picasso
+import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import com.yingwumeijia.commonlibrary.utils.ListUtil
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
@@ -23,10 +27,13 @@ class AccountActivity : LBaseActivity() {
 
     val request_code_portrait = CameraSdkParameterInfo.TAKE_PICTURE_FROM_GALLERY
 
+    val userName by lazy { intent.getStringExtra(Constant.KEY_CURRENT) }
+
 
     companion object {
-        fun start(context: Context) {
+        fun start(context: Context, username: String) {
             val intent = Intent(context, AccountActivity::class.java)
+            intent.putExtra(Constant.KEY_CURRENT, username)
             context.startActivity(intent)
         }
     }
@@ -34,10 +41,24 @@ class AccountActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
-        topTitle
-        et_user_name.run { isFocusable = true }
+        topTitle.text = "账户"
+        et_user_name.setText(userName)
 
+
+        topLeft.setOnClickListener { close() }
         user.setOnClickListener { editPortrait() }
+        et_user_name.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+        })
+
     }
 
 
@@ -80,5 +101,18 @@ class AccountActivity : LBaseActivity() {
 //        user_img.setImageBitmap(BitmapFactory.decodeFile(s))
 
 
+    }
+
+
+    private fun usernameValue(): String? {
+        return et_user_name.text.toString()
+    }
+
+    private fun verifyUserName(username: String?): Boolean {
+        if (!VerifyUtils.verifyUsername(username)) {
+            toastWith("请输入正确的用户名")
+            return false
+        }
+        return true
     }
 }
