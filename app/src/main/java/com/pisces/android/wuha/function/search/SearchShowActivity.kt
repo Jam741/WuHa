@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import com.jcodecraeer.xrecyclerview.XRecyclerView
+import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
@@ -17,6 +18,7 @@ import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
+import com.yingwumeijia.commonlibrary.utils.ListUtil
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
 import kotlinx.android.synthetic.main.f_service.*
@@ -72,6 +74,8 @@ class SearchShowActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.search_show_a)
+        btnClose.setOnClickListener { finish() }
+
         edSearchView.run {
         }
         edSearchView.setOnClickListener {
@@ -82,7 +86,7 @@ class SearchShowActivity : LBaseActivity() {
             layoutManager = LinearLayoutManager(this@SearchShowActivity)
             adapter = mAdapter
 
-            setPullRefreshEnabled(false)
+            setPullRefreshEnabled(true)
             setLoadingMoreEnabled(true)
             setLoadingListener(object : XRecyclerView.LoadingListener {
                 override fun onRefresh() {
@@ -139,13 +143,24 @@ class SearchShowActivity : LBaseActivity() {
             3 -> {
 
             }
-
         }
 
-        HttpUtli.toSubscribe(Api.service.queryServiceProviderBySearceName(BodySearch(keyword, page, Config.pageSize)), object : ProgressSubscriber<ArrayList<ServiceProvider>>(this) {
+        HttpUtli.toSubscribe(Api.service.queryServiceProviderBySearceName(BodySearch(Constant.getGpsX(), Constant.getGpsY(), keyword, page, Config.pageSize)), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 if (t == null) return Unit
-                mAdapter.refresh(t)
+                if (page == Config.page) {
+                    recycler_view.refreshComplete()
+                    recycler_view.setNoMore(false)
+                } else {
+                    recycler_view.loadMoreComplete()
+                    recycler_view.setNoMore(ListUtil.isEmpty(t))
+                }
+                if (!ListUtil.isEmpty(t))
+                    if (page == Config.page) {
+                        mAdapter.refresh(t)
+                    } else {
+                        mAdapter.addRange(t)
+                    }
             }
         })
     }
