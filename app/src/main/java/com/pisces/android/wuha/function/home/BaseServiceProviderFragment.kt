@@ -34,7 +34,6 @@ abstract class BaseServiceProviderFragment : LBaseFragment(), BaseServiceProvide
 
     val type by lazy { serviceProviderType() }
 
-
     var way: Int = 1
 
     abstract fun serviceProviderType(): Int
