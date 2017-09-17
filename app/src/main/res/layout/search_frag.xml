@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhiteC1">
+    android:background="@color/colorWhiteC1"
+    android:orientation="vertical">
 
-    <include layout="@layout/search_header"/>
+    <include layout="@layout/search_header" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/history_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:text="历史搜索"
+        android:textColor="@color/colorYellowC1"
+        android:textSize="@dimen/text_size_14" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:id="@+id/rv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginTop="5dp"
+        android:text="猜你想搜"
+        android:textColor="@color/colorYellowC1"
+        android:textSize="@dimen/text_size_14" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:id="@+id/rv_interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

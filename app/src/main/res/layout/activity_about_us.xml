@@ -20,9 +20,7 @@
         android:layout_marginLeft="@dimen/margin_left_right"
         android:layout_marginRight="@dimen/margin_left_right"
         android:layout_marginTop="@dimen/margin_size_36"
-        android:text="哈哈你居然点了进来 哈哈我是不是很叼啊h
-        hhhhhhhhhhhhhhhh我是第二行数据哈哈哈哈哈哈哈哈哈哈哈啊楼上的房间哦i啊释迦佛
-        i叫我i而激情渴望放假啊空间佛卡就哦耳机烹饪么我看分配上大怕饿啊佛牌咯我发脾气文
-        凭渴望" />
+        android:gravity="center"
+        android:text="一群有爱的人，做着有爱的事" />
 
 </LinearLayout>

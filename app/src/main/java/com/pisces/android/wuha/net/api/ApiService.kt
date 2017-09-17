@@ -4,12 +4,15 @@ import com.pisces.android.wuha.entity.BodyForServiceByCount
 import com.pisces.android.wuha.entity.BodyForServiceByDistance
 import com.pisces.android.wuha.entity.BodyForServiceByPrice
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
-import com.pisces.android.wuha.entity.bean.LoginResponse
-import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
-import com.pisces.android.wuha.entity.bean.ServiceProvider
-import com.pisces.android.wuha.entity.bean.UserInfoBean
+import com.pisces.android.wuha.entity.bean.*
 import com.pisces.android.wuha.function.collect.BodyCollect
+
+//import com.pisces.android.wuha.function.setting.bean.FeedBack
+
 import com.pisces.android.wuha.function.mine.BodyForUserInfo
+import com.pisces.android.wuha.function.search.BodySearch
+import com.pisces.android.wuha.function.setting.bean.FeedBack
+
 import com.pisces.android.wuha.function.user.BodyForLogin
 import okhttp3.ResponseBody
 import retrofit2.http.Body
@@ -84,9 +87,27 @@ interface ApiService {
 
 
     /**
+
+     * 提交反馈或意见
+     */
+    @POST("About/AddFeedBack")
+    fun addFeedBack(@Body feedBack: FeedBack): Observable<Any>
+
+    /**
      * 获取用户信息
      */
     @POST("UserInfo/GetUserInfo")
     fun getUserInfo(@Body bodyForUserInfo: BodyForUserInfo): Observable<UserInfoBean>
+
+
+    /**
+     * 返回所有用户的热搜10个词条
+     */
+    @POST("Analysis/GetHotSearch")
+    fun getHotSearch(): Observable<ArrayList<HotSearch>>
+
+    @POST("ServiceProvider/QueryServiceProviderByServiceName")
+    fun queryServiceProviderBySearceName(@Body bodySearch: BodySearch):Observable<ArrayList<ServiceProvider>>
+
 
 }

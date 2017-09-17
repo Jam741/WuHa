@@ -49,7 +49,7 @@
                         android:layout_marginStart="12dp"
                         android:drawableLeft="@mipmap/home_icon_address2"
                         android:drawablePadding="@dimen/margin_size_10"
-                        android:text="高新区创业路300号"
+                        android:text=""
                         android:textColor="@color/colorGrayC1"
                         android:textSize="@dimen/margin_size_14" />
 
@@ -60,7 +60,7 @@
                         android:layout_below="@+id/site"
                         android:layout_marginLeft="@dimen/margin_size_34"
                         android:layout_marginTop="@dimen/margin_size_8"
-                        android:text="12345人去过"
+                        android:text=""
                         android:textColor="@color/colorGrayC1"
                         android:textSize="@dimen/text_size_12" />
 
@@ -71,7 +71,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/margin_left_right"
                         android:layout_toLeftOf="@+id/view"
-                        android:text="700米"
+                        android:text=""
                         android:textColor="@color/colorGrayC1"
                         android:textSize="@dimen/text_size_12" />
 
@@ -152,7 +152,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="@dimen/actionBarSize"
             android:layout_marginTop="@dimen/margin_size_10"
             android:background="@color/colorBackGroundWhiteC1" />
 
