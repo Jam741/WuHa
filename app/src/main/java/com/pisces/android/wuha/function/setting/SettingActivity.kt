@@ -36,6 +36,7 @@ class SettingActivity : LBaseActivity() {
     }
 
     private fun initView() {
+        toolbar.setOnClickListener { finish() }
         topTitle.text = "设置"
         about_us.setOnClickListener { AboutUsActivity.start(this) }
         grade.setOnClickListener {
