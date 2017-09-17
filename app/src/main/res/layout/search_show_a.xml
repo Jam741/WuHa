@@ -3,7 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/search_header"/>
-    <include layout="@layout/f_service"/>
 
+    <include layout="@layout/search_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.jcodecraeer.xrecyclerview.XRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackGroundGrayC1" />
+
+        <TextView
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="没有数据..." />
+    </FrameLayout>
 </LinearLayout>

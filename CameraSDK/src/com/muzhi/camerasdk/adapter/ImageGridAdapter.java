@@ -9,9 +9,9 @@ import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.muzhi.camerasdk.R;
 import com.muzhi.camerasdk.model.ImageInfo;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -252,8 +252,9 @@ public class ImageGridAdapter extends BaseAdapter {
             }
             File imageFile = new File(data.path);
             if(mItemSize > 0) {
-                Glide.with(mContext).load(imageFile).error(R.drawable.camerasdk_pic_loading).crossFade().
-                        into(image);
+                Picasso.with(mContext).load(imageFile).placeholder(R.drawable.camerasdk_pic_loading).into(image);
+//                Glide.with(mContext).load(imageFile).error(R.drawable.camerasdk_pic_loading).crossFade().
+//                        into(image);
             }
         }
     }

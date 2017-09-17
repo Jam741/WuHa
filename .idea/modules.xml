@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CameraSDK/CameraSDK.iml" filepath="$PROJECT_DIR$/CameraSDK/CameraSDK.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CameraSDK/CameraSDK.iml" filepath="$PROJECT_DIR$/CameraSDK/CameraSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/WuHa.iml" filepath="$PROJECT_DIR$/WuHa.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flowlayout-lib/flowlayout-lib.iml" filepath="$PROJECT_DIR$/flowlayout-lib/flowlayout-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flowlayout-lib/flowlayout-lib.iml" filepath="$PROJECT_DIR$/flowlayout-lib/flowlayout-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/framworkerlibrary/framworkerlibrary.iml" filepath="$PROJECT_DIR$/framworkerlibrary/framworkerlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationlibrary/locationlibrary.iml" filepath="$PROJECT_DIR$/locationlibrary/locationlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" filepath="$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" />

@@ -8,9 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.muzhi.camerasdk.R;
 import com.muzhi.camerasdk.model.FolderInfo;
+import com.squareup.picasso.Picasso;
 
 
 import java.io.File;
@@ -81,8 +81,7 @@ public class FolderAdapter extends BaseAdapter {
                 holder.size.setText(getTotalImageSize()+"张");
                 if(mFolders.size()>0){
                     FolderInfo f = mFolders.get(0);
-                    Glide.with(mContext).load(new File(f.cover.path)).error(R.drawable.camerasdk_pic_loading).crossFade().
-                            into(holder.cover);
+                    Picasso.with(mContext).load(new File(f.cover.path)).placeholder(R.drawable.camerasdk_pic_loading).into(holder.cover);
                 }
             }else {
                 holder.bindData(getItem(i));
@@ -133,8 +132,8 @@ public class FolderAdapter extends BaseAdapter {
         void bindData(FolderInfo data) {
             name.setText(data.name);
             size.setText(data.imageInfos.size() + "张");
-            Glide.with(mContext).load(new File(data.cover.path)).error(R.drawable.camerasdk_pic_loading).crossFade().
-                    into(cover);
+            Picasso.with(mContext).load(new File(data.cover.path)).placeholder(R.drawable.camerasdk_pic_loading).into(cover);
+
         }
     }
 
