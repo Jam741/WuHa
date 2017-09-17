@@ -41,7 +41,6 @@ class HomeFragment : JBaseFragment() {
         search_layout.setOnClickListener {
             SearchForActivity.start(context)
         }
-//        search_layout_appbar.setOnClickListener { SearchForActivity.start(context) }
 
 
         initLocation()

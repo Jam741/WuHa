@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/about_us"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="@dimen/actionBarSize"
         android:layout_marginTop="@dimen/margin_size_10"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
@@ -22,7 +22,7 @@
     <TextView
         android:id="@+id/grade"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="@dimen/actionBarSize"
         android:layout_marginTop="1dp"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
@@ -34,7 +34,7 @@
     <TextView
         android:id="@+id/version"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="@dimen/actionBarSize"
         android:layout_marginTop="1dp"
         android:background="@color/colorTextWhite"
         android:gravity="center_vertical"
@@ -47,7 +47,7 @@
     <Button
         android:id="@+id/setting_return"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="@dimen/actionBarSize"
         android:layout_marginLeft="@dimen/margin_size_36"
         android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="48dp"
