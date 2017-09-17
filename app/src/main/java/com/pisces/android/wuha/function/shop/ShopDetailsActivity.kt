@@ -5,25 +5,29 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.pisces.android.wuha.entity.BodyForCancelCollect
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
-import com.pisces.android.wuha.function.home.service.ServiceFragment
+import com.pisces.android.wuha.function.user.UserController
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
+import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import kotlinx.android.synthetic.main.activity_shop_details.*
 
 
 /**
  * Created by Chris Li on 2017/9/1.
- * 商品详情界面
+ * 商铺详情界面
  */
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+    var isCollect: Boolean = false
 
     val serviceListFragment by lazy { ServiceListFragment() }
 
@@ -41,7 +45,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private val mTabList by lazy { arrayListOf("服务列表", "客户信息") }
-    private val mViewList by lazy { arrayListOf(serviceListFragment,clientMessageFragment ) }
+    private val mViewList by lazy { arrayListOf(serviceListFragment, clientMessageFragment) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +53,31 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_shop_details)
         initView()
         initData()
+
+        collect.setOnClickListener {
+            if (!isCollect) {
+                if (!UserController.passPrecondition(this)) return@setOnClickListener
+                HttpUtli.toSubscribe(Api.service.addUserFavorite(BodyForCollect(UserController.userId(this).toString(), id)), object : SimpleSubscriber<Any>(this) {
+                    override fun onSuccess(t: Any?) {
+                        if (t == null) return Unit
+                        collect.setImageResource(R.mipmap.mine_icon_collect)
+                        isCollect = true
+                        toastWith("该商铺加入收藏")
+                    }
+                })
+            } else {
+
+                if (!UserController.passPrecondition(this)) return@setOnClickListener
+                HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(UserController.userId(this).toString(), id)), object : ProgressSubscriber<Int>(this) {
+                    override fun onSuccess(t: Int?) {
+                        collect.setImageResource(R.mipmap.home_icon_collect)
+                        isCollect = false
+                        toastWith("该商铺移出收藏")
+                    }
+                })
+
+            }
+        }
 
     }
 
@@ -94,4 +123,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
         }
     }
+
+
 }

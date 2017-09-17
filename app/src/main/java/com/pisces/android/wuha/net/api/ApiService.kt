@@ -1,20 +1,16 @@
 package com.pisces.android.wuha.net.api
 
-import com.pisces.android.wuha.entity.BodyForServiceByCount
-import com.pisces.android.wuha.entity.BodyForServiceByDistance
-import com.pisces.android.wuha.entity.BodyForServiceByPrice
-import com.pisces.android.wuha.entity.BodyForServiceDetailById
+import com.pisces.android.wuha.entity.*
 import com.pisces.android.wuha.entity.bean.*
 import com.pisces.android.wuha.function.collect.BodyCollect
 
-//import com.pisces.android.wuha.function.setting.bean.FeedBack
 
 import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.function.search.BodySearch
 import com.pisces.android.wuha.function.setting.bean.FeedBack
+import com.pisces.android.wuha.function.shop.BodyForCollect
 
 import com.pisces.android.wuha.function.user.BodyForLogin
-import okhttp3.ResponseBody
 import retrofit2.http.Body
 import retrofit2.http.POST
 import rx.Observable
@@ -106,8 +102,23 @@ interface ApiService {
     @POST("Analysis/GetHotSearch")
     fun getHotSearch(): Observable<ArrayList<HotSearch>>
 
+    /**
+     * 查询关键字对应的商铺
+     */
     @POST("ServiceProvider/QueryServiceProviderByServiceName")
-    fun queryServiceProviderBySearceName(@Body bodySearch: BodySearch):Observable<ArrayList<ServiceProvider>>
+    fun queryServiceProviderBySearceName(@Body bodySearch: BodySearch): Observable<ArrayList<ServiceProvider>>
 
+    /**
+     * 添加收藏的商铺
+     */
+    @POST("UserInfo/AddUserFavorite")
+    fun addUserFavorite(@Body bodyForCollect: BodyForCollect): Observable<Any>
+
+
+    /**
+     * 取消收藏
+     */
+    @POST("UserInfo/RemoveUserFavorite")
+    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect):Observable<Int>
 
 }
