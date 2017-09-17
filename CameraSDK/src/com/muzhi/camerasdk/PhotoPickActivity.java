@@ -42,7 +42,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.muzhi.camerasdk.adapter.FolderAdapter;
 import com.muzhi.camerasdk.adapter.ImageGridAdapter;
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo;
@@ -50,6 +49,7 @@ import com.muzhi.camerasdk.model.FolderInfo;
 import com.muzhi.camerasdk.model.ImageInfo;
 import com.muzhi.camerasdk.utils.FileUtils;
 import com.muzhi.camerasdk.utils.TimeUtils;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -491,8 +491,7 @@ public class PhotoPickActivity extends BaseActivity {
 
         hashMap.put(path, imageView);
         File imageFile = new File(path);
-        Glide.with(mContext).load(imageFile).error(R.drawable.camerasdk_pic_loading).crossFade().
-                into(imageView);
+        Picasso.with(mContext).load(imageFile).placeholder(R.drawable.camerasdk_pic_loading).into(imageView);
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override

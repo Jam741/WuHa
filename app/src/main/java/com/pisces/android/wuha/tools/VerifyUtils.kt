@@ -1,6 +1,7 @@
 package com.yingwumeijia.baseywmj.utils
 
 import android.text.TextUtils
+import java.util.regex.Pattern
 
 /**
  * Created by jamisonline on 2017/6/16.
@@ -71,4 +72,29 @@ object VerifyUtils {
         else return companyName!!.trim().length >= 2
     }
 
+
+    /**
+     * 验证用户名
+     * @param account
+     * @return
+     */
+    fun verifyUsername(username: String): Boolean {
+
+        return if (username.length < 2 || username.length > 16) {
+            false
+        } else {
+
+            var value = username.replace("-", "")
+            value = value.replace("_", "")
+            value = value.replace(".", "")
+
+            // 验证用户名只包含字母，数字，中文
+            val all = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$"
+            val p = Pattern.compile(all)
+            val m = p.matcher(value)
+            m.matches()
+
+        }
+    }
 }
+

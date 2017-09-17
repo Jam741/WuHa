@@ -11,6 +11,7 @@ import com.pisces.android.wuha.entity.bean.UserInfoBean
 import com.pisces.android.wuha.function.mine.BaseMineContentFragment
 import com.pisces.android.wuha.function.setting.AccountActivity
 import com.pisces.android.wuha.function.user.UserController
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.mine_logged_layout.*
 import rx.functions.Action1
 
@@ -37,7 +38,8 @@ class LoggedFragment : BaseMineContentFragment() {
 
         UserController.getUserInfo(context, Action1 { t ->
             if (!TextUtils.isEmpty(t.photoPath))
-                LImg.with(this).load(t.photoPath).into(ivPortrait)
+                Picasso.with(context).load(t.photoPath).into(ivPortrait)
+//            LImg.with(this).load(t.photoPath).into(ivPortrait)
             tv_username.text = t.name
         })
     }

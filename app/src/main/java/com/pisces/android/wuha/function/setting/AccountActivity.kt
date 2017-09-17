@@ -2,15 +2,16 @@ package com.pisces.android.wuha.function.setting
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
+import android.util.Log
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.squareup.picasso.Picasso
 import com.yingwumeijia.commonlibrary.utils.ListUtil
 import kotlinx.android.synthetic.main.activity_account.*
-import kotlinx.android.synthetic.main.mine_logged_layout.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 /**
  * Created by Chris Li on 2017/9/3.
@@ -33,9 +34,10 @@ class AccountActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
+        topTitle
         et_user_name.run { isFocusable = true }
 
-        user_img.setOnClickListener { editPortrait() }
+        user.setOnClickListener { editPortrait() }
     }
 
 
@@ -73,6 +75,10 @@ class AccountActivity : LBaseActivity() {
     }
 
     private fun upLoadPortrait(s: String) {
-        ivPortrait.setImageBitmap(BitmapFactory.decodeFile(s))
+        Log.d("IMAGE", s)
+        Picasso.with(this).load(s).into(user_img)
+//        user_img.setImageBitmap(BitmapFactory.decodeFile(s))
+
+
     }
 }
