@@ -1,90 +1,90 @@
 [
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\folder_text_color.xml",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\color\\folder_text_color.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_search_url_text.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_search_url_text.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_search_url_text.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_search_url_text.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_light.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_hint_foreground_material_light.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_btn_checkable.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_secondary_text_material_dark.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_spinner.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_spinner.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_dark.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/switch_thumb_material_dark.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_switch_track.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_default.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_default.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/default_text_color.xml",
+        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/bundles/debug/res/color/default_text_color.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_light.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\switch_thumb_material_light.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_switch_track.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_switch_track.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\default_text_color.xml",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\color\\default_text_color.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/folder_text_color.xml",
+        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/bundles/debug/res/color/folder_text_color.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_edittext.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_edittext.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_primary_text_material_dark.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_switch_thumb.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_hint_foreground_material_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/switch_thumb_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_switch_thumb.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_hint_foreground_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_spinner.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_secondary_text_material_light.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_secondary_text_material_light.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_btn_colored_borderless_text_material.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\switch_thumb_material_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\switch_thumb_material_dark.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_btn_colored_text_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_btn_colored_text_material.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_hint_foreground_material_dark.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_primary_text_material_light.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_primary_text_material_light.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_tint_default.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_tint_default.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_edittext.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\color\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\color\\abc_tint_seek_thumb.xml"
+        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/color/abc_secondary_text_material_dark.xml"
     }
 ]

@@ -1,44 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhiteC1"
     android:orientation="vertical">
 
-    <include layout="@layout/search_header" />
-
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/history_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_left_right"
-        android:text="历史搜索"
-        android:textColor="@color/colorYellowC1"
-        android:textSize="@dimen/text_size_14" />
+        android:orientation="horizontal">
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_marginLeft="@dimen/margin_left_right"
-        android:layout_marginRight="@dimen/margin_left_right"
-        android:id="@+id/rv_history"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionBarSize"
+            android:orientation="horizontal">
 
-    <TextView
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:paddingLeft="10dp"
+                android:paddingRight="12dp"
+                android:src="@mipmap/home_return2" />
+
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/edSearchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_input"
+                android:background="#f3f3f3"
+                android:queryHint="请输入店铺名称或者服务类型" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@color/colorBlackC1"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/history_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_left_right"
-        android:layout_marginTop="5dp"
-        android:text="猜你想搜"
-        android:textColor="@color/colorYellowC1"
-        android:textSize="@dimen/text_size_14" />
+        android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_marginLeft="@dimen/margin_left_right"
-        android:layout_marginRight="@dimen/margin_left_right"
-        android:id="@+id/rv_interest"
+
+        <TextView
+            android:id="@+id/history_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:text="历史搜索"
+            android:textColor="@color/colorYellowC1"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="visible" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/flow_history"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:max_select="1" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/hot_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginTop="5dp"
+            android:text="猜你想搜"
+            android:textColor="@color/colorYellowC1"
+            android:textSize="@dimen/text_size_14" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/flow_hot"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:max_select="1" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
