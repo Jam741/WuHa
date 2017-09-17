@@ -134,7 +134,7 @@
 
         <!--搜索结果展示界面-->
         <activity
-            android:name=".function.search.SearchShowActivity"
+            android:name=".function.search.show.SearchShowActivity"
             android:screenOrientation="portrait">
         </activity>
 

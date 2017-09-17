@@ -4,13 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.SearchView
-import android.text.Editable
 import android.text.TextUtils
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.pisces.android.wuha.function.search.show.SearchShowActivity
 import com.yingwumeijia.commonlibrary.utils.ListUtil
 import kotlinx.android.synthetic.main.search_frag.*
 
