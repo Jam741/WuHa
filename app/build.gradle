@@ -67,6 +67,8 @@ dependencies {
     /*数据库*/
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile project(':CameraSDK')
+
 }
 repositories {
     mavenCentral()

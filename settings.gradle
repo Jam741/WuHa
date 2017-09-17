@@ -1,1 +1,1 @@
-include ':app', ':test', ':framworkerlibrary', ':reslibrary', ':xrecyclerview', ':ltaskpicture', ':locationlibrary'
+include ':app', ':test', ':framworkerlibrary', ':reslibrary', ':xrecyclerview', ':ltaskpicture', ':locationlibrary', ':CameraSDK'

@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.mine.logged
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +36,8 @@ class LoggedFragment : BaseMineContentFragment() {
         ivPortrait.setOnClickListener { AccountActivity.start(context) }
 
         UserController.getUserInfo(context, Action1 { t ->
-            LImg.with(this).load(t.photoPath).into(ivPortrait)
+            if (!TextUtils.isEmpty(t.photoPath))
+                LImg.with(this).load(t.photoPath).into(ivPortrait)
             tv_username.text = t.name
         })
     }

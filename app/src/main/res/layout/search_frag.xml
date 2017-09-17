@@ -8,6 +8,8 @@
     <include layout="@layout/search_header" />
 
     <TextView
+        android:visibility="gone"
+        android:id="@+id/history_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_left_right"
