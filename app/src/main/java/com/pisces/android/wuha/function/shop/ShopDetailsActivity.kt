@@ -5,6 +5,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import com.pisces.adnroid.ltaskpicture.LImg
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.R
@@ -93,6 +95,8 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun bindData(t: ServiceDetailProvider) {
+        var img: ImageView = findViewById(R.id.img_bg) as ImageView
+        LImg.with(this).load(t.serviceProviderIntroduction.imagePath).into(img)
         name.text = t.name
         site.text = t.serviceProviderAddress.mainAddressLine
         person.text = t.viewingCount.toString() + "人去过"

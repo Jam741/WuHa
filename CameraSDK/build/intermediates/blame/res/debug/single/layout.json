@@ -8,24 +8,24 @@
         "source": "D:\\Project\\WuHa\\CameraSDK\\res\\layout\\camerasdk_activity_camera.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
         "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\camerasdk_crop_image.xml",
         "source": "D:\\Project\\WuHa\\CameraSDK\\res\\layout\\camerasdk_crop_image.xml"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_select_dialog_material.xml"
-    },
-    {
         "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\camerasdk_list_item_camera.xml",
         "source": "D:\\Project\\WuHa\\CameraSDK\\res\\layout\\camerasdk_list_item_camera.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
