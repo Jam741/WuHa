@@ -13,8 +13,8 @@ public class Constant {
     public static final String LOCATION_BROADCAST_ACTION = "LOCATION_BROADCAST_ACTION";
     private static SharedPreferences sp;
     public static final String C_LOCATION = "location";//地理位置
-    public static String C_GPS_X = "gps_x";//地理位置
-    public static String C_GPS_Y = "gps_y";//地理位置
+    public static String C_GPS_X = "gps_x";//地理经度
+    public static String C_GPS_Y = "gps_y";//地理维度
 
 
     public static void setLocation(String s) {
@@ -27,7 +27,10 @@ public class Constant {
     }
 
     public static void setGpsX(double x) {
-        sp.edit().putFloat(C_GPS_X, 0);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putFloat(C_GPS_X, (float) x);
+        editor.apply();
+        editor.commit();
     }
 
     public static float getGpsX() {
@@ -36,7 +39,10 @@ public class Constant {
     }
 
     public static void setGpsY(double y) {
-        sp.edit().putFloat(C_GPS_Y, 0);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putFloat(C_GPS_Y, (float) y);
+        editor.apply();
+        editor.commit();
     }
 
     public static float getGpsY() {

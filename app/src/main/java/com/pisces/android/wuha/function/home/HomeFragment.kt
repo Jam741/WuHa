@@ -38,6 +38,8 @@ class HomeFragment : JBaseFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        registerLocationBroadCastReceived()
+
         vp_home.run { adapter = TabAdapter(childFragmentManager, fragments as ArrayList<JBaseFragment>, tabs) }
         tab_home.run {
             setupWithViewPager(vp_home)
@@ -46,27 +48,27 @@ class HomeFragment : JBaseFragment() {
             SearchForActivity.start(context)
         }
 
-
-//        initLocation()
-//        tx_location.setOnClickListener {
-//            initLocation()
-//        }
         activity.startService(Intent(activity, LocationService::class.java))
-        registerLocationBroadCastReceived()
+
 
     }
 
+    /**
+     * 注册广播
+     */
     private fun registerLocationBroadCastReceived() {
         val intentFilter = IntentFilter()
         intentFilter.addAction(Constant.LOCATION_BROADCAST_ACTION)
         context.registerReceiver(locationBroadCastReceive, intentFilter)
     }
 
+    /**
+     * 移除广播
+     */
     private fun unRegisterLoginStatusBroadCastReceived() {
         context.unregisterReceiver(locationBroadCastReceive)
     }
-
-
+    
     override fun onDestroy() {
         unRegisterLoginStatusBroadCastReceived()
         super.onDestroy()

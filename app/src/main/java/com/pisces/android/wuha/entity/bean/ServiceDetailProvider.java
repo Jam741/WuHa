@@ -35,7 +35,7 @@ public class ServiceDetailProvider {
     private int ViewingCount;
     private String CreateTime;
     private int ServiceProviderType;
-    private double Distance;
+    private float Distance;
     private ArrayList<ServiceProviderServiceCategoriesBean> ServiceProviderServiceCategories;
 
     public String getId() {
@@ -118,11 +118,11 @@ public class ServiceDetailProvider {
         this.ServiceProviderType = ServiceProviderType;
     }
 
-    public double getDistance() {
+    public float getDistance() {
         return Distance;
     }
 
-    public void setDistance(double Distance) {
+    public void setDistance(float Distance) {
         this.Distance = Distance;
     }
 
