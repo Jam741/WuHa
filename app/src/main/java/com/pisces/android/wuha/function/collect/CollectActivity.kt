@@ -87,7 +87,7 @@ class CollectActivity : LBaseActivity() {
     }
 
     private fun loadData() {
-        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1", Constant.getGpsX(), Constant.getGpsY())), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
+        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1", Constant.getGpsY(), Constant.getGpsX())), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 if (t == null) return Unit
                 mAdapter.refresh(t)
