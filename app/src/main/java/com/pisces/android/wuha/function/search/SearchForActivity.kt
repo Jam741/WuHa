@@ -24,7 +24,7 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
             history_layout.visibility = View.GONE
         else {
             history_layout.visibility = View.VISIBLE
-            controller.historyKeyWordsAdapter.addRange(data)
+            controller.historyKeyWordsAdapter.refresh(data)
         }
 
     }
@@ -34,7 +34,7 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
             hot_layout.visibility = View.GONE
         else {
             hot_layout.visibility = View.VISIBLE
-            controller.hotKeyWordsAdapter.addRange(data)
+            controller.hotKeyWordsAdapter.refresh(data)
         }
     }
 
@@ -75,9 +75,14 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
         }
 
         btnSearch.setOnClickListener {
+            searchKeyWord = edSearchView.query.toString()
+            if (!TextUtils.isEmpty(searchKeyWord)) {
+                controller.insertHistoryKeyWords(searchKeyWord)
+            }
             didSearch()
         }
 
+        btnClose.setOnClickListener { close() }
 
 
         edSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
@@ -94,8 +99,18 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
         })
 
 
-        controller.loadHistoryKeyWords()
         controller.loadHotKeyWords()
+        edSearchView.onActionViewExpanded()
+        controller.loadHistoryKeyWords()
+
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+////        edSearchView.isFocusable = true
+////        edSearchView.isFocusableInTouchMode = true
+//        edSearchView.requestFocus()
     }
 
 
@@ -105,6 +120,7 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
             toastWith("搜索不能为空")
             return
         }
+        edSearchView.setQuery(searchKeyWord, false)
         SearchShowActivity.start(this, searchKeyWord)
     }
 }

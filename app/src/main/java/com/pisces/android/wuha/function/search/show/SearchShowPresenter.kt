@@ -1,6 +1,8 @@
 package com.pisces.android.wuha.function.search.show
 
 import android.content.Context
+import android.util.Log
+import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.search.BodySearch
@@ -16,6 +18,8 @@ class SearchShowPresenter(val context: Context, val view: SearchShowContract.Vie
     override fun loadList(bodySearch: BodySearch) {
         HttpUtli.toSubscribe(Api.service.queryServiceProviderBySearceName(bodySearch), object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
+                Logger.d(t)
+                Log.d("JAM", "=====" + (bodySearch.CurrentPageIndex == Config.page && ListUtil.isEmpty(t)))
                 view.showEmpty(bodySearch.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
                 view.onLoadCompleted(bodySearch.CurrentPageIndex, ListUtil.isEmpty(t))
                 if (!ListUtil.isEmpty(t))

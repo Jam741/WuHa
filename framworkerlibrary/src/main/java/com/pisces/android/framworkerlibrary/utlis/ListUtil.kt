@@ -9,22 +9,18 @@ object ListUtil {
 
 
     fun isEmpty(list: List<*>?): Boolean {
-        if (list == null) {
-            return true
-        } else if (list.isEmpty()) {
-            return true
-        } else {
-            return false
+        return when {
+            list == null -> true
+            list.isEmpty() -> true
+            else -> false
         }
     }
 
     fun isEmpty(list: ArrayList<*>?):Boolean{
-        if (list == null) {
-            return true
-        } else if (list.isEmpty()) {
-            return true
-        } else {
-            return false
+        return when {
+            list == null -> true
+            list.isEmpty() -> true
+            else -> false
         }
     }
 }

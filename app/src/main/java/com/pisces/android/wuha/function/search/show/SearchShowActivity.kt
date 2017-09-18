@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.View
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.pisces.android.locationlibrary.Constant
@@ -46,6 +47,7 @@ class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
     }
 
     override fun showEmpty(empty: Boolean) {
+        Log.d("showEmpty", empty.toString())
         empty_layout.visibility = if (empty) View.VISIBLE else View.GONE
         recycler_view.visibility = if (empty) View.GONE else View.VISIBLE
     }
@@ -99,8 +101,8 @@ class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
         setContentView(R.layout.search_show_a)
         btnClose.setOnClickListener { finish() }
 
-        edSearchView.setQuery(keyword, true)
-        edSearchView.setOnClickListener {
+        edSearchView.text = keyword
+        search_layout.setOnClickListener {
             finish()
         }
         recycler_view.run {
@@ -128,25 +130,7 @@ class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
 
 
     private fun loadData() {
-        BodySearch(Constant.getGpsY(), Constant.getGpsX(), keyword, page, Config.pageSize)
-        HttpUtli.toSubscribe(Api.service.queryServiceProviderBySearceName(BodySearch(Constant.getGpsX(), Constant.getGpsY(), keyword, page, Config.pageSize)), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
-            override fun onSuccess(t: ArrayList<ServiceProvider>?) {
-                if (t == null) return Unit
-                if (page == Config.page) {
-                    recycler_view.refreshComplete()
-                    recycler_view.setNoMore(false)
-                } else {
-                    recycler_view.loadMoreComplete()
-                    recycler_view.setNoMore(ListUtil.isEmpty(t))
-                }
-                if (!ListUtil.isEmpty(t))
-                    if (page == Config.page) {
-                        mAdapter.refresh(t)
-                    } else {
-                        mAdapter.addRange(t)
-                    }
-            }
-        })
-
+        val bodySearch = BodySearch(Constant.getGpsY(), Constant.getGpsX(), keyword, page, Config.pageSize)
+        presenter.loadList(bodySearch)
     }
 }
