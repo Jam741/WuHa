@@ -90,5 +90,6 @@ class ServiceListFragment : JBaseFragment() {
 
     fun setData(mData: ArrayList<ServiceDetailProvider.ServiceProviderServiceCategoriesBean>) {
         leftAdapter.refresh(mData)
+        rightAdapter.refresh(mData[0].subCategories)
     }
 }

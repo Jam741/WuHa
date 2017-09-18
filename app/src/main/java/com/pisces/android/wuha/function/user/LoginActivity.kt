@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat
 import android.util.Log
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
+import com.google.gson.Gson
 import com.mob.MobSDK
 import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.Config
@@ -92,6 +93,11 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
                     handler.handleMessage(Message().apply { what = event })
                 } else {
                     (data as Throwable).printStackTrace()
+                    Log.d("jam", data.message)
+                    if (data.message != null) {
+                        val bean = Gson().fromJson(data.message, SMSVerifyData::class.java)
+                        toastWith(bean.detail)
+                    }
                 }
             }
         }
