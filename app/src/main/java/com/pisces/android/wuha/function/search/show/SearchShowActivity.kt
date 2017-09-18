@@ -129,7 +129,7 @@ class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
 
 
     private fun loadData() {
-        BodySearch(Constant.getGpsX(), Constant.getGpsY(), keyword, page, Config.pageSize)
+        BodySearch(Constant.getGpsY(), Constant.getGpsX(), keyword, page, Config.pageSize)
         HttpUtli.toSubscribe(Api.service.queryServiceProviderBySearceName(BodySearch(Constant.getGpsX(), Constant.getGpsY(), keyword, page, Config.pageSize)), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
                 if (t == null) return Unit

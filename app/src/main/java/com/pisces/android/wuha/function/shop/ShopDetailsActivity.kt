@@ -5,12 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
-import com.pisces.android.wuha.entity.BodyForCancelCollect
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
 import com.pisces.android.wuha.function.user.UserController
@@ -82,7 +80,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun initData() {
-        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsX(), Constant.getGpsY())
+        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsY(), Constant.getGpsX())
         ), object : SimpleSubscriber<ServiceDetailProvider>(this) {
             override fun onSuccess(t: ServiceDetailProvider?) {
                 if (t == null) return Unit

@@ -1,6 +1,7 @@
 package com.pisces.android.locationlibrary;
 
 import android.content.Context;
+import android.content.Intent;
 
 
 import com.amap.api.location.AMapLocation;
@@ -16,6 +17,8 @@ public class GDLocationUtil {
     private static AMapLocationClient mLocationClient;
     private static AMapLocationClientOption mLocationOption = null;
     private static AMapLocation sLocation = null;
+
+
 
     /**
      * 初始化地图导航，只需调用一次
@@ -70,6 +73,9 @@ public class GDLocationUtil {
             Constant.setLocation(sLocation.getAddress());
             Constant.setGpsX(sLocation.getLongitude());
             Constant.setGpsY(sLocation.getLatitude());
+
+
+
 
         }
     }

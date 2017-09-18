@@ -1,11 +1,15 @@
 package com.pisces.android.wuha.function.home
 
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.amap.api.location.AMapLocation
 import com.pisces.android.framworkerlibrary.core.JBaseFragment
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
@@ -24,7 +28,7 @@ import kotlinx.android.synthetic.main.home_frag.*
  * 主页fragment
  */
 class HomeFragment : JBaseFragment() {
-    private var mLocation: String = ""
+    val locationBroadCastReceive by lazy { LocationBroadCastReceive() }
     private val tabs by lazy { arrayListOf("医疗", "服务") }
     private val fragments by lazy { arrayListOf(MedicalFragment(), ServiceFragment()) }
 
@@ -43,30 +47,36 @@ class HomeFragment : JBaseFragment() {
         }
 
 
-        initLocation()
-        tx_location.setOnClickListener {
-            initLocation()
-        }
+//        initLocation()
+//        tx_location.setOnClickListener {
+//            initLocation()
+//        }
         activity.startService(Intent(activity, LocationService::class.java))
+        registerLocationBroadCastReceived()
 
     }
 
-    private fun initLocation() {
+    private fun registerLocationBroadCastReceived() {
+        val intentFilter = IntentFilter()
+        intentFilter.addAction(Constant.LOCATION_BROADCAST_ACTION)
+        context.registerReceiver(locationBroadCastReceive, intentFilter)
+    }
 
-        GDLocationUtil.getCurrentLocation(object : GDLocationUtil.MyLocationListener {
-            override fun result(location: AMapLocation?) {
-                if (location != null) {
-                    mLocation = location.address.toString()
-                    Log.i("lyx", Constant.getLocation())
-                    tx_location.text = Constant.getLocation()
-                }
-            }
+    private fun unRegisterLoginStatusBroadCastReceived() {
+        context.unregisterReceiver(locationBroadCastReceive)
+    }
 
-            override fun fail(message: String?) {
-                tx_location.text = "定位失败点击重新定位"
-            }
-        })
 
+    override fun onDestroy() {
+        unRegisterLoginStatusBroadCastReceived()
+        super.onDestroy()
+    }
+
+
+    inner class LocationBroadCastReceive : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent) {
+            tx_location.text = intent.getStringExtra(Constant.C_LOCATION)
+        }
 
     }
 

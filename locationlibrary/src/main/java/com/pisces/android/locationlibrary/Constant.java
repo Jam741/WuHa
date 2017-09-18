@@ -9,8 +9,10 @@ import android.content.SharedPreferences;
  */
 
 public class Constant {
+    //广播  Action
+    public static final String LOCATION_BROADCAST_ACTION = "LOCATION_BROADCAST_ACTION";
     private static SharedPreferences sp;
-    public static String C_LOCATION = "location";//地理位置
+    public static final String C_LOCATION = "location";//地理位置
     public static String C_GPS_X = "gps_x";//地理位置
     public static String C_GPS_Y = "gps_y";//地理位置
 
