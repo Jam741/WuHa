@@ -39,7 +39,6 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         UserController.login(context, bodyForLogin, Action1 {
             view.loginSuccess()
         })
-
     }
 
     override fun sendSmsCode(phone: String) {
@@ -49,6 +48,4 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         countDownTimer.start()
         view.showMsg("短信验证码发送成功，请注意查收")
     }
-
-
 }

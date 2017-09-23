@@ -36,12 +36,12 @@ class SearchController(val context: Context, val onLoadHistoryAndHotKeyWordsList
     fun loadHistoryKeyWords() {
         val ob: Observable<List<String>> = Observable
                 .create(Observable.OnSubscribe { t: Subscriber<in List<String>>? ->
-                    Log.d("JHAM", "xxxxxxxxxxxxxxxx:" + SearchHistoryMenager.getHistory(context).size)
+//                    Log.d("JHAM", "xxxxxxxxxxxxxxxx:" + SearchHistoryMenager.getHistory(context).size)
                     t!!.onNext(SearchHistoryMenager.getHistory(context))
                 })
         ob.compose(HttpUtli.applySchedulers()).subscribe(object : Action1<List<String>> {
             override fun call(t: List<String>?) {
-                Log.d("JHAM", "------:" + t!!.size)
+//                Log.d("JHAM", "------:" + t!!.size)
                 if (!ListUtil.isEmpty(t))
                     historyKeyWordsAdapter.refresh(t!!)
                 onLoadHistoryAndHotKeyWordsListener.didLoadHistoryKeyWords(t)
