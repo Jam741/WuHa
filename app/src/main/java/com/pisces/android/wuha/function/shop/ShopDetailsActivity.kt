@@ -13,6 +13,7 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
+import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
 import com.pisces.android.wuha.function.user.UserController
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
@@ -66,7 +67,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                     }
                 })
             } else {
-
                 if (!UserController.passPrecondition(this)) return@setOnClickListener
                 HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(UserController.userId(this).toString(), id)), object : ProgressSubscriber<Int>(this) {
                     override fun onSuccess(t: Int?) {
@@ -75,10 +75,21 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                         toastWith("该商铺移出收藏")
                     }
                 })
-
             }
         }
+        addViewingCount()
 
+    }
+
+    /**
+     * 添加浏览记录
+     */
+    private fun addViewingCount() {
+        HttpUtli.toSubscribe(Api.service.addViewingCountForServiceProvider(BodyAddViewingCount(id,1)),object :SimpleSubscriber<Any>(this){
+            override fun onSuccess(t: Any?) {
+                if (t==null) return Unit
+            }
+        })
     }
 
     private fun initData() {
@@ -106,7 +117,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         } else {
             distance.text = dis.toString() + "m"
         }
-
     }
 
     private fun initView() {
@@ -122,9 +132,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             R.id.shop_return -> {
                 finish()
             }
-
         }
     }
-
-
 }
