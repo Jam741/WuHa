@@ -69,6 +69,12 @@ class SearchController(val context: Context, val onLoadHistoryAndHotKeyWordsList
         historyKeyWordsAdapter.refresh(SearchHistoryMenager.getHistory(context))
     }
 
+
+    fun clearHistory(){
+        SearchHistoryMenager.clearnHistory(context)
+        loadHistoryKeyWords()
+    }
+
     private fun createKeyWordsAdapter(): TagAdapter<String> {
         return object : TagAdapter<String>() {
             override fun getView(parent: FlowLayout?, position: Int, t: String?): View {

@@ -72,4 +72,8 @@ public class SearchHistoryMenager {
     }
 
 
+    public static void clearnHistory(Context context){
+        SPUtils.put(context, KEY_SEARCH_HISTORY, "");
+    }
+
 }
