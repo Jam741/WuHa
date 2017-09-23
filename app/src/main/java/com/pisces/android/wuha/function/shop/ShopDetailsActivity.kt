@@ -20,6 +20,13 @@ import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import kotlinx.android.synthetic.main.activity_shop_details.*
+import android.net.Uri
+import android.support.v7.app.AlertDialog
+import android.widget.Toast
+import kotlinx.android.synthetic.main.map_show_d.view.*
+import java.net.URISyntaxException
+
+//import jdk.nashorn.internal.runtime.ECMAErrors.getMessage
 
 
 /**
@@ -29,6 +36,11 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     var isCollect: Boolean = false
+    var phoneNmubder: String = ""
+    var isBD: Boolean = false
+    var isGD: Boolean = false
+    var isTX: Boolean = false
+    var mData: ServiceDetailProvider? = null
 
     val serviceListFragment by lazy { ServiceListFragment() }
 
@@ -55,6 +67,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         initView()
         initData()
 
+        /*添加或移除收藏*/
         collect.setOnClickListener {
             if (!isCollect) {
                 if (!UserController.passPrecondition(this)) return@setOnClickListener
@@ -77,7 +90,111 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 })
             }
         }
+        /*打电话*/
+        call_phone.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNmubder))
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+        }
+        /*去哪里*/
+        shop_goto.setOnClickListener {
+
+
+            //            val intent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://ditu.google.cn/maps?hl=zh&mrt=loc&q=31.1198723,121.1099877(上海青浦大街100号)"))
+//            intent.addFlags(
+////                    Intent.FLAG_ACTIVITY_NEW_TASK
+//            Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
+//            )
+//
+//
+//            startActivity(intent)
+            isBD = isAvilible(this, "com.baidu.BaiduMap")
+            isGD = isAvilible(this, "com.autonavi.minimap")
+            isTX = isAvilible(this, "com.tencent.map")
+            showMyDialog()
+        }
         addViewingCount()
+
+    }
+
+    private fun showMyDialog() {
+        val dialog = AlertDialog.Builder(this).create()
+        val view = View.inflate(this, R.layout.map_show_d, null)
+        view.bd_location.run {
+            text = if (isBD) {
+                "百度地图"
+            } else {
+                "百度地图(未安装)"
+            }
+            setOnClickListener {
+                if (isBD) {
+                    try {
+                        //                          intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&src=yourCompanyName|yourAppName#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                        intent = Intent.getIntent("intent://map/direction?" +
+                                //"origin=latlng:"+"34.264642646862,108.95108518068&" +   //起点  此处不传值默认选择当前位置
+                                "destination=latlng:" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "|name:我的目的地" + //终点
+
+                                "&mode=driving&" + //导航路线方式
+
+                                "region=北京" + //
+
+                                "&src=慧医#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end")
+                        context.startActivity(intent) //启动调用
+                    } catch (e: URISyntaxException) {
+                        Log.e("intent", e.message)
+                    }
+                } else {
+                    Toast.makeText(this@ShopDetailsActivity, "你未安装", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+        view.gd_location.run {
+            text = if (isGD) {
+                "高德地图"
+            } else {
+                "高德地图(未安装)"
+            }
+
+            setOnClickListener {
+                if (isGD) {
+                    try {
+                        intent = Intent.getIntent("androidamap://navi?sourceApplication=WUHA&poiname=我的目的地&lat=" + mData!!.serviceProviderAddress.latitude + "&lon=" + mData!!.serviceProviderAddress.longitude + "&dev=0")
+                        context.startActivity(intent)
+                    } catch (e: URISyntaxException) {
+                        e.printStackTrace()
+                    }
+
+                } else {
+                    Toast.makeText(this@ShopDetailsActivity, "你未安装", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+
+        }
+        view.tx_location.run {
+            text = if (isTX) {
+                "腾讯地图"
+            } else {
+                "腾讯地图(未安装)"
+            }
+
+            setOnClickListener {
+                if (isTX) {
+                    val uri = Uri.parse("http://apis.map.qq.com/uri/v1/routeplan?type=walk&tocoord=" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "&policy=1&referer=myapp&coord_type=1")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+
+                } else {
+
+                }
+            }
+
+        }
+        view.button.setOnClickListener {
+            dialog?.dismiss()
+        }
+        dialog.setView(view)
+        dialog.show()
 
     }
 
@@ -85,9 +202,9 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
      * 添加浏览记录
      */
     private fun addViewingCount() {
-        HttpUtli.toSubscribe(Api.service.addViewingCountForServiceProvider(BodyAddViewingCount(id,1)),object :SimpleSubscriber<Any>(this){
+        HttpUtli.toSubscribe(Api.service.addViewingCountForServiceProvider(BodyAddViewingCount(id, 1)), object : SimpleSubscriber<Any>(this) {
             override fun onSuccess(t: Any?) {
-                if (t==null) return Unit
+                if (t == null) return Unit
             }
         })
     }
@@ -98,7 +215,9 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             override fun onSuccess(t: ServiceDetailProvider?) {
                 if (t == null) return Unit
                 Log.i("lyx", t.id)
+                mData = t
                 bindData(t)
+                phoneNmubder = t.serviceProviderContact.phone
                 serviceListFragment.setData(t.serviceProviderServiceCategories)
                 clientMessageFragment.setData(t.serviceProviderIntroduction)
             }
@@ -133,5 +252,24 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 finish()
             }
         }
+    }
+
+
+    fun isAvilible(context: Context, packageName: String): Boolean {
+        //获取packagemanager
+        val packageManager = context.packageManager
+        //获取所有已安装程序的包信息
+        val packageInfos = packageManager.getInstalledPackages(0)
+        //用于存储所有已安装程序的包名
+        val packageNames = ArrayList<String>()
+        //从pinfo中将包名字逐一取出，压入pName list中
+        if (packageInfos != null) {
+            for (i in packageInfos.indices) {
+                val packName = packageInfos[i].packageName
+                packageNames.add(packName)
+            }
+        }
+        //判断packageNames中是否有目标程序的包名，有TRUE，没有FALSE
+        return packageNames.contains(packageName)
     }
 }
