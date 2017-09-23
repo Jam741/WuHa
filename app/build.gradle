@@ -69,6 +69,7 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile project(':CameraSDK')
     compile project(':flowlayout-lib')
+    compile project(':sharesdk')
 
 }
 repositories {

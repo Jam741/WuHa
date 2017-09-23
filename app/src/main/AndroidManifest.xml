@@ -146,12 +146,6 @@
         <activity android:name="com.muzhi.camerasdk.CropperImageRectangleActivity" />
 
 
-        <receiver android:name=".function.home.HomeFragment$Location">
-            <intent-filter>
-                <action android:name="com.pisces.android.locationlibrary" />
-            </intent-filter>
-        </receiver>
-
 
     </application>
 

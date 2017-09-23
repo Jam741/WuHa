@@ -7,6 +7,9 @@ import android.util.Log
 import android.view.View
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
+import com.pisces.android.sharesdk.ShareBean
+import com.pisces.android.sharesdk.ShareClient
+import com.pisces.android.sharesdk.ShareDialog
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
@@ -25,6 +28,9 @@ import kotlinx.android.synthetic.main.activity_shop_details.*
  */
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+
+    val shareClient by lazy { ShareClient(this, ShareBean("测试标题", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+
     var isCollect: Boolean = false
 
     val serviceListFragment by lazy { ServiceListFragment() }
@@ -77,6 +83,21 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             }
         }
 
+
+        btnShare.setOnClickListener {
+            shareClient.launchShare()
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        shareClient.didActivityResult(requestCode,resultCode,data)
+    }
+
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        shareClient.didNewIntent(intent)
     }
 
     private fun initData() {
