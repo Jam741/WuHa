@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+        "outputFile": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 121
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +38,11 @@
                     "endOffset": 192
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +61,11 @@
                     "endOffset": 262
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +84,11 @@
                     "endOffset": 332
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +107,11 @@
                     "endOffset": 400
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -106,7 +130,11 @@
                     "endOffset": 468
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+=======
+                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

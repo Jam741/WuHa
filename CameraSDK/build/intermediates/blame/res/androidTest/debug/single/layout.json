@@ -1,33 +1,65 @@
 [
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_loading.xml",
         "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_loading.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_image.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_image.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_action_tombstone.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\notification_action_tombstone.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_main.xml",
         "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_main.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_part_time.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\notification_template_part_time.xml"
     },
@@ -42,10 +74,14 @@
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_lines_media.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\notification_template_lines_media.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_image_view.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_image_view.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_item_effect.xml",
-        "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_item_effect.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_crop_image.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_crop_image.xml"
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_preview_image.xml",
@@ -60,6 +96,7 @@
         "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_filter_image.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_title_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
@@ -70,30 +107,60 @@
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_image_view.xml",
         "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_image_view.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_expanded_menu_layout.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_media_custom.xml",
-        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\notification_template_media_custom.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_item_viewpage.xml",
-        "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_item_viewpage.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_screen_content_include.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_custom_big.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_image.xml",
-        "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_image.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_part_chronometer.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_image_view2.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_image_view2.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_list_menu_item_layout.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_camera.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_camera.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_singlechoice_material.xml",
@@ -108,6 +175,7 @@
         "source": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_popup_folder.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
@@ -218,13 +286,122 @@
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_activity_chooser_view.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_alert_dialog_title_material.xml"
     },
     {
-        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_simple.xml",
-        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_screen_simple.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_main.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_main.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_folder.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_folder.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_loading.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_loading.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_list_item_camera.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_list_item_camera.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_popup_folder.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_popup_folder.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_item_viewpage.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_item_viewpage.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_item_effect.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_item_effect.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_actionbar.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_actionbar.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\camerasdk_activity_preview.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\layout\\camerasdk_activity_preview.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_activity_chooser_view.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_search_view.xml"
+    },
+    {
+<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_action_bar_up_container.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\layout\\abc_action_bar_up_container.xml"
+=======
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\layout\\notification_action.xml"
+>>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     }
 ]

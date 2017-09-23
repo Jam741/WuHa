@@ -2,13 +2,18 @@ package com.pisces.android.wuha.function.shop
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import com.pisces.adnroid.ltaskpicture.LImg
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
+import com.pisces.android.sharesdk.ShareBean
+import com.pisces.android.sharesdk.ShareClient
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
@@ -20,13 +25,8 @@ import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import kotlinx.android.synthetic.main.activity_shop_details.*
-import android.net.Uri
-import android.support.v7.app.AlertDialog
-import android.widget.Toast
 import kotlinx.android.synthetic.main.map_show_d.view.*
 import java.net.URISyntaxException
-
-//import jdk.nashorn.internal.runtime.ECMAErrors.getMessage
 
 
 /**
@@ -35,6 +35,9 @@ import java.net.URISyntaxException
  */
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+
+    val shareClient by lazy { ShareClient(this, ShareBean("测试标题", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+
     var isCollect: Boolean = false
     var phoneNmubder: String = ""
     var isBD: Boolean = false
@@ -198,6 +201,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
     }
 
+
     /**
      * 添加浏览记录
      */
@@ -207,6 +211,24 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 if (t == null) return Unit
             }
         })
+
+
+        /*分享按钮*/
+        btnShare.setOnClickListener {
+            shareClient.launchShare()
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        shareClient.didActivityResult(requestCode,resultCode,data)
+    }
+
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        shareClient.didNewIntent(intent)
+
     }
 
     private fun initData() {
