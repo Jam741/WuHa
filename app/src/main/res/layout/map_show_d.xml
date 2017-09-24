@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/gd_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:gravity="center"
+        android:text="高德地图（未安装）" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBackGroundGrayC1" />
+
+    <TextView
+        android:id="@+id/bd_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:gravity="center"
+        android:text="百度地图（未安装）" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBackGroundGrayC1" />
+
+    <TextView
+        android:id="@+id/tx_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"
+        android:gravity="center"
+        android:text="腾讯地图（未安装）" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorBackGroundGrayC1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="取消" />
+
+</LinearLayout>

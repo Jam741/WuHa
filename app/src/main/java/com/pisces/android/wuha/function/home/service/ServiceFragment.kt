@@ -17,9 +17,7 @@ import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHol
 class ServiceFragment : BaseServiceProviderFragment() {
 
 
-    override fun serviceProviderType(): Int {
-        return 2
-    }
+    override fun serviceProviderType(): Int = 2
 
     override fun createAdapter(): CommonRecyclerAdapter<ServiceProvider> {
         return object : CommonRecyclerAdapter<ServiceProvider>(this, null, R.layout.i_medical) {
@@ -29,7 +27,7 @@ class ServiceFragment : BaseServiceProviderFragment() {
                     setTextWith(R.id.i_medical_site, t.serviceProviderAddress.mainAddressLine)
                     setTextWith(R.id.i_medical_price, "￥" + t.startingPrice)
                     setTextWith(R.id.i_medical_person, t.viewingCount.toString() + "人去过")
-                    var dis: Int = t.distance.toInt()
+                    val dis: Int = t.distance.toInt()
                     if (dis > 1000) {
                         setTextWith(R.id.i_medical_distance, (dis / 1000).toString() + "km")
                     } else {

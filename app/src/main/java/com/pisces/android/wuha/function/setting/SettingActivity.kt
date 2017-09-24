@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import com.pisces.android.framworkerlibrary.utlis.AppUtils
+import com.pisces.android.wuha.App
 
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
@@ -50,7 +52,10 @@ class SettingActivity : LBaseActivity() {
                 e.printStackTrace()
             }
         }
-        version.setOnClickListener { VersionActivity.start(this) }
+        version.run {
+            text = "v\t" + AppUtils.getVersionName(this@SettingActivity)
+        }
+//        version.setOnClickListener { VersionActivity.start(this) }
         setting_return.setOnClickListener {
             UserController.loginOut(this)
             close()

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
@@ -32,9 +33,10 @@ class AccountActivity : LBaseActivity() {
 
 
     companion object {
-        fun start(context: Context, username: String) {
+        fun start(context: Context, username: String?) {
             val intent = Intent(context, AccountActivity::class.java)
-            intent.putExtra(Constant.KEY_CURRENT, username)
+            if (!TextUtils.isEmpty(username))
+                intent.putExtra(Constant.KEY_CURRENT, username)
             context.startActivity(intent)
         }
     }
@@ -43,7 +45,8 @@ class AccountActivity : LBaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
         topTitle.text = "账户"
-        et_user_name.setText(userName)
+        if (!TextUtils.isEmpty(userName))
+            et_user_name.setText(userName)
 
 
         topLeft.setOnClickListener { close() }
@@ -101,9 +104,6 @@ class AccountActivity : LBaseActivity() {
     private fun upLoadPortrait(s: String) {
         Log.d("IMAGE", s)
         Picasso.with(this).load(s).into(user_img)
-//        user_img.setImageBitmap(BitmapFactory.decodeFile(s))
-
-
     }
 
 

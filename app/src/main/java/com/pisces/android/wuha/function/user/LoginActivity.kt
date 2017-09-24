@@ -10,19 +10,16 @@ import android.util.Log
 import cn.smssdk.EventHandler
 import cn.smssdk.SMSSDK
 import com.google.gson.Gson
-import com.mob.MobSDK
 import com.orhanobut.logger.Logger
-import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
-import com.pisces.android.wuha.tools.JRSAUtils
-import com.pisces.android.wuha.tools.RSAUtils
 import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import kotlinx.android.synthetic.main.login_act.*
 
 
 /**
  * Created by Jam on 2017/9/13.
+ * 登陆界面
  */
 class LoginActivity : LBaseActivity(), LoginContract.View {
 
@@ -83,7 +80,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
         toastWith(msg)
     }
 
-    var eh: EventHandler = object : EventHandler() {
+    private var eh: EventHandler = object : EventHandler() {
 
         override fun afterEvent(event: Int, result: Int, data: Any?) {
 
@@ -130,15 +127,11 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
     }
 
 
-    fun phoneValue(): String {
-        return editText.text.toString()
-    }
+    fun phoneValue(): String = editText.text.toString()
 
-    fun smsCodeValue(): String {
-        return editText2.text.toString()
-    }
+    private fun smsCodeValue(): String = editText2.text.toString()
 
-    fun verifyPhone(phone: String?): Boolean {
+    private fun verifyPhone(phone: String?): Boolean {
         if (!VerifyUtils.verifyMobilePhoneNumber(phone)) {
             toastWith("手机号码错误")
             return false
@@ -146,7 +139,7 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
         return true
     }
 
-    fun verifySmsCode(smsCode: String?): Boolean {
+    private fun verifySmsCode(smsCode: String?): Boolean {
         if (!VerifyUtils.verifySmsCode(smsCode)) {
             toastWith("验证码错误")
             return false
