@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-        "outputFile": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
         "map": [
             {
                 "to": {
@@ -15,11 +11,7 @@
                     "endOffset": 119
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -38,11 +30,7 @@
                     "endOffset": 188
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -61,11 +49,7 @@
                     "endOffset": 258
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -84,11 +68,7 @@
                     "endOffset": 332
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -107,11 +87,7 @@
                     "endOffset": 408
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -130,11 +106,7 @@
                     "endOffset": 467
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -153,11 +125,7 @@
                     "endOffset": 538
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -176,11 +144,7 @@
                     "endOffset": 606
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,

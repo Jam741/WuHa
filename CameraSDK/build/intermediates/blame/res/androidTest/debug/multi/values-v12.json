@@ -1,10 +1,6 @@
 [
     {
-<<<<<<< HEAD
         "outputFile": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v12\\values-v12.xml",
-=======
-        "outputFile": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v12\\values-v12.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
         "map": [
             {
                 "to": {
@@ -16,11 +12,7 @@
                     "endOffset": 274
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-v12\\values-v12.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-v12\\values-v12.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -41,11 +33,7 @@
                     "endOffset": 474
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-v12\\values-v12.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-v12\\values-v12.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -65,11 +53,7 @@
                     "endOffset": 593
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-v12\\values-v12.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-v12\\values-v12.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -88,11 +72,7 @@
                     "endOffset": 688
                 },
                 "from": {
-<<<<<<< HEAD
                     "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-v12\\values-v12.xml",
-=======
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-v12\\values-v12.xml",
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,

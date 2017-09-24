@@ -1,6 +1,5 @@
 [
     {
-<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
@@ -15,21 +14,5 @@
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-v21\\notification_action_background.xml"
-=======
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\release\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-v21\\notification_action_background.xml"
->>>>>>> 589f5deb6b37cac6bd6815427c402a26932fb719
     }
 ]

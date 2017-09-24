@@ -102,15 +102,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         /*去哪里*/
         shop_goto.setOnClickListener {
 
-
-            //            val intent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://ditu.google.cn/maps?hl=zh&mrt=loc&q=31.1198723,121.1099877(上海青浦大街100号)"))
-//            intent.addFlags(
-////                    Intent.FLAG_ACTIVITY_NEW_TASK
-//            Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS
-//            )
-//
-//
-//            startActivity(intent)
             isBD = isAvilible(this, "com.baidu.BaiduMap")
             isGD = isAvilible(this, "com.autonavi.minimap")
             isTX = isAvilible(this, "com.tencent.map")
@@ -133,21 +124,16 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 if (isBD) {
                     try {
                         //                          intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&src=yourCompanyName|yourAppName#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
-                        intent = Intent.getIntent("intent://map/direction?" +
-                                //"origin=latlng:"+"34.264642646862,108.95108518068&" +   //起点  此处不传值默认选择当前位置
-                                "destination=latlng:" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "|name:我的目的地" + //终点
-
+                        intent = Intent.getIntent("intent://map/direction?destination=latlng:" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "|name:"+mData!!.serviceProviderAddress.mainAddressLine+  //终点
                                 "&mode=driving&" + //导航路线方式
-
                                 "region=北京" + //
-
                                 "&src=慧医#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end")
                         context.startActivity(intent) //启动调用
                     } catch (e: URISyntaxException) {
                         Log.e("intent", e.message)
                     }
                 } else {
-                    Toast.makeText(this@ShopDetailsActivity, "你未安装", Toast.LENGTH_SHORT).show()
+                    goToWebPager()
                 }
             }
         }
@@ -168,7 +154,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                     }
 
                 } else {
-                    Toast.makeText(this@ShopDetailsActivity, "你未安装", Toast.LENGTH_SHORT).show()
+                 goToWebPager()
                 }
             }
 
@@ -188,6 +174,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                     startActivity(intent)
 
                 } else {
+                    goToWebPager()
 
                 }
             }
@@ -199,6 +186,12 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         dialog.setView(view)
         dialog.show()
 
+    }
+
+    private fun goToWebPager() {
+        val intent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://ditu.google.cn/maps?hl=zh&mrt=loc&q=31.1198723,121.1099877(上海青浦大街100号)"))
+        intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+        startActivity(intent)
     }
 
 
