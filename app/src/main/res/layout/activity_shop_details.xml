@@ -16,7 +16,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:contentScrim="@color/colorPrimary"
+            app:contentScrim="@color/colorAccent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
@@ -28,6 +28,7 @@
                 app:layout_collapseMode="parallax">
 
                 <ImageView
+                    android:id="@+id/img_bg"
                     android:layout_width="match_parent"
                     android:layout_height="227dp"
                     android:background="@mipmap/mine_top_bg"
@@ -189,6 +190,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/btnShare"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

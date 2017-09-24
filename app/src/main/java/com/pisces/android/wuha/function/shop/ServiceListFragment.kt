@@ -31,8 +31,6 @@ class ServiceListFragment : JBaseFragment() {
                 holder.run {
                     setTextWith(R.id.name, t.name)
                     setTextWith(R.id.price, "￥" + t.price)
-
-
                 }
             }
 
@@ -55,10 +53,15 @@ class ServiceListFragment : JBaseFragment() {
                             rightAdapter.refresh(t.subCategories)
                         }
                     })
+
                     if (mPosition == position) {
-                        setBackgroundColor(R.id.i_name, R.color.colorWhiteC1)
+                        setBackgroundRes(R.id.i_name, R.color.colorGrayC2)
+                        setTextColorRes(R.id.i_name, R.color.colorTextWhite)
+
                     } else {
-                        setBackgroundColor(R.id.i_name, R.color.colorWhiteC1)
+                        setBackgroundRes(R.id.i_name, R.color.colorWhiteC1)
+                        setTextColorRes(R.id.i_name, R.color.colorBlackC1)
+
                     }
                 }
 
@@ -87,5 +90,6 @@ class ServiceListFragment : JBaseFragment() {
 
     fun setData(mData: ArrayList<ServiceDetailProvider.ServiceProviderServiceCategoriesBean>) {
         leftAdapter.refresh(mData)
+        rightAdapter.refresh(mData[0].subCategories)
     }
 }

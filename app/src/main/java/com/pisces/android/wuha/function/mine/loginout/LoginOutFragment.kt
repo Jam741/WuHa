@@ -20,6 +20,10 @@ class LoginOutFragment : BaseMineContentFragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (menusView.parent != null) {
+            val parent = menusView.parent as ViewGroup
+            parent.removeAllViews()
+        }
         frame_menus.addView(menusView)
         ivPortrait.setOnClickListener { LoginActivity.start(context) }
         btnLogin.setOnClickListener { LoginActivity.start(context) }

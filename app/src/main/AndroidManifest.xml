@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -134,9 +134,8 @@
 
         <!--搜索结果展示界面-->
         <activity
-            android:name=".function.search.SearchShowActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:name=".function.search.show.SearchShowActivity"
+            android:screenOrientation="portrait"></activity>
 
 
         <!-- CameraSDK相册选取 -->

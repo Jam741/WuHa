@@ -151,7 +151,7 @@ public class LocationService extends APSService implements AMapLocationListener 
          */
         locationOption.setGpsFirst(true);
         String strInterval;
-        strInterval = "" + 1000 * 60*3;
+        strInterval = "" + 1000 * 60 * 3;
 
         if (!TextUtils.isEmpty(strInterval)) {
             /*设置发送定位请求的时间间隔，最小为1000，如果小于1000，按1000算*/
@@ -193,6 +193,11 @@ public class LocationService extends APSService implements AMapLocationListener 
                         Constant.setLocation(mLocation.getAddress());
                         Constant.setGpsX(mLocation.getLongitude());
                         Constant.setGpsY(mLocation.getLatitude());
+
+                        Intent intent = new Intent();
+                        intent.setAction(Constant.LOCATION_BROADCAST_ACTION);
+                        intent.putExtra(Constant.C_LOCATION, "" + mLocation.getAddress());
+                        sendBroadcast(intent);
                     } else {
                         Log.i(TAG, "定位失败\n" + locationString);
 

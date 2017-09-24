@@ -34,11 +34,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_margin="5dp"
-                android:padding="5dp"
                 android:layout_weight="1"
-                android:textSize="@dimen/font_input"
                 android:background="#f3f3f3"
-                android:queryHint="请输入店铺名称或者服务类型" />
+                android:iconifiedByDefault="true"
+                android:padding="5dp"
+                android:queryHint="请输入店铺名称或者服务类型"
+                android:textSize="@dimen/font_input" />
 
             <Button
                 android:id="@+id/btnSearch"
@@ -56,19 +57,40 @@
     <LinearLayout
         android:id="@+id/history_layout"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
-        <TextView
-            android:id="@+id/history_name"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_left_right"
-            android:text="历史搜索"
-            android:textColor="@color/colorYellowC1"
-            android:textSize="@dimen/text_size_14"
-            android:visibility="visible" />
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/history_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_right"
+                android:layout_weight="1"
+                android:text="历史搜索"
+                android:textColor="@color/colorYellowC1"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/btnClearHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_left_right"
+                android:padding="5dp"
+                android:text="清除"
+                android:textColor="#a8a8a8"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
 
         <com.zhy.view.flowlayout.TagFlowLayout
             android:id="@+id/flow_history"
@@ -87,7 +109,8 @@
         android:id="@+id/hot_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
 
         <TextView

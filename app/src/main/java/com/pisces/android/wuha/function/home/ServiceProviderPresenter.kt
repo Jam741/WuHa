@@ -21,11 +21,10 @@ class ServiceProviderPresenter(val view: BaseServiceProviderContract.View, val c
         HttpUtli.toSubscribe(Api.service.getServiceFromLocation(bodyForServiceByDistance)
                 , object : SimpleSubscriber<ArrayList<ServiceProvider>>(context) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
-                if (t == null) return Unit
                 view.showEmpty(bodyForServiceByDistance.CurrentPageIndex == Config.page && ListUtil.isEmpty(t))
                 view.onLoadCompleted(bodyForServiceByDistance.CurrentPageIndex, ListUtil.isEmpty(t))
                 if (!ListUtil.isEmpty(t))
-                    view.onResponse(t)
+                    view.onResponse(t!!)
             }
 
         })

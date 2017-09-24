@@ -1,6 +1,7 @@
 package com.pisces.android.locationlibrary;
 
 import android.content.Context;
+import android.content.Intent;
 
 
 import com.amap.api.location.AMapLocation;
@@ -70,6 +71,7 @@ public class GDLocationUtil {
             Constant.setLocation(sLocation.getAddress());
             Constant.setGpsX(sLocation.getLongitude());
             Constant.setGpsY(sLocation.getLatitude());
+
 
         }
     }

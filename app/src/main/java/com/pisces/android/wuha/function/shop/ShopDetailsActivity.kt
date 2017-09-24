@@ -5,25 +5,36 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
+import com.pisces.adnroid.ltaskpicture.LImg
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
+import com.pisces.android.sharesdk.ShareBean
+import com.pisces.android.sharesdk.ShareClient
+import com.pisces.android.sharesdk.ShareDialog
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
 import com.pisces.android.wuha.entity.bean.ServiceDetailProvider
-import com.pisces.android.wuha.function.home.service.ServiceFragment
+import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
+import com.pisces.android.wuha.function.user.UserController
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
+import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import kotlinx.android.synthetic.main.activity_shop_details.*
 
 
 /**
  * Created by Chris Li on 2017/9/1.
- * 商品详情界面
+ * 商铺详情界面
  */
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+
+    val shareClient by lazy { ShareClient(this, ShareBean("测试标题", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+
+    var isCollect: Boolean = false
 
     val serviceListFragment by lazy { ServiceListFragment() }
 
@@ -41,7 +52,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private val mTabList by lazy { arrayListOf("服务列表", "客户信息") }
-    private val mViewList by lazy { arrayListOf(serviceListFragment,clientMessageFragment ) }
+    private val mViewList by lazy { arrayListOf(serviceListFragment, clientMessageFragment) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,10 +61,60 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         initView()
         initData()
 
+        collect.setOnClickListener {
+            if (!isCollect) {
+                if (!UserController.passPrecondition(this)) return@setOnClickListener
+                HttpUtli.toSubscribe(Api.service.addUserFavorite(BodyForCollect(UserController.userId(this).toString(), id)), object : SimpleSubscriber<Any>(this) {
+                    override fun onSuccess(t: Any?) {
+                        if (t == null) return Unit
+                        collect.setImageResource(R.mipmap.mine_icon_collect)
+                        isCollect = true
+                        toastWith("该商铺加入收藏")
+                    }
+                })
+            } else {
+                if (!UserController.passPrecondition(this)) return@setOnClickListener
+                HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(UserController.userId(this).toString(), id)), object : ProgressSubscriber<Int>(this) {
+                    override fun onSuccess(t: Int?) {
+                        collect.setImageResource(R.mipmap.home_icon_collect)
+                        isCollect = false
+                        toastWith("该商铺移出收藏")
+                    }
+                })
+            }
+        }
+        addViewingCount()
+
+
+        btnShare.setOnClickListener {
+            shareClient.launchShare()
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        shareClient.didActivityResult(requestCode,resultCode,data)
+    }
+
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        shareClient.didNewIntent(intent)
+    }
+
+    /**
+     * 添加浏览记录
+     */
+    private fun addViewingCount() {
+        HttpUtli.toSubscribe(Api.service.addViewingCountForServiceProvider(BodyAddViewingCount(id,1)),object :SimpleSubscriber<Any>(this){
+            override fun onSuccess(t: Any?) {
+                if (t==null) return Unit
+            }
+        })
     }
 
     private fun initData() {
-        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsX(), Constant.getGpsY())
+        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsY(), Constant.getGpsX())
         ), object : SimpleSubscriber<ServiceDetailProvider>(this) {
             override fun onSuccess(t: ServiceDetailProvider?) {
                 if (t == null) return Unit
@@ -66,6 +127,8 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun bindData(t: ServiceDetailProvider) {
+        var img: ImageView = findViewById(R.id.img_bg) as ImageView
+        LImg.with(this).load(t.serviceProviderIntroduction.imagePath).into(img)
         name.text = t.name
         site.text = t.serviceProviderAddress.mainAddressLine
         person.text = t.viewingCount.toString() + "人去过"
@@ -75,7 +138,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         } else {
             distance.text = dis.toString() + "m"
         }
-
     }
 
     private fun initView() {
@@ -91,7 +153,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             R.id.shop_return -> {
                 finish()
             }
-
         }
     }
 }

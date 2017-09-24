@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/locationlibrary/locationlibrary.iml" filepath="$PROJECT_DIR$/locationlibrary/locationlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" filepath="$PROJECT_DIR$/ltaskpicture/ltaskpicture.iml" />
       <module fileurl="file://$PROJECT_DIR$/reslibrary/reslibrary.iml" filepath="$PROJECT_DIR$/reslibrary/reslibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/sharesdk/sharesdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" filepath="$PROJECT_DIR$/xrecyclerview/xrecyclerview.iml" />
     </modules>
