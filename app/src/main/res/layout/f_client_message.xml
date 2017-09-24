@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/message"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_left_right"
-        android:layout_marginRight="@dimen/margin_left_right"
-        android:layout_marginTop="@dimen/margin_size_10"
-        android:gravity="center"
-        android:textColor="@color/colorBlackC1"
-        android:textSize="@dimen/text_size_14" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_marginLeft="@dimen/margin_left_right"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:layout_marginTop="@dimen/margin_size_10"
+            android:gravity="top"
+            android:textColor="@color/colorBlackC1"
+            android:textSize="@dimen/text_size_14" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

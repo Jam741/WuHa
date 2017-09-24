@@ -87,7 +87,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
 
         btnShare.setOnClickListener {
-            shareClient.launchShare()
+            shareClient.launchSharePopWindow(findViewById(R.id.root_layout))
         }
 
     }

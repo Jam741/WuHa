@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/id_pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFFAF0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/btnToWxFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@mipmap/mine_icon_weixin"
+                android:gravity="center"
+                android:text="微信好友"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnToWxCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@mipmap/mine_icon_pyq"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnToQQFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@mipmap/mine_icon_qq"
+                android:gravity="center"
+                android:text="QQ好友"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnToQQZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@mipmap/mine_icon_kj"
+                android:gravity="center"
+                android:text="QQ空间"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/btnToWeiBo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@mipmap/mine_icon_weibo"
+                android:gravity="center"
+                android:text="微博"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_bg_drak"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
