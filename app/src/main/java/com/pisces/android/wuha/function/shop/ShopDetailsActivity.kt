@@ -124,7 +124,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 if (isBD) {
                     try {
                         //                          intent = Intent.getIntent("intent://map/direction?origin=latlng:34.264642646862,108.95108518068|name:我家&destination=大雁塔&mode=driving®ion=西安&src=yourCompanyName|yourAppName#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
-                        intent = Intent.getIntent("intent://map/direction?destination=latlng:" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "|name:"+mData!!.serviceProviderAddress.mainAddressLine+  //终点
+                        intent = Intent.getIntent("intent://map/direction?destination=latlng:" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "|name:" + mData!!.serviceProviderAddress.mainAddressLine + //终点
                                 "&mode=driving&" + //导航路线方式
                                 "region=北京" + //
                                 "&src=慧医#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end")
@@ -154,7 +154,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                     }
 
                 } else {
-                 goToWebPager()
+                    goToWebPager()
                 }
             }
 
@@ -175,7 +175,6 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
                 } else {
                     goToWebPager()
-
                 }
             }
 
@@ -188,8 +187,11 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
     }
 
+    /**
+     * 通过网页进行定位
+     */
     private fun goToWebPager() {
-        val intent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://ditu.google.cn/maps?hl=zh&mrt=loc&q=31.1198723,121.1099877(上海青浦大街100号)"))
+        val intent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://ditu.google.cn/maps?hl=zh&mrt=loc&q=+" + mData!!.serviceProviderAddress.latitude + "," + mData!!.serviceProviderAddress.longitude + "(" + mData!!.serviceProviderAddress.mainAddressLine + ")"))
         intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
         startActivity(intent)
     }
@@ -214,7 +216,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        shareClient.didActivityResult(requestCode,resultCode,data)
+        shareClient.didActivityResult(requestCode, resultCode, data)
     }
 
 

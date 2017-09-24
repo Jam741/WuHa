@@ -5,9 +5,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.pisces.adnroid.ltaskpicture.LImg
 import com.pisces.android.wuha.R
-import com.pisces.android.wuha.entity.bean.UserInfoBean
 import com.pisces.android.wuha.function.mine.BaseMineContentFragment
 import com.pisces.android.wuha.function.setting.AccountActivity
 import com.pisces.android.wuha.function.user.UserController
@@ -36,7 +34,7 @@ class LoggedFragment : BaseMineContentFragment() {
         }
         frame_menus.addView(menusView)
 
-        ivPortrait.setOnClickListener { AccountActivity.start(context, userName!!) }
+        ivPortrait.setOnClickListener { AccountActivity.start(context, userName) }
 
         UserController.getUserInfo(context, Action1 { t ->
             userName = t.name

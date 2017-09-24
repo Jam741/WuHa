@@ -4,29 +4,20 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.widget.Toast
 import com.jcodecraeer.xrecyclerview.XRecyclerView
 import com.pisces.android.locationlibrary.Constant
-import com.pisces.android.wuha.Config
-
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.shop.ShopDetailsActivity
-
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
-import com.yingwumeijia.commonlibrary.utils.ListUtil
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
 import kotlinx.android.synthetic.main.activity_collect.*
 import kotlinx.android.synthetic.main.toolbar.*
-import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Created by Chris Li on 2017/9/1.
@@ -82,6 +73,16 @@ class CollectActivity : LBaseActivity() {
             loadData()
             layoutManager = LinearLayoutManager(this@CollectActivity)
             adapter = mAdapter
+            setPullRefreshEnabled(true)
+            setLoadingMoreEnabled(false)
+            setLoadingListener(object : XRecyclerView.LoadingListener {
+                override fun onRefresh() {
+                    loadData()
+                }
+
+                override fun onLoadMore() {
+                }
+            })
         }
 
     }
@@ -89,9 +90,16 @@ class CollectActivity : LBaseActivity() {
     private fun loadData() {
         HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1", Constant.getGpsY(), Constant.getGpsX())), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
             override fun onSuccess(t: ArrayList<ServiceProvider>?) {
+                recycler_view.refreshComplete()
                 if (t == null) return Unit
                 mAdapter.refresh(t)
             }
+
+            override fun onError(e: Throwable?) {
+                super.onError(e)
+                recycler_view.refreshComplete()
+            }
+
         })
     }
 }

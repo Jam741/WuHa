@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:layout_marginBottom="1dp"
@@ -12,7 +13,7 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginLeft="@dimen/margin_left_right"
-        android:src="@mipmap/mine_top_bg" />
+        tools:src="@mipmap/mine_top_bg" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,10 +24,13 @@
             android:id="@+id/i_medical_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_size_10"
-            android:text="爱奇艺宠物医院"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
             android:textColor="#1a1a1a"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_14"
+            tools:text="爱奇艺宠物医院" />
 
         <TextView
             android:id="@+id/i_medical_site"
@@ -34,9 +38,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/i_medical_name"
             android:layout_marginTop="@dimen/margin_size_10"
-            android:text="爱奇艺区古城小区西苑中学"
             android:textColor="#c2c2c2"
-            android:textSize="@dimen/text_size_12" />
+            android:textSize="@dimen/text_size_12"
+            tools:text="爱奇艺区古城小区西苑中学" />
 
         <TextView
             android:id="@+id/i_medical_price"
@@ -44,9 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/i_medical_site"
             android:layout_marginTop="@dimen/margin_size_10"
-            android:text="￥30"
             android:textColor="#f35a5a"
-            android:textSize="@dimen/text_size_16" />
+            android:textSize="@dimen/text_size_16"
+            tools:text="￥30" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,9 +58,9 @@
             android:layout_alignBottom="@+id/i_medical_price"
             android:layout_toRightOf="@+id/i_medical_price"
             android:paddingLeft="1dp"
-            android:text="元起"
             android:textColor="#a2a2a2"
-            android:textSize="@dimen/text_size_12" />
+            android:textSize="@dimen/text_size_12"
+            tools:text="元起" />
 
         <TextView
             android:id="@+id/i_medical_person"
@@ -64,9 +68,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/i_medical_price"
             android:layout_marginTop="@dimen/margin_size_10"
-            android:text="1245人去过"
             android:textColor="#a2a2a2"
-            android:textSize="@dimen/text_size_12" />
+            android:textSize="@dimen/text_size_12"
+            tools:text="1245人去过" />
 
         <TextView
             android:id="@+id/i_medical_distance"
@@ -77,9 +81,9 @@
             android:layout_marginRight="@dimen/margin_left_right"
             android:layout_marginTop="@dimen/margin_size_10"
             android:drawableLeft="@mipmap/home_icon_address"
-            android:text="700m"
             android:textColor="#a2a2a2"
-            android:textSize="@dimen/text_size_12" />
+            android:textSize="@dimen/text_size_12"
+            tools:text="700m" />
 
 
     </RelativeLayout>

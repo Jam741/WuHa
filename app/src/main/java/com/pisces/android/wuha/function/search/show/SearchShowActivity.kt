@@ -13,12 +13,7 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.search.BodySearch
-import com.pisces.android.wuha.function.search.SearchForActivity
 import com.pisces.android.wuha.function.shop.ShopDetailsActivity
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
-import com.yingwumeijia.commonlibrary.utils.ListUtil
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
 import kotlinx.android.synthetic.main.search_header.*
@@ -31,12 +26,12 @@ import kotlinx.android.synthetic.main.search_show_a.*
 class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
 
 
-    val mAdapter by lazy { createAdapter() }
+    private val mAdapter by lazy { createAdapter() }
     var page: Int = 1
 
-    val presenter by lazy { SearchShowPresenter(this, this) }
+    private val presenter by lazy { SearchShowPresenter(this, this) }
 
-    val keyword by lazy { intent.getStringExtra(com.pisces.android.wuha.Constant.KEY_CURRENT) }
+    private val keyword by lazy { intent.getStringExtra(com.pisces.android.wuha.Constant.KEY_CURRENT) }
 
     override fun onResponse(data: ArrayList<ServiceProvider>) {
         if (page == Config.page) {
@@ -70,7 +65,7 @@ class SearchShowActivity : LBaseActivity(), SearchShowContract.View {
                     setTextWith(R.id.i_medical_site, t.serviceProviderAddress.mainAddressLine)
                     setTextWith(R.id.i_medical_price, "￥" + t.startingPrice)
                     setTextWith(R.id.i_medical_person, t.viewingCount.toString() + "人去过")
-                    var dis: Int = t.distance.toInt()
+                    val dis: Int = t.distance.toInt()
                     if (dis > 1000) {
                         setTextWith(R.id.i_medical_distance, (dis / 1000).toString() + "km")
                     } else {

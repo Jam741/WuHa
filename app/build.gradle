@@ -22,7 +22,7 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
@@ -74,7 +74,7 @@ dependencies {
 }
 repositories {
     mavenCentral()
-    flatDir{
+    flatDir {
         dirs 'libs' //就是你放aar的目录地址
     }
 }

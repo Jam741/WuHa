@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackGroundGrayC1"
@@ -31,17 +32,35 @@
         android:textColor="@color/colorTextMain"
         android:textSize="@dimen/text_size_16" />
 
-    <TextView
-        android:id="@+id/version"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize"
-        android:layout_marginTop="1dp"
-        android:background="@color/colorTextWhite"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left_right"
-        android:text="版本"
-        android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_16" />
+        android:layout_height="@dimen/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionBarSize"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorTextWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left_right"
+            android:textColor="@color/colorTextMain"
+            android:textSize="@dimen/text_size_16"
+            android:text="版本" />
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionBarSize"
+            android:layout_marginTop="1dp"
+            android:background="@color/colorTextWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left_right"
+            android:paddingRight="@dimen/margin_left_right"
+            android:textColor="@color/colorTextMain"
+            android:textSize="@dimen/text_size_16"
+            tools:text="v 1.0.0 " />
+    </LinearLayout>
 
 
     <Button

@@ -1,11 +1,9 @@
 package com.pisces.android.wuha.function.search
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
-import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.entity.bean.HotSearch
 import com.pisces.android.wuha.net.HttpUtli

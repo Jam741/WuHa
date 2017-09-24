@@ -138,12 +138,16 @@ public class LImg {
     /*显示的image*/
     public void into(ImageView imageViewId) {
         RequestOptions options = new RequestOptions().centerCrop();
-        if (resourceDrawable != null) {
+        if (resourceDrawable != null) {//占位符
             options.placeholder(resourceDrawable);
+        } else {
+            options.placeholder(R.mipmap.load);
         }
 
-        if (resourceId > 0) {
+        if (resourceId > 0) {//占位符
             options.placeholder(resourceId);
+        } else {
+            options.placeholder(R.mipmap.load);
         }
 
         if (errorId > 0) {
@@ -164,7 +168,6 @@ public class LImg {
             } else {
                 options.transform(new GlideRoundTransform(radius));
             }
-
         }
 
         this.imageViewId = imageViewId;

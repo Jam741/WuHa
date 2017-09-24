@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  * Created by Chris Li on 2017/9/2.
@@ -20,6 +21,8 @@ class VersionActivity : LBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_version)
+        toolbar.setOnClickListener { finish() }
+        topTitle.text="版本"
     }
 
 }
