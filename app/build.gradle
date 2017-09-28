@@ -63,14 +63,13 @@ dependencies {
     /*定位*/
     compile project(':locationlibrary')
     compile project(':ltaskpicture')
-    compile name: 'SMSSDK-3.0.0', ext: 'aar'
     /*数据库*/
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile project(':CameraSDK')
     compile project(':flowlayout-lib')
     compile project(':sharesdk')
-
+    compile 'com.qiniu:qiniu-android-sdk:7.3.10'
 }
 repositories {
     mavenCentral()

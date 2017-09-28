@@ -12,6 +12,7 @@ import com.pisces.android.wuha.function.setting.bean.BodyUserName
 import com.pisces.android.wuha.function.setting.bean.FeedBack
 import com.pisces.android.wuha.function.shop.BodyForCollect
 import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
+import com.pisces.android.wuha.function.shop.bean.BodySendSmsCode
 
 import com.pisces.android.wuha.function.user.BodyForLogin
 import retrofit2.http.Body
@@ -132,6 +133,7 @@ interface ApiService {
 
 
     /**
+    <<<<<<< HEAD
      * 修改用户名
      */
     @POST("UserInfo/ModifyUserInfoByNickName")
@@ -143,5 +145,14 @@ interface ApiService {
     @POST("UserInfo/ModifyUserInfoByPhoto")
     fun modifyUserInfoByPhoto(@Body bodyPhoto: BodyPhoto): Observable<Any>
 
+    /**
+     *  发送短信验证码
+     */
+    @POST("Account/GetVerificationCode")
+    fun sendSmsCode(@Body bodySendSmsCode: BodySendSmsCode): Observable<Int>
+
+
+    @POST("UserInfo/GetQiniuToken")
+    fun getUpLoadToken():Observable<String>
 
 }
