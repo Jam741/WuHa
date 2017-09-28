@@ -39,7 +39,7 @@ object VerifyUtils {
         else return nikeName!!.trim().length >= NIKENAME_LENGTH_MINI && nikeName.trim().length <= NIKENAME_LENGTH_MAX
     }
 
-    val SMS_CODE_LENGTH = 4
+    val SMS_CODE_LENGTH = 6
 
     /**
      * 校验短信验证码

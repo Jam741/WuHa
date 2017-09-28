@@ -2,11 +2,12 @@ package com.pisces.android.wuha.function.user
 
 import android.content.Context
 import android.os.CountDownTimer
-import android.util.Log
-import cn.smssdk.SMSSDK
-import com.orhanobut.logger.Logger
 import com.pisces.android.framworkerlibrary.utlis.Installation
-import com.pisces.android.wuha.tools.JRSAUtils
+import com.pisces.android.wuha.function.shop.bean.BodySendSmsCode
+import com.pisces.android.wuha.net.HttpUtli
+import com.pisces.android.wuha.net.api.Api
+import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import rx.functions.Action1
 
 /**
@@ -31,10 +32,11 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         }
     }
 
-    override fun login(phone: String) {
+    override fun login(phone: String, smsCode: String) {
+        if (!verifyPhone(phone) || !verifySmsCode(smsCode)) return
         val bodyForLogin = BodyForLogin()
         bodyForLogin.deviceName = android.os.Build.MODEL
-        bodyForLogin.currentDeviceIdentificationNumber =  Installation.id(context)
+        bodyForLogin.currentDeviceIdentificationNumber = Installation.id(context)
         bodyForLogin.mobliePhoneNumber = phone
         UserController.login(context, bodyForLogin, Action1 {
             view.loginSuccess()
@@ -42,10 +44,31 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
     }
 
     override fun sendSmsCode(phone: String) {
-        SMSSDK.getVerificationCode("86", phone)
-        view.lockSendButton(true)
-        view.setTextWithSendButton("60s")
-        countDownTimer.start()
-        view.showMsg("短信验证码发送成功，请注意查收")
+        if (!verifyPhone(phone)) return
+        HttpUtli.toSubscribe(Api.service.sendSmsCode(BodySendSmsCode(phone)), object : ProgressSubscriber<Int>(context) {
+            override fun onSuccess(t: Int?) {
+                view.lockSendButton(true)
+                view.setTextWithSendButton("60s")
+                countDownTimer.start()
+                view.showMsg("短信验证码发送成功，请注意查收")
+            }
+
+        })
+    }
+
+    private fun verifyPhone(phone: String?): Boolean {
+        if (!VerifyUtils.verifyMobilePhoneNumber(phone)) {
+            view.showMsg("手机号码错误")
+            return false
+        }
+        return true
+    }
+
+    private fun verifySmsCode(smsCode: String?): Boolean {
+        if (!VerifyUtils.verifySmsCode(smsCode)) {
+            view.showMsg("验证码错误")
+            return false
+        }
+        return true
     }
 }

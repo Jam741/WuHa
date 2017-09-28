@@ -42,7 +42,7 @@ class ShareSDK {
                     metaData = ai.metaData
                 }
                 if (null != metaData) {
-                    value = metaData.getString(key)
+                    value = metaData.get(key).toString()
                 }
             } catch (e: PackageManager.NameNotFoundException) {
                 // Nothing to do

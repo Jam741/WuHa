@@ -10,6 +10,7 @@ import com.pisces.android.wuha.function.search.BodySearch
 import com.pisces.android.wuha.function.setting.bean.FeedBack
 import com.pisces.android.wuha.function.shop.BodyForCollect
 import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
+import com.pisces.android.wuha.function.shop.bean.BodySendSmsCode
 
 import com.pisces.android.wuha.function.user.BodyForLogin
 import retrofit2.http.Body
@@ -120,13 +121,20 @@ interface ApiService {
      * 取消收藏
      */
     @POST("UserInfo/RemoveUserFavorite")
-    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect):Observable<Int>
+    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect): Observable<Int>
 
     /**
      * 添加各个服务商的浏览量
      */
     @POST("ServiceProvider/AddViewingCountForServiceProvider")
     fun addViewingCountForServiceProvider(@Body bodyAddViewingCount: BodyAddViewingCount): Observable<Any>
+
+
+    /**
+     *  发送短信验证码
+     */
+    @POST("api/Account/GetVerificationCode")
+    fun sendSmsCode(@Body bodySendSmsCode: BodySendSmsCode): Observable<Int>
 
 
 }

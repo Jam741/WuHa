@@ -3,17 +3,9 @@ package com.pisces.android.wuha.function.user
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Message
 import android.support.v4.app.ActivityCompat
-import android.util.Log
-import cn.smssdk.EventHandler
-import cn.smssdk.SMSSDK
-import com.google.gson.Gson
-import com.orhanobut.logger.Logger
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
-import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import kotlinx.android.synthetic.main.login_act.*
 
 
@@ -23,34 +15,7 @@ import kotlinx.android.synthetic.main.login_act.*
  */
 class LoginActivity : LBaseActivity(), LoginContract.View {
 
-
     val presenter by lazy { LoginPresenter(this, this) }
-
-    val handler by lazy {
-        createHandler()
-    }
-
-    private fun createHandler(): Handler {
-        return object : Handler(this.mainLooper) {
-
-            override fun handleMessage(msg: Message?) {
-                //回调完成
-                when (msg!!.what) {
-                    SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE -> {
-                        //提交验证码成功
-                        presenter.login(phoneValue())
-                    }
-                    SMSSDK.EVENT_GET_VERIFICATION_CODE -> {
-                        //获取验证码成功
-                    }
-                    SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES -> {
-                        //返回支持发送验证码的国家列表
-                    }
-                }
-            }
-        }
-    }
-
 
     companion object {
         fun start(context: Context) {
@@ -61,15 +26,15 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
 
     override fun setTextWithSendButton(text: String) {
-        button.text = text
+        btnSendSmsCode.text = text
     }
 
     override fun resetSendButton() {
-        button.text = "重新发送"
+        btnSendSmsCode.text = "重新发送"
     }
 
     override fun lockSendButton(lock: Boolean) {
-        button.isEnabled = !lock
+        btnSendSmsCode.isEnabled = !lock
     }
 
     override fun loginSuccess() {
@@ -80,49 +45,23 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
         toastWith(msg)
     }
 
-    private var eh: EventHandler = object : EventHandler() {
-
-        override fun afterEvent(event: Int, result: Int, data: Any?) {
-
-            runOnUiThread {
-                Logger.d(data)
-                if (result == SMSSDK.RESULT_COMPLETE) {
-                    handler.handleMessage(Message().apply { what = event })
-                } else {
-                    (data as Throwable).printStackTrace()
-                    Log.d("jam", data.message)
-                    if (data.message != null) {
-                        val bean = Gson().fromJson(data.message, SMSVerifyData::class.java)
-                        toastWith(bean.detail)
-                    }
-                }
-            }
-        }
-    }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_act)
-        SMSSDK.registerEventHandler(eh)
 
         //发送验证码
-        button.setOnClickListener {
-            if (verifyPhone(phoneValue()))
-                presenter.sendSmsCode(phoneValue())
+        btnSendSmsCode.setOnClickListener {
+            presenter.sendSmsCode(phoneValue())
         }
 
-        //校验短信验证码，校验结果在：<EventHandler> 中返回
         btnLogin.setOnClickListener {
-            if (verifyPhone(phoneValue()) && verifySmsCode(smsCodeValue())) {
-                SMSSDK.submitVerificationCode("86", phoneValue(), smsCodeValue())
-            }
+            presenter.login(phoneValue(), smsCodeValue())
         }
     }
 
 
     override fun onDestroy() {
-        SMSSDK.unregisterEventHandler(eh)
         super.onDestroy()
     }
 
@@ -131,19 +70,5 @@ class LoginActivity : LBaseActivity(), LoginContract.View {
 
     private fun smsCodeValue(): String = editText2.text.toString()
 
-    private fun verifyPhone(phone: String?): Boolean {
-        if (!VerifyUtils.verifyMobilePhoneNumber(phone)) {
-            toastWith("手机号码错误")
-            return false
-        }
-        return true
-    }
 
-    private fun verifySmsCode(smsCode: String?): Boolean {
-        if (!VerifyUtils.verifySmsCode(smsCode)) {
-            toastWith("验证码错误")
-            return false
-        }
-        return true
-    }
 }
