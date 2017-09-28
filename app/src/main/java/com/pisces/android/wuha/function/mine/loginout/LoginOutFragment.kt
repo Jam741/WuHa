@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.function.mine.BaseMineContentFragment
+import com.pisces.android.wuha.function.setting.AccountActivity
 import com.pisces.android.wuha.function.user.LoginActivity
 import kotlinx.android.synthetic.main.mine_loginout_layout.*
 
@@ -25,7 +26,9 @@ class LoginOutFragment : BaseMineContentFragment() {
             parent.removeAllViews()
         }
         frame_menus.addView(menusView)
-        ivPortrait.setOnClickListener { LoginActivity.start(context) }
+        ivPortrait.setOnClickListener { AccountActivity.start(context, "尼古拉斯") }
+
+//        ivPortrait.setOnClickListener { LoginActivity.start(context) }
         btnLogin.setOnClickListener { LoginActivity.start(context) }
     }
 }

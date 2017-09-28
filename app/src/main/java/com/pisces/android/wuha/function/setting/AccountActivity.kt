@@ -3,21 +3,34 @@ package com.pisces.android.wuha.function.setting
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.UserHandle
 import android.support.v4.app.ActivityCompat
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.muzhi.camerasdk.model.CameraSdkParameterInfo
 import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
+import com.pisces.android.wuha.function.setting.bean.BodyPhoto
+import com.pisces.android.wuha.function.setting.bean.BodyUserName
+import com.pisces.android.wuha.function.upload.UploadPictureHelper
+import com.pisces.android.wuha.function.user.UserController
+import com.pisces.android.wuha.net.HttpUtli
+import com.pisces.android.wuha.net.api.Api
+import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import com.squareup.picasso.Picasso
 import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import com.yingwumeijia.commonlibrary.utils.ListUtil
 import kotlinx.android.synthetic.main.activity_account.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
+import rx.Observable
+import rx.functions.Func2
+import java.io.File
 
 /**
  * Created by Chris Li on 2017/9/3.
@@ -65,7 +78,27 @@ class AccountActivity : LBaseActivity() {
         })
 
         user_name_delete.setOnClickListener { et_user_name.setText("") }
+        /*点击上传*/
+        account_btn.setOnClickListener {
+            val id = UserController.getUserInfoBean(this)!!.id
+            if (verifyUserName(usernameValue())) {
+                HttpUtli.toSubscribe(Api.service.modifyUserInfoByNickName(BodyUserName(id, usernameValue())), object : SimpleSubscriber<Any>(this) {
+                    override fun onSuccess(t: Any?) {
+                        if (t == null) {
+
+                        } else {
+//                            HttpUtli.toSubscribe(Api.service.modifyUserInfoByPhoto(BodyPhoto(id, )))
+                        }
+
+                    }
+                })
+            } else {
+                Toast.makeText(this, "请输入新的用户名", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
+//    private fun verifyName(): Boolean = !TextUtils.isEmpty(usernameValue())
 
 
     /**
@@ -103,7 +136,30 @@ class AccountActivity : LBaseActivity() {
 
     private fun upLoadPortrait(s: String) {
         Log.d("IMAGE", s)
-        Picasso.with(this).load(s).into(user_img)
+        Picasso.with(this).load(File(s)).into(user_img)
+        UploadPictureHelper.uploadSinglePicture(this, s, object : UploadPictureHelper.OnSingleLoadListener {
+            override fun success(url: String) {
+
+                val userId = UserController.getUserInfoBean(this@AccountActivity)!!.id
+
+                val obPortrait = Api.service.modifyUserInfoByPhoto(BodyPhoto(userId, url))
+                val obUsername = Api.service.modifyUserInfoByNickName(BodyUserName(userId, usernameValue()))
+
+               val out =  Observable.zip(obPortrait,obUsername,object :Func2< Any,  Any,  Boolean> {
+                    override fun call(t1: Any?, t2: Any?): Boolean {
+                        return true
+                    }
+
+                })
+
+                HttpUtli.toSubscribe(out, object : ProgressSubscriber<Boolean>(this@AccountActivity) {
+                    override fun onSuccess(t: Boolean?) {
+
+                    }
+
+                })
+            }
+        })
     }
 
 

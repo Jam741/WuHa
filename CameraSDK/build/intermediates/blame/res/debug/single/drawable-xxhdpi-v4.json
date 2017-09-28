@@ -1,610 +1,306 @@
 [
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\introduction_unfold_ic.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\introduction_unfold_ic.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_4.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_4.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_5.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_5.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\camerasdk_icon_camera.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\bussiness_edit_symmetry.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\bussiness_edit_symmetry.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_19.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_19.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_6.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_6.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_control.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_control.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\bussiness_edit_symmetry.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\bussiness_edit_symmetry.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_3.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_3.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_15.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_15.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_12.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_12.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_20.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_20.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_1.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_1.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_18.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_18.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_11.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_11.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_14.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_14.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_17.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_17.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_delete_gray.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_delete_gray.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_11.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_11.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_14.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_14.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_33.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_33.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_17.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_17.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_8.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_8.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_2.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_2.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_33.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_33.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\introduction_unfold_ic.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\introduction_unfold_ic.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_9.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_delete_gray.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_delete_gray.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_1.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_1.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_3.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_3.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_del.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_del.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_16.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_16.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_3.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_3.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_18.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_18.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_12.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_12.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\camerasdk_icon_camera.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_9.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_20.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_20.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_13.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_13.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_19.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_19.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_10.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_10.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_48dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\default_check.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\default_check.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_4.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_4.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_5.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_5.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_16.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_16.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_2.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_2.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_7.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_7.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_8.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_8.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_4.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_4.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_return.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_return.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\bussiness_edit_symmetry.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\bussiness_edit_symmetry.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_7.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_7.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_19.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_19.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_1.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_1.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_control.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_control.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_13.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_13.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_16.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_16.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_delete_gray.png",
+        "source": "F:\\WuHa\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_delete_gray.png"
     },
     {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_del.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_del.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_10.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_10.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_10.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_10.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_13.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_13.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_12.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_12.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_20.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_20.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_5.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_5.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_18.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_18.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_return.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_return.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_9.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_17.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_17.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_14.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_14.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_del.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_del.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_11.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_11.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\introduction_unfold_ic.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\introduction_unfold_ic.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_48dp.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_33.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_33.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\camerasdk_icon_camera.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\camerasdk_icon_camera.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_6.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_6.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\icon_return.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\icon_return.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_right_mtrl_light.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_7.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_7.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_light.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_8.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_8.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_6.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_6.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\edit_control.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\edit_control.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_15.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_15.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_15.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_15.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\default_check.png",
-        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\default_check.png"
-    },
-    {
-        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\sticker_2.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\sticker_2.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\default_check.png",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable-xxhdpi\\default_check.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_16dp.png"
+        "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable-xxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     }
 ]

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+        "outputFile": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,33 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 6,
-                        "endColumn": 13,
-                        "endOffset": 327
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 6,
-                    "endColumn": 13,
-                    "endOffset": 327
-                },
-                "from": {
-                    "file": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "file": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
