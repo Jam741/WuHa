@@ -1,50 +1,98 @@
 [
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_out.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_fade_out.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\camerasdk_push_up_in.xml",
+        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\camerasdk_push_up_in.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/camerasdk_push_up_out.xml",
-        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/bundles/debug/res/anim/camerasdk_push_up_out.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/camerasdk_push_up_in.xml",
-        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/bundles/debug/res/anim/camerasdk_push_up_in.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_top.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_slide_in_top.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_fade_out.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_fade_in.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_fade_in.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_slide_out_bottom.xml"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_popup_enter.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_fade_in.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_slide_out_top.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_popup_exit.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_popup_exit.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/jamisonline/.android/build-cache/99e654f0643b296766e6d297983b6780cad8de60/output/res/anim/abc_slide_in_bottom.xml"
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\camerasdk_push_up_out.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\camerasdk_push_up_out.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_enter.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\camerasdk_push_up_out.xml",
+        "source": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\camerasdk_push_up_out.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\Users\\jamisonline\\Documents\\WUHA\\project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\Users\\jamisonline\\.android\\build-cache\\99e654f0643b296766e6d297983b6780cad8de60\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\camerasdk_push_up_in.xml",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\anim\\camerasdk_push_up_in.xml"
     }
 ]
