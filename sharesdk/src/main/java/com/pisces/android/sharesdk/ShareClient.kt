@@ -28,7 +28,9 @@ import android.view.Gravity
 
 class ShareClient(val activity: Activity, val shareBean: ShareBean) {
 
-    private val tencent by lazy { Tencent.createInstance(Config.TENCENT_APP_ID, activity.applicationContext) }
+    val QQ_APP_ID = ShareSDK.getMetaData(activity, "QQ_APP_ID")
+
+    private val tencent by lazy { Tencent.createInstance(QQ_APP_ID, activity.applicationContext) }
 
     private val wbShareHandler by lazy { WbShareHandler(activity).apply { registerApp() } }
 

@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.shop
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -102,9 +103,11 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         /*去哪里*/
         shop_goto.setOnClickListener {
 
+
             isBD = isAvilible(this, "com.baidu.BaiduMap")
             isGD = isAvilible(this, "com.autonavi.minimap")
             isTX = isAvilible(this, "com.tencent.map")
+
             showMyDialog()
         }
         addViewingCount()
@@ -115,8 +118,8 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun showMyDialog() {
-        val dialog = AlertDialog.Builder(this).create()
         val view = View.inflate(this, R.layout.map_show_d, null)
+
         view.bd_location.run {
             text = if (isBD) {
                 "百度地图"
@@ -182,11 +185,14 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             }
 
         }
-        view.button.setOnClickListener {
-            dialog?.dismiss()
-        }
-        dialog.setView(view)
-        dialog.show()
+
+        AlertDialog.Builder(this)
+                .setView(view)
+                .setCancelable(true)
+                .setNegativeButton("取消", { dialog, _ ->
+                    dialog.dismiss()
+                })
+                .show()
 
     }
 

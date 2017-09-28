@@ -37,12 +37,11 @@ public abstract class TagAdapter<T> {
     }
 
     public void refresh(List<T> data) {
-        if (mTagDatas == null) {
-            mTagDatas = data;
-        } else {
-            mTagDatas.clear();
-            mTagDatas.addAll(data);
-        }
+        if (mTagDatas == null)
+            mTagDatas = new ArrayList<T>();
+        mTagDatas.clear();
+        mTagDatas.addAll(data);
+
         notifyDataChanged();
     }
 

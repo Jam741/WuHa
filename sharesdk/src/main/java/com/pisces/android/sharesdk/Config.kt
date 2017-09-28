@@ -5,12 +5,12 @@ package com.pisces.android.sharesdk
  */
 
 object Config {
-
-    //腾讯APP ID
-    var TENCENT_APP_ID = "1106359193"
-
-    //微博APP KEY
-    var WEIBO_APP_KEY = "3244422614"
+    //
+//    //腾讯APP ID
+    var KEY_QQ_APP_ID = "QQ_APP_ID"
+    //
+//    //微博APP KEY
+    var KEY_WEIBO_APP_KEY = "WB_APP_KEY"
 
 
     /**
@@ -21,9 +21,6 @@ object Config {
      */
     object WeiboConstants {
 
-        //2045436852
-        /** 当前 DEMO 应用的 APP_KEY，第三方应用应该使用自己的 APP_KEY 替换该 APP_KEY */
-        val APP_KEY = "3244422614"
 
         /**
          * 当前 DEMO 应用的回调页，第三方应用可以使用自己的回调页。

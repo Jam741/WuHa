@@ -1,6 +1,8 @@
 package com.pisces.android.wuha.function.main
 
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
@@ -12,6 +14,15 @@ import kotlinx.android.synthetic.main.main_act.*
 
 
 class MainActivity : LBaseActivity() {
+
+
+    companion object {
+
+        fun statr(context: Context) {
+            val stater = Intent(context, MainActivity::class.java)
+            context.startActivity(stater)
+        }
+    }
 
     private val tabs by lazy { arrayListOf("主页", "我的") }
     private val fragments by lazy({ arrayListOf(HomeFragment(), MineFragment()) })
