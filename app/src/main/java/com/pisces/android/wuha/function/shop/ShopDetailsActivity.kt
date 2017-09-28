@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.shop
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -36,7 +37,7 @@ import java.net.URISyntaxException
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
-    val shareClient by lazy { ShareClient(this, ShareBean("测试标题", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+    val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
 
     var isCollect: Boolean = false
     var phoneNmubder: String = ""
@@ -102,18 +103,23 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         /*去哪里*/
         shop_goto.setOnClickListener {
 
+
             isBD = isAvilible(this, "com.baidu.BaiduMap")
             isGD = isAvilible(this, "com.autonavi.minimap")
             isTX = isAvilible(this, "com.tencent.map")
+
             showMyDialog()
         }
         addViewingCount()
 
+        btnShare.setOnClickListener {
+            shareClient.launchSharePopWindow(findViewById(R.id.root_layout))
+        }
     }
 
     private fun showMyDialog() {
-        val dialog = AlertDialog.Builder(this).create()
         val view = View.inflate(this, R.layout.map_show_d, null)
+
         view.bd_location.run {
             text = if (isBD) {
                 "百度地图"
@@ -179,11 +185,14 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
             }
 
         }
-        view.button.setOnClickListener {
-            dialog?.dismiss()
-        }
-        dialog.setView(view)
-        dialog.show()
+
+        AlertDialog.Builder(this)
+                .setView(view)
+                .setCancelable(true)
+                .setNegativeButton("取消", { dialog, _ ->
+                    dialog.dismiss()
+                })
+                .show()
 
     }
 
@@ -210,7 +219,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
         /*分享按钮*/
         btnShare.setOnClickListener {
-            shareClient.launchShare()
+            shareClient.launchSharePopWindow(this.findViewById(R.id.root_layout))
         }
 
     }

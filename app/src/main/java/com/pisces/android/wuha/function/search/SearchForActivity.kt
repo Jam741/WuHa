@@ -20,6 +20,12 @@ import kotlinx.android.synthetic.main.search_frag.*
 class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotKeyWordsListener {
 
     override fun didLoadHistoryKeyWords(data: List<String>?) {
+        Log.d("JAM", data!!.size.toString())
+
+        for (s in data) {
+            Log.d("JAM", s)
+        }
+
         if (ListUtil.isEmpty(data))
             history_layout.visibility = View.GONE
         else {
@@ -55,20 +61,23 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
         setContentView(R.layout.search_frag)
 
 
-        flow_history.run {
-            adapter = controller.historyKeyWordsAdapter
-            setOnTagClickListener { view, position, parent ->
-                searchKeyWord = controller.historyKeyWordsAdapter.getItem(position)
-                didSearch()
-                return@setOnTagClickListener true
-            }
-        }
+
 
 
         flow_hot.run {
             adapter = controller.hotKeyWordsAdapter
             setOnTagClickListener { view, position, parent ->
                 searchKeyWord = controller.hotKeyWordsAdapter.getItem(position)
+                didSearch()
+                return@setOnTagClickListener true
+            }
+        }
+
+
+        flow_history.run {
+            adapter = controller.historyKeyWordsAdapter
+            setOnTagClickListener { view, position, parent ->
+                searchKeyWord = controller.historyKeyWordsAdapter.getItem(position)
                 didSearch()
                 return@setOnTagClickListener true
             }
@@ -99,10 +108,10 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
             }
         })
 
-
-        controller.loadHotKeyWords()
-        edSearchView.onActionViewExpanded()
         controller.loadHistoryKeyWords()
+        controller.loadHotKeyWords()
+
+        edSearchView.onActionViewExpanded()
 
     }
 

@@ -4,7 +4,6 @@
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
@@ -23,26 +22,6 @@
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
         "source": "C:\\Users\\Chris Li\\.android\\build-cache\\4eaccf0d162ec009b115c7e0ff4f542f8d2a663b\\output\\res\\drawable\\abc_tab_indicator_material.xml"
-=======
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable\\abc_list_selector_holo_dark.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable\\abc_ic_voice_search_api_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\camerasdk_selector_checkbox.xml",
-        "source": "D:\\Project\\WuHa\\CameraSDK\\res\\drawable\\camerasdk_selector_checkbox.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\Jam\\.android\\build-cache\\a3a06f200a0c94036e8cf71eb12731483068e320\\output\\res\\drawable\\abc_dialog_material_background.xml"
->>>>>>> 884f16a52d5333642409d7d735005d02457fdccd
     },
     {
         "merged": "F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",

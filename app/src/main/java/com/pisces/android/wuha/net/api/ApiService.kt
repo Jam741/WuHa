@@ -7,6 +7,8 @@ import com.pisces.android.wuha.function.collect.BodyCollect
 
 import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.function.search.BodySearch
+import com.pisces.android.wuha.function.setting.bean.BodyPhoto
+import com.pisces.android.wuha.function.setting.bean.BodyUserName
 import com.pisces.android.wuha.function.setting.bean.FeedBack
 import com.pisces.android.wuha.function.shop.BodyForCollect
 import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
@@ -120,13 +122,26 @@ interface ApiService {
      * 取消收藏
      */
     @POST("UserInfo/RemoveUserFavorite")
-    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect):Observable<Int>
+    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect): Observable<Int>
 
     /**
      * 添加各个服务商的浏览量
      */
     @POST("ServiceProvider/AddViewingCountForServiceProvider")
     fun addViewingCountForServiceProvider(@Body bodyAddViewingCount: BodyAddViewingCount): Observable<Any>
+
+
+    /**
+     * 修改用户名
+     */
+    @POST("UserInfo/ModifyUserInfoByNickName")
+    fun modifyUserInfoByNickName(@Body bodyUserName: BodyUserName): Observable<Any>
+
+    /**
+     * 修改用户头像
+     */
+    @POST("UserInfo/ModifyUserInfoByPhoto")
+    fun modifyUserInfoByPhoto(@Body bodyPhoto: BodyPhoto): Observable<Any>
 
 
 }

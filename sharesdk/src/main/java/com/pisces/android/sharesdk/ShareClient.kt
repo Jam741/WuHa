@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.sina.weibo.sdk.api.ImageObject
 import com.sina.weibo.sdk.api.TextObject
@@ -16,6 +17,8 @@ import com.tencent.tauth.Tencent
 import java.io.IOException
 import java.net.MalformedURLException
 import java.net.URL
+import android.view.Gravity
+
 
 /**
  * Created by Jam on 2017/9/23.
@@ -25,12 +28,17 @@ import java.net.URL
 
 class ShareClient(val activity: Activity, val shareBean: ShareBean) {
 
-    private val tencent by lazy { Tencent.createInstance(Config.TENCENT_APP_ID, activity.applicationContext) }
+    val QQ_APP_ID = ShareSDK.getMetaData(activity, "QQ_APP_ID")
+
+    private val tencent by lazy { Tencent.createInstance(QQ_APP_ID, activity.applicationContext) }
 
     private val wbShareHandler by lazy { WbShareHandler(activity).apply { registerApp() } }
 
-    val shareDialog by lazy {
-        ShareDialog(activity, object : ShareDialog.ShareEventListener {
+
+    var isShowDialog = true
+
+    private val shareEventLsitener by lazy {
+        object : ShareEventListener {
             override fun toWxCricle() {
                 Toast.makeText(activity, "审核中...", Toast.LENGTH_SHORT).show()
                 dismiss()
@@ -57,16 +65,36 @@ class ShareClient(val activity: Activity, val shareBean: ShareBean) {
                 shareToWeibo(shareBean)
                 dismiss()
             }
-        })
+        }
+    }
+
+    val shareDialog by lazy {
+        ShareDialog(activity, shareEventLsitener)
     }
 
 
-    fun launchShare() {
+    val sharePopWindow by lazy {
+        SharePopWindow(activity, shareEventLsitener)
+    }
+
+
+    fun launchShareDialog() {
         shareDialog.show()
+        isShowDialog = true
     }
+
+    fun launchSharePopWindow(v: View) {
+        sharePopWindow.showAtLocation(v, Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL, 0, 0)
+        isShowDialog = false
+
+    }
+
 
     fun dismiss() {
-        shareDialog.dismiss()
+        if (isShowDialog)
+            shareDialog.dismiss()
+        else
+            sharePopWindow.dismiss()
     }
 
 

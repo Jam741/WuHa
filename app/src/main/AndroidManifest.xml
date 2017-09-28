@@ -30,12 +30,10 @@
             android:name="com.amap.api.v2.apikey"
             android:value="23725a498c0b75fbb7681d49632435b5" />
 
-
+        <!--启动页面-->
         <activity
-            android:name=".function.main.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".function.welcome.WelComeActivity"
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,16 +41,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+        </activity>
+
+        <!--主页面-->
+        <activity
+            android:name=".function.main.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
+        <!--登录页面-->
         <activity
             android:name=".function.user.LoginActivity"
-            android:screenOrientation="portrait">
-
-
-        </activity>
-
+            android:screenOrientation="portrait" />
 
         <!--================================设置界面============================================-->
 
@@ -60,84 +63,58 @@
         <!--关于我们-->
         <activity
             android:name="com.pisces.android.wuha.function.setting.AboutUsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" />
 
-        </activity>
-
-
-        <!--版本号界面-->
-        <activity
-            android:name="com.pisces.android.wuha.function.setting.VersionActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-
-        <!--================================设置界面============================================-->
-
-
-        <!--================================我的界面============================================-->
         <!--设置主界面-->
         <activity
             android:name="com.pisces.android.wuha.function.setting.SettingActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!--我的收藏-->
         <activity
             android:name="com.pisces.android.wuha.function.collect.CollectActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!--意见建议-->
         <activity
             android:name="com.pisces.android.wuha.function.personage.SuggestActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <!--联系我们-->
-        <activity
-            android:name="com.pisces.android.wuha.function.personage.CallActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-
-        <!--分享app-->
-        <activity
-            android:name="com.pisces.android.wuha.function.personage.ShareActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!--我的账户-->
         <activity
             android:name="com.pisces.android.wuha.function.setting.AccountActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <!--================================我的界面============================================-->
+            android:screenOrientation="portrait" />
 
         <!--店铺详情-->
         <activity
             android:name="com.pisces.android.wuha.function.shop.ShopDetailsActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!--搜索界面-->
         <activity
             android:name=".function.search.SearchForActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
 
         <!--搜索结果展示界面-->
         <activity
             android:name=".function.search.show.SearchShowActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+
+
+        <!--========分享配置开始=========-->
+        <!--微信-->
+        <meta-data
+            android:name="WX_APP_ID"
+            android:value="wxa57345f69f5a674d" />
+        <!--微博-->
+        <meta-data
+            android:name="WB_APP_KEY"
+            android:value="3244422614" />
+        <!--QQ-->
+        <meta-data
+            android:name="QQ_APP_ID"
+            android:value="1106359193" />
+        <!--=========享配置结束===========-->
 
 
         <!-- CameraSDK相册选取 -->
@@ -146,7 +123,6 @@
         <activity android:name="com.muzhi.camerasdk.CropperImageActivity" />
         <activity android:name="com.muzhi.camerasdk.FilterImageActivity" />
         <activity android:name="com.muzhi.camerasdk.CropperImageRectangleActivity" />
-
 
 
     </application>
