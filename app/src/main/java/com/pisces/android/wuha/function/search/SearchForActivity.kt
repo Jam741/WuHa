@@ -84,6 +84,7 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
 
         btnClose.setOnClickListener { close() }
 
+        btnClearHistory.setOnClickListener { controller.clearHistory() }
 
         edSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
