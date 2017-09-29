@@ -12,12 +12,23 @@ public class BodyForLogin {
      * MobliePhoneNumber : string
      * CurrentDeviceIdentificationNumber : string
      * DeviceName : string
+     * VerificationCode": string
      */
+
 
     private String IdentityToken;
     private String MobliePhoneNumber;
     private String CurrentDeviceIdentificationNumber;
     private String DeviceName;
+    private String VerificationCode;
+
+    public String getVerificationCode() {
+        return VerificationCode;
+    }
+
+    public void setVerificationCode(String verificationCode) {
+        VerificationCode = verificationCode;
+    }
 
     public String getIdentityToken() {
         return IdentityToken;

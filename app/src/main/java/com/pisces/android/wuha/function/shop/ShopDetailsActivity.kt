@@ -1,7 +1,6 @@
 package com.pisces.android.wuha.function.shop
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -9,7 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
+import com.google.gson.annotations.Until
 import com.pisces.adnroid.ltaskpicture.LImg
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
 import com.pisces.android.locationlibrary.Constant
@@ -37,14 +36,15 @@ import java.net.URISyntaxException
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
-    val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+    private val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
 
     var isCollect: Boolean = false
     var phoneNmubder: String = ""
-    var isBD: Boolean = false
-    var isGD: Boolean = false
-    var isTX: Boolean = false
+    private var isBD: Boolean = false
+    private var isGD: Boolean = false
+    private var isTX: Boolean = false
     var mData: ServiceDetailProvider? = null
+    var userId=""
 
     val serviceListFragment by lazy { ServiceListFragment() }
 
@@ -68,6 +68,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shop_details)
+        userId=UserController.getUserInfoBean(this)!!.id.toString()
         initView()
         initData()
 
@@ -75,7 +76,8 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         collect.setOnClickListener {
             if (!isCollect) {
                 if (!UserController.passPrecondition(this)) return@setOnClickListener
-                HttpUtli.toSubscribe(Api.service.addUserFavorite(BodyForCollect(UserController.userId(this).toString(), id)), object : SimpleSubscriber<Any>(this) {
+                val userId=UserController.getUserInfoBean(this)!!.id.toString()
+                HttpUtli.toSubscribe(Api.service.addUserFavorite(BodyForCollect(userId, id)), object : SimpleSubscriber<Any>(this) {
                     override fun onSuccess(t: Any?) {
                         if (t == null) return Unit
                         collect.setImageResource(R.mipmap.mine_icon_collect)
@@ -85,7 +87,8 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 })
             } else {
                 if (!UserController.passPrecondition(this)) return@setOnClickListener
-                HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(UserController.userId(this).toString(), id)), object : ProgressSubscriber<Int>(this) {
+
+                HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(userId, id)), object : ProgressSubscriber<Int>(this) {
                     override fun onSuccess(t: Int?) {
                         collect.setImageResource(R.mipmap.home_icon_collect)
                         isCollect = false
@@ -117,6 +120,9 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         }
     }
 
+    /**
+     * 地图/导航
+     */
     private fun showMyDialog() {
         val view = View.inflate(this, R.layout.map_show_d, null)
 
@@ -235,7 +241,11 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
     }
 
+
     private fun initData() {
+        /**
+         * 获取店铺详情
+         */
         HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsY(), Constant.getGpsX())
         ), object : SimpleSubscriber<ServiceDetailProvider>(this) {
             override fun onSuccess(t: ServiceDetailProvider?) {
@@ -248,10 +258,24 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
                 clientMessageFragment.setData(t.serviceProviderIntroduction)
             }
         })
+
+        /**
+         * 获取店铺是否已经被加入收藏
+         */
+        HttpUtli.toSubscribe(Api.service.checkIsMyFavorite(BodyForCollect(userId, id)),object :SimpleSubscriber<Any>(this){
+            override fun onSuccess(t: Any?) {
+                isCollect = (t == 1.0)
+                if (isCollect) {
+                    collect.setImageResource(R.mipmap.mine_icon_collect)
+                }else{
+                    collect.setImageResource(R.mipmap.home_icon_collect)
+                }
+            }
+        })
     }
 
     private fun bindData(t: ServiceDetailProvider) {
-        var img: ImageView = findViewById(R.id.img_bg) as ImageView
+        val img: ImageView = findViewById(R.id.img_bg) as ImageView
         LImg.with(this).load(t.serviceProviderIntroduction.imagePath).into(img)
         name.text = t.name
         site.text = t.serviceProviderAddress.mainAddressLine
@@ -281,7 +305,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
 
-    fun isAvilible(context: Context, packageName: String): Boolean {
+    private fun isAvilible(context: Context, packageName: String): Boolean {
         //获取packagemanager
         val packageManager = context.packageManager
         //获取所有已安装程序的包信息

@@ -22,8 +22,8 @@ import kotlinx.android.synthetic.main.f_service_list.*
 
 class ServiceListFragment : JBaseFragment() {
 
-    val leftAdapter by lazy { createLeftAdapter() }
-    val rightAdapter by lazy { createRightAdapter() }
+     private val leftAdapter by lazy { createLeftAdapter() }
+  private  val rightAdapter by lazy { createRightAdapter() }
 
     private fun createRightAdapter(): CommonRecyclerAdapter<ServiceDetailProvider.ServiceProviderServiceCategoriesBean.SubCategoriesBean> {
         return object : CommonRecyclerAdapter<ServiceDetailProvider.ServiceProviderServiceCategoriesBean.SubCategoriesBean>(this, null, R.layout.service_list_right_i) {
@@ -33,7 +33,6 @@ class ServiceListFragment : JBaseFragment() {
                     setTextWith(R.id.price, "￥" + t.price)
                 }
             }
-
         }
     }
 
@@ -48,21 +47,21 @@ class ServiceListFragment : JBaseFragment() {
                     setTextWith(R.id.i_name, t.name)
                     setOnItemClickListener(object : RecyclerViewHolder.OnItemCliceListener {
                         override fun itemClick(itemView: View, position: Int) {
+                            rightAdapter.refresh(t.subCategories)
                             mPosition = position
                             notifyDataSetChanged()
-                            rightAdapter.refresh(t.subCategories)
                         }
                     })
 
                     if (mPosition == position) {
                         setBackgroundRes(R.id.i_name, R.color.colorGrayC2)
                         setTextColorRes(R.id.i_name, R.color.colorTextWhite)
-
                     } else {
                         setBackgroundRes(R.id.i_name, R.color.colorWhiteC1)
                         setTextColorRes(R.id.i_name, R.color.colorBlackC1)
-
                     }
+
+
                 }
 
 
@@ -78,7 +77,7 @@ class ServiceListFragment : JBaseFragment() {
         super.onViewCreated(view, savedInstanceState)
         recycler_view_left.run {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            adapter = this@ServiceListFragment.leftAdapter
+            adapter = leftAdapter
         }
 
         recycler_view_right.run {

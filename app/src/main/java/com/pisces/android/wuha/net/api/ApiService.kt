@@ -152,7 +152,17 @@ interface ApiService {
     fun sendSmsCode(@Body bodySendSmsCode: BodySendSmsCode): Observable<Int>
 
 
+    /**
+     * 获取七牛云的Token信息
+     */
     @POST("UserInfo/GetQiniuToken")
     fun getUpLoadToken():Observable<String>
+
+    /**
+     *是否已经收藏的服务商 datas 1 已收藏 0未收藏
+     */
+    @POST("UserInfo/CheckIsMyFavotite")
+    fun checkIsMyFavorite(@Body bodyForCollect: BodyForCollect):Observable<Any>
+
 
 }

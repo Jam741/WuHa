@@ -12,6 +12,7 @@ import com.pisces.android.wuha.function.user.UserController
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.mine_logged_layout.*
 import rx.functions.Action1
+import java.io.File
 
 /**
  * Created by Jam on 2017/9/16.
@@ -39,7 +40,7 @@ class LoggedFragment : BaseMineContentFragment() {
         UserController.getUserInfo(context, Action1 { t ->
             userName = t.name
             if (!TextUtils.isEmpty(t.photoPath))
-                Picasso.with(context).load(t.photoPath).into(ivPortrait)
+                Picasso.with(context).load(File( t.photoPath)).into(ivPortrait)
 //            LImg.with(this).load(t.photoPath).into(ivPortrait)
             tv_username.text = t.name
         })

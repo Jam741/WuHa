@@ -37,6 +37,7 @@ import java.io.File
  * 个人账户界面
  */
 class AccountActivity : LBaseActivity() {
+    var imagePath:String=""
 
     val mCameraSdkParameterInfo by lazy { CameraSdkParameterInfo() }
 
@@ -80,21 +81,43 @@ class AccountActivity : LBaseActivity() {
         user_name_delete.setOnClickListener { et_user_name.setText("") }
         /*点击上传*/
         account_btn.setOnClickListener {
-            val id = UserController.getUserInfoBean(this)!!.id
-            if (verifyUserName(usernameValue())) {
-                HttpUtli.toSubscribe(Api.service.modifyUserInfoByNickName(BodyUserName(id, usernameValue())), object : SimpleSubscriber<Any>(this) {
-                    override fun onSuccess(t: Any?) {
-                        if (t == null) {
 
-                        } else {
-//                            HttpUtli.toSubscribe(Api.service.modifyUserInfoByPhoto(BodyPhoto(id, )))
+            UploadPictureHelper.uploadSinglePicture(this, imagePath, object : UploadPictureHelper.OnSingleLoadListener {
+                override fun success(url: String) {
+
+                    val userId = UserController.getUserInfoBean(this@AccountActivity)!!.id
+
+                    val obPortrait = Api.service.modifyUserInfoByPhoto(BodyPhoto(userId, url))
+                    val obUsername = Api.service.modifyUserInfoByNickName(BodyUserName(userId, usernameValue()))
+
+                    val out =  Observable.zip(obPortrait,obUsername,object :Func2< Any,  Any,  Boolean> {
+                        override fun call(t1: Any?, t2: Any?): Boolean = (t1==t2)
+
+                    })
+
+                    HttpUtli.toSubscribe(out, object : ProgressSubscriber<Boolean>(this@AccountActivity) {
+                        override fun onSuccess(t: Boolean?) {
+
                         }
 
-                    }
-                })
-            } else {
-                Toast.makeText(this, "请输入新的用户名", Toast.LENGTH_SHORT).show()
-            }
+                    })
+                }
+            })
+//            val id = UserController.getUserInfoBean(this)!!.id
+//            if (verifyUserName(usernameValue())) {
+//                HttpUtli.toSubscribe(Api.service.modifyUserInfoByNickName(BodyUserName(id, usernameValue())), object : SimpleSubscriber<Any>(this) {
+//                    override fun onSuccess(t: Any?) {
+//                        if (t == null) {
+//
+//                        } else {
+////                            HttpUtli.toSubscribe(Api.service.modifyUserInfoByPhoto(BodyPhoto(id, )))
+//                        }
+//
+//                    }
+//                })
+//            } else {
+//                Toast.makeText(this, "请输入新的用户名", Toast.LENGTH_SHORT).show()
+//            }
         }
     }
 
@@ -137,29 +160,8 @@ class AccountActivity : LBaseActivity() {
     private fun upLoadPortrait(s: String) {
         Log.d("IMAGE", s)
         Picasso.with(this).load(File(s)).into(user_img)
-        UploadPictureHelper.uploadSinglePicture(this, s, object : UploadPictureHelper.OnSingleLoadListener {
-            override fun success(url: String) {
+        imagePath=s
 
-                val userId = UserController.getUserInfoBean(this@AccountActivity)!!.id
-
-                val obPortrait = Api.service.modifyUserInfoByPhoto(BodyPhoto(userId, url))
-                val obUsername = Api.service.modifyUserInfoByNickName(BodyUserName(userId, usernameValue()))
-
-               val out =  Observable.zip(obPortrait,obUsername,object :Func2< Any,  Any,  Boolean> {
-                    override fun call(t1: Any?, t2: Any?): Boolean {
-                        return true
-                    }
-
-                })
-
-                HttpUtli.toSubscribe(out, object : ProgressSubscriber<Boolean>(this@AccountActivity) {
-                    override fun onSuccess(t: Boolean?) {
-
-                    }
-
-                })
-            }
-        })
     }
 
 
