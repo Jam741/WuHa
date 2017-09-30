@@ -1,5 +1,6 @@
 package com.pisces.android.wuha.net.api
 
+import com.pisces.android.wuha.BuildConfig
 import com.pisces.android.wuha.Config
 import com.pisces.android.wuha.net.RetrofitUtli
 
@@ -9,7 +10,7 @@ import com.pisces.android.wuha.net.RetrofitUtli
 class Api {
 
     private object ApiServiceINSTANCE {
-        val INSTANCE =RetrofitUtli.instance.retrofit(Config.host).create(ApiService::class.java)
+        val INSTANCE = RetrofitUtli.instance.retrofit(if (BuildConfig.DEBUG) Config.host_release else Config.host_release).create(ApiService::class.java)
     }
 
     companion object {

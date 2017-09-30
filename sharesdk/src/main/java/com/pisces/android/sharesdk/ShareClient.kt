@@ -130,6 +130,8 @@ class ShareClient(val activity: Activity, val shareBean: ShareBean) {
 
     fun shareToWx(shareBean: ShareBean, isToFriends: Boolean) {
 
+        if (!wxApi.isWXAppInstalled) Toast.makeText(activity, "您尚未安装微信", Toast.LENGTH_SHORT).show()
+
 
         object : AsyncTask<String, Void, Bitmap>() {
             override fun doInBackground(vararg params: String?): Bitmap? {

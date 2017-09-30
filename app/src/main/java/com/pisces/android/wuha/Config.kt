@@ -6,7 +6,10 @@ package com.pisces.android.wuha
  */
 object Config {
 
-    val host = "http://119.23.13.139/api/"
+
+    val host_release = "http://119.23.13.139/api/"
+
+    val host_dubug = "https://www.wuhapets.com/api/"
 
     val page = 1
 
