@@ -59,7 +59,6 @@ class MineFragment : LBaseFragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.d("JAM", "MINE  onResume")
     }
 
     fun changeContentFragment(fragment: Fragment) {
@@ -92,6 +91,7 @@ class MineFragment : LBaseFragment() {
             val logged = intent!!.getBooleanExtra(Constant.KEY_LOGIN_STATUS, false)
             if (logged) {
                 this@MineFragment.changeContentFragment(this@MineFragment.loggedFragment)
+                loggedFragment.refreshUserData()
             } else {
                 this@MineFragment.changeContentFragment(this@MineFragment.loginOutFragment)
             }

@@ -40,10 +40,13 @@ class LoggedFragment : BaseMineContentFragment() {
             if (!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(portraitUrl))
                 AccountActivity.start(context, userName!!, portraitUrl!!)
         }
+
+        refreshUserData()
+
     }
 
-    override fun onResume() {
-        super.onResume()
+
+    fun refreshUserData() {
         UserController.getUserInfo(context, Action1 { t ->
             userName = t.name
             portraitUrl = t.photoPath
@@ -52,4 +55,6 @@ class LoggedFragment : BaseMineContentFragment() {
             tv_username.text = t.name
         })
     }
+
+
 }

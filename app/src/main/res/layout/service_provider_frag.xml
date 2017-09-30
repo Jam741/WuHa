@@ -27,8 +27,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Empty" />
-
+                android:drawablePadding="20dp"
+                android:drawableTop="@mipmap/home_search_fail"
+                android:gravity="center"
+                android:paddingBottom="100dp"
+                android:text="暂无数据..."
+                android:visibility="visible" />
         </RelativeLayout>
 
     </FrameLayout>
