@@ -89,7 +89,7 @@
             android:id="@+id/account_btn"
             style="@style/btn_style"
             android:layout_alignParentBottom="true"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/horizontal_margin"
             android:text="确定" />
 
     </RelativeLayout>

@@ -26,9 +26,7 @@ class LoginOutFragment : BaseMineContentFragment() {
             parent.removeAllViews()
         }
         frame_menus.addView(menusView)
-        ivPortrait.setOnClickListener { AccountActivity.start(context, "尼古拉斯") }
-
-//        ivPortrait.setOnClickListener { LoginActivity.start(context) }
+        ivPortrait.setOnClickListener { LoginActivity.start(context) }
         btnLogin.setOnClickListener { LoginActivity.start(context) }
     }
 }

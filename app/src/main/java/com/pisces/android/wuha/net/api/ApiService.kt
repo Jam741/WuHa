@@ -133,7 +133,6 @@ interface ApiService {
 
 
     /**
-    <<<<<<< HEAD
      * 修改用户名
      */
     @POST("UserInfo/ModifyUserInfoByNickName")
@@ -152,7 +151,16 @@ interface ApiService {
     fun sendSmsCode(@Body bodySendSmsCode: BodySendSmsCode): Observable<Int>
 
 
+    /**
+     * 获取上传七牛token
+     */
     @POST("UserInfo/GetQiniuToken")
-    fun getUpLoadToken():Observable<String>
+    fun getUpLoadToken(): Observable<String>
+
+    /**
+     * 检查是否收藏过
+     */
+    @POST("UserInfo/CheckIsMyFavotite")
+    fun checkCollectForServiceProvider(@Body bodyForCollect: BodyForCollect): Observable<Int>
 
 }

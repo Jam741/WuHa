@@ -6,67 +6,87 @@
     android:background="@color/colorBackGroundGrayC1"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
-
-    <TextView
-        android:id="@+id/about_us"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize"
-        android:layout_marginTop="@dimen/margin_size_10"
-        android:background="@color/colorTextWhite"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left_right"
-        android:text="关于我们"
-        android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_16" />
-
-    <TextView
-        android:id="@+id/grade"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize"
-        android:layout_marginTop="1dp"
-        android:background="@color/colorTextWhite"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/margin_left_right"
-        android:text="给我评分"
-        android:textColor="@color/colorTextMain"
-        android:textSize="@dimen/text_size_16" />
+    <include layout="@layout/toolbar_layout" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size_10"
+        android:background="@color/bg_white"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/actionBarSize"
-            android:layout_marginTop="1dp"
-            android:layout_weight="1"
+            android:id="@+id/about_us"
+            style="@style/textTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabHeight"
             android:background="@color/colorTextWhite"
+            android:drawableRight="@mipmap/home_icon_right"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/margin_left_right"
-            android:textColor="@color/colorTextMain"
-            android:textSize="@dimen/text_size_16"
-            android:text="版本" />
+            android:paddingRight="@dimen/margin_size_12"
+            android:text="关于我们" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerSize"
+            android:layout_marginLeft="@dimen/margin_size_12"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:background="@color/dividerColor" />
 
         <TextView
-            android:id="@+id/version"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/actionBarSize"
-            android:layout_marginTop="1dp"
+            android:id="@+id/grade"
+            style="@style/textTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabHeight"
             android:background="@color/colorTextWhite"
+            android:drawableRight="@mipmap/home_icon_right"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/margin_left_right"
-            android:paddingRight="@dimen/margin_left_right"
-            android:textColor="@color/colorTextMain"
-            android:textSize="@dimen/text_size_16"
-            tools:text="v 1.0.0 " />
+            android:paddingRight="@dimen/margin_size_12"
+            android:text="给我评分" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dividerSize"
+            android:layout_marginLeft="@dimen/margin_size_12"
+            android:layout_marginRight="@dimen/horizontal_margin"
+            android:background="@color/dividerColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tabHeight"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_left_right"
+                android:text="版本" />
+
+            <TextView
+                android:id="@+id/version"
+                style="@style/textTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_left_right"
+                android:paddingRight="@dimen/margin_left_right"
+                tools:text="v 1.0.0 " />
+        </LinearLayout>
+
     </LinearLayout>
-
 
     <Button
         android:id="@+id/setting_return"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/actionBarSize"
+        android:layout_height="@dimen/button_height"
         android:layout_marginLeft="@dimen/margin_size_36"
         android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="48dp"

@@ -213,7 +213,6 @@ public class TagFlowLayout extends FlowLayout implements TagAdapter.OnDataChange
         {
             if (!child.isChecked())
             {
-                //处理max_select=1的情况
                 if (mSelectedMax == 1 && mSelectedView.size() == 1)
                 {
                     Iterator<Integer> iterator = mSelectedView.iterator();

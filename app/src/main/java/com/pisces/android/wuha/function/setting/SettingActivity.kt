@@ -12,7 +12,7 @@ import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.function.user.UserController
 import kotlinx.android.synthetic.main.activity_setting.*
-import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 /**
  * Created by Chris Li on 2017/8/31.
@@ -38,7 +38,7 @@ class SettingActivity : LBaseActivity() {
     }
 
     private fun initView() {
-        toolbar.setOnClickListener { finish() }
+        topLeft.setOnClickListener { close() }
         topTitle.text = "设置"
         about_us.setOnClickListener { AboutUsActivity.start(this) }
         grade.setOnClickListener {

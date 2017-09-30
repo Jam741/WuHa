@@ -38,6 +38,7 @@ class LoginPresenter(val context: Context, val view: LoginContract.View) : Login
         bodyForLogin.deviceName = android.os.Build.MODEL
         bodyForLogin.currentDeviceIdentificationNumber = Installation.id(context)
         bodyForLogin.mobliePhoneNumber = phone
+        bodyForLogin.verificationCode = smsCode
         UserController.login(context, bodyForLogin, Action1 {
             view.loginSuccess()
         })

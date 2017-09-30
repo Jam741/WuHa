@@ -5,7 +5,9 @@
     android:background="@color/colorBackGroundGrayC1"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_layout" />
+
+
 
     <EditText
         android:id="@+id/message"

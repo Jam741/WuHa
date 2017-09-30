@@ -24,6 +24,8 @@ class LoggedFragment : BaseMineContentFragment() {
 
     private var userName: String? = null
 
+    private var portraitUrl: String? = null
+
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         frame_menus.removeAllViews()
@@ -34,13 +36,19 @@ class LoggedFragment : BaseMineContentFragment() {
         }
         frame_menus.addView(menusView)
 
-        ivPortrait.setOnClickListener { AccountActivity.start(context, userName) }
+        ivPortrait.setOnClickListener {
+            if (!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(portraitUrl))
+                AccountActivity.start(context, userName!!, portraitUrl!!)
+        }
+    }
 
+    override fun onResume() {
+        super.onResume()
         UserController.getUserInfo(context, Action1 { t ->
             userName = t.name
+            portraitUrl = t.photoPath
             if (!TextUtils.isEmpty(t.photoPath))
                 Picasso.with(context).load(t.photoPath).into(ivPortrait)
-//            LImg.with(this).load(t.photoPath).into(ivPortrait)
             tv_username.text = t.name
         })
     }

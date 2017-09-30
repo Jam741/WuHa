@@ -66,11 +66,16 @@
 
 
     <style name="btn_style">
-        <item name="android:layout_height">@dimen/actionBarSize</item>
+        <item name="android:layout_height">@dimen/button_height</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@drawable/btn_bg_drak</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_16</item>
         <item name="android:textColor">@color/colorTextWhite</item>
+    </style>
+
+    <style name="textTab">
+        <item name="android:textColor">@color/colorBlackC1</item>
+        <item name="android:textSize">@dimen/font_tab</item>
     </style>
 </resources>

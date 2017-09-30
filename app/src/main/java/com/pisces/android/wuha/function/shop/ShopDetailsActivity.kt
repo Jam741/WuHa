@@ -1,7 +1,6 @@
 package com.pisces.android.wuha.function.shop
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -9,12 +8,12 @@ import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
-import android.widget.Toast
 import com.pisces.adnroid.ltaskpicture.LImg
+import com.pisces.android.framworkerlibrary.utlis.CallUtils
 import com.pisces.android.framworkerlibrary.widget.adapter.TabAdapter
-import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.sharesdk.ShareBean
 import com.pisces.android.sharesdk.ShareClient
+import com.pisces.android.wuha.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.BodyForServiceDetailById
@@ -23,7 +22,6 @@ import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
 import com.pisces.android.wuha.function.user.UserController
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
 import kotlinx.android.synthetic.main.activity_shop_details.*
 import kotlinx.android.synthetic.main.map_show_d.view.*
@@ -35,9 +33,27 @@ import java.net.URISyntaxException
  * 商铺详情界面
  */
 
-class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
+class ShopDetailsActivity : LBaseActivity(), View.OnClickListener, ShopDetailsContract.View {
 
-    val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+    override fun showMsg(msg: String) {
+        toastWith(msg)
+    }
+
+    /**
+     * 显示是否收藏
+     */
+    override fun showIsCollect(isCollect: Boolean) {
+        this.isCollect = isCollect
+        if (isCollect) {
+            collect.setImageResource(R.mipmap.mine_icon_collect)
+        } else {
+            collect.setImageResource(R.mipmap.home_icon_collect)
+        }
+    }
+
+    val presenter by lazy { ShopDetailsPresenter(this, this) }
+
+    private val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "呜哈，专业的宠物信息服务平台", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
 
     var isCollect: Boolean = false
     var phoneNmubder: String = ""
@@ -46,18 +62,21 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     var isTX: Boolean = false
     var mData: ServiceDetailProvider? = null
 
+    private val userId by lazy { UserController.getUserInfoBean(this)!!.id }
+
+    val id: String by lazy { intent.getStringExtra(Constant.KEY_CURRENT) }
+
+    private val bodyForCollect by lazy { BodyForCollect(userId!!.toString(), id) }
+
     val serviceListFragment by lazy { ServiceListFragment() }
 
     val clientMessageFragment by lazy { ClientMessageFragment() }
 
     companion object {
-        private var id: String = ""
-        private lateinit var context: Context
         fun start(context: Context, id: String) {
             val intent = Intent(context, ShopDetailsActivity::class.java)
+            intent.putExtra(Constant.KEY_CURRENT, id)
             context.startActivity(intent)
-            this.context = context
-            this.id = id
         }
     }
 
@@ -71,35 +90,19 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
         initView()
         initData()
 
+        if (UserController.isLogined(this)) {
+            presenter.checkCollectStatus(bodyForCollect)
+        }
+
         /*添加或移除收藏*/
         collect.setOnClickListener {
-            if (!isCollect) {
-                if (!UserController.passPrecondition(this)) return@setOnClickListener
-                HttpUtli.toSubscribe(Api.service.addUserFavorite(BodyForCollect(UserController.userId(this).toString(), id)), object : SimpleSubscriber<Any>(this) {
-                    override fun onSuccess(t: Any?) {
-                        if (t == null) return Unit
-                        collect.setImageResource(R.mipmap.mine_icon_collect)
-                        isCollect = true
-                        toastWith("该商铺加入收藏")
-                    }
-                })
-            } else {
-                if (!UserController.passPrecondition(this)) return@setOnClickListener
-                HttpUtli.toSubscribe(Api.service.cancelCollect(BodyForCollect(UserController.userId(this).toString(), id)), object : ProgressSubscriber<Int>(this) {
-                    override fun onSuccess(t: Int?) {
-                        collect.setImageResource(R.mipmap.home_icon_collect)
-                        isCollect = false
-                        toastWith("该商铺移出收藏")
-                    }
-                })
-            }
+            if (!UserController.passPrecondition(this)) return@setOnClickListener
+            if (isCollect) presenter.removeCollect(bodyForCollect) else presenter.addCollect(bodyForCollect)
         }
+
         /*打电话*/
-        call_phone.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNmubder))
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-        }
+        call_phone.setOnClickListener { CallUtils.callPhoneDIAL(phoneNmubder, this) }
+
         /*去哪里*/
         shop_goto.setOnClickListener {
 
@@ -236,7 +239,7 @@ class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
     }
 
     private fun initData() {
-        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, Constant.getGpsY(), Constant.getGpsX())
+        HttpUtli.toSubscribe(Api.service.getServiceProviderDetail(BodyForServiceDetailById(id, com.pisces.android.locationlibrary.Constant.getGpsY(), com.pisces.android.locationlibrary.Constant.getGpsX())
         ), object : SimpleSubscriber<ServiceDetailProvider>(this) {
             override fun onSuccess(t: ServiceDetailProvider?) {
                 if (t == null) return Unit

@@ -3,6 +3,7 @@ package com.pisces.android.wuha.function.user
 import android.content.Context
 import android.content.Intent
 import android.text.TextUtils
+import android.util.Log
 import com.google.gson.Gson
 import com.pisces.android.framworkerlibrary.utlis.SPUtils
 import com.pisces.android.wuha.Constant
@@ -57,7 +58,9 @@ object UserController {
      * 获取UserId
      */
     fun userId(context: Context): Int {
-        return SPUtils.get(context, Constant.KEY_USER_ID_CACHE, 0) as Int
+        val userId =  SPUtils.get(context, Constant.KEY_USER_ID_CACHE, 0) as Int
+        Log.d("JAM","=====UserId:"+userId)
+        return userId
     }
 
     /**

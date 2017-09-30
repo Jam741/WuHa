@@ -6,7 +6,7 @@ package com.pisces.android.wuha
  */
 object Config {
 
-    val host = "http://www.paotuixiao2.com/"
+    val host = "http://119.23.13.139/api/"
 
     val page = 1
 
@@ -18,5 +18,5 @@ object Config {
     val MOB_APP_SECRET = "a786887c5dd5568d2d3c5c3857a7ac0e"
 
 
-    val BASE_QINIU_URL = ""
+    val BASE_QINIU_URL = "http://qn.wuhapets.com/"
 }
