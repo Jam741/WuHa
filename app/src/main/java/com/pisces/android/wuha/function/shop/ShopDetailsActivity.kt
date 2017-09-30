@@ -37,7 +37,7 @@ import java.net.URISyntaxException
 
 class ShopDetailsActivity : LBaseActivity(), View.OnClickListener {
 
-    val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.pisces91.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
+    val shareClient by lazy { ShareClient(this, ShareBean("呜哈", "测试摘要", "https://www.wuhapets.com/", "http://owq0wloan.bkt.clouddn.com/logo.png")) }
 
     var isCollect: Boolean = false
     var phoneNmubder: String = ""

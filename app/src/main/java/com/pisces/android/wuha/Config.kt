@@ -14,8 +14,12 @@ object Config {
 
     val location_address = ""
 
+    /*友盟*/
     val MOB_APP_KEY = "20f7428769ccf"
     val MOB_APP_SECRET = "a786887c5dd5568d2d3c5c3857a7ac0e"
+
+    /*阿里HotFix*/
+    val ALI_HOTFIX_AES_KEY = "123456789x654321"
 
 
 }

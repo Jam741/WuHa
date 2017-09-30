@@ -106,7 +106,7 @@
         <!--微信-->
         <meta-data
             android:name="WX_APP_ID"
-            android:value="wxa57345f69f5a674d" />
+            android:value="wxc35af66d3467d148" />
         <!--微博-->
         <meta-data
             android:name="WB_APP_KEY"
@@ -116,6 +116,19 @@
             android:name="QQ_APP_ID"
             android:value="1106359193" />
         <!--=========享配置结束===========-->
+
+
+        <!--========热更新配置开始=========-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="125406-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="90208a750a8dc2aae9177747f24299b1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCACFzzHd4UXUS2bu5Yb5vokrQoKIzBYHbWNQS1c/q80dBReSh0GYe3mmRmT95y/L1Zb/4+O4I2rNf9KSh3/B+yKQmvx3ipx4nuHG5I1RBEAkeevz3/74BllK4MRcyIHpVguFL59qNT6d7UmtfdVLcsKEGryxQqhkCWUHzLHRmT+rqYEAs1NKFDjIZ8EliBUvS2CyGvWcC5JkoXwaCeWUlOgxNRJ5JDHLQRaH5Y7wanzQNaqLIxqF5BGch1uUxsIpxlCxmopFQz57VKZm6PXmE5e89vM07Vk3X+qNZ2z9g67SmCHbjOE9a6yto8375CtSUL7aym2f1yNB01gJL3UEXNAgMBAAECggEAIlSbv+DhXKqJszVZmcMLljhIMIB3BZ89HkEHKzSXJixIZKBNNZxm5Nd0Vm7SIhkdGK9MCBni15BPNiXkIRAs25Pfcg/VjgjgNkXPWJ4xB1tpIur6z/bDgfl1FftdVZ6FxXKHZVk6AFU0l+ORQFrn5uJAgbUpiiGHjga0/62k3yW51I1v6TAVJjQGHmcqOoaBzf62aawmPiQqkzF7z4ccWMhW51U3CP/maO7Lous1t304/SG4T8c8GlyP/VUclPCX+qCTm+jVRezA3iEmYlkTSPvOZRUklfPTVgDvSF788n0rMWW0t8vSNkhURabn9bsamsBIGoINTZL5opn9K6mGTQKBgQC9YtOn3l2DzxUl6g5AB7P+HNk4OXTXONWUgR86GX/A8FXgAMhPd/499QsQ1eD6Eg44lJb32+U7W21agcwbIQqt1nKw3yVtBEX8w+R9LVKri6yWQ6YhamMNxURFvlUyR45Oh7jtg59YeD6MK4d915+I9rVcPgaagTu4vAZVsvizjwKBgQCtEQB6fjAiTUbCgOUK29OMWR5ExBJHCW+gV+PWxzyCFzirfRB8yOQcgbXNZsB7HYDmrjJloWthsLW7s+ZJ5clTPxc7sVJABigkFMqDIGk9hdlBSTffibAl4okgVxMnaGRaIdhFem78iDuIcPNcVeMoESg/eF4H8RF16xjmjMcS4wKBgHQf+fovzhV5T9Vcq/o0/vfsxoDEMlGZptSVTAl7AyvR8kYVFL4trHZfH7bl/jo4AgJNkjhO3ENGL0pU1ks4Om0XVmH/odozyZpQn3Tl6pAHZ/8HYgGRU0VpVRCSwXjACZE7hXgVwgokSO337u+J3GfGJrR1z+TDI1SF7jh0Mi0fAoGAfcth4adfLU+mIzK1SRNHzTfpvGoYLvI45P99aFwhKx3d3yhkl48d32qYztflCJgFXac4ko6mErfzIKA+v2/6yjuNk6Hr+wV+n9tM58rjNAjaRY4GwsC9/IuQyKUCEx7Z8nmvTbEUgxIy05XmDjOPjUwLSTcggf1Dh8Z+rvWcrakCgYBP5k2v7++W87c4VBp3IbXnlX7GUzhMRaoAXWNIjVqIm2APIK2S2u6KGSPFS63EA9xeYW3Sn7lP68o2/Swzbux6GPO1lcqc/fUMBpOfEfolS02KjqBFqf63xvwum3Y06kd/sYEusLPw+kOEuqXDH3Aw4e/rbvgSUbyVT3CvuHgrXQ==" />
+        <!--========热更新配置结束=========-->
 
 
         <!-- CameraSDK相册选取 -->

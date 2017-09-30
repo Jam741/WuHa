@@ -6,6 +6,8 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.widget.Toast
 import com.sina.weibo.sdk.api.ImageObject
@@ -13,11 +15,14 @@ import com.sina.weibo.sdk.api.TextObject
 import com.sina.weibo.sdk.api.WeiboMultiMessage
 import com.sina.weibo.sdk.share.WbShareHandler
 import com.tencent.connect.share.QQShare
+import com.tencent.mm.sdk.modelmsg.SendMessageToWX
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage
+import com.tencent.mm.sdk.modelmsg.WXWebpageObject
+import com.tencent.mm.sdk.openapi.IWXAPI
+import com.tencent.mm.sdk.openapi.WXAPIFactory
 import com.tencent.tauth.Tencent
 import java.io.IOException
-import java.net.MalformedURLException
 import java.net.URL
-import android.view.Gravity
 
 
 /**
@@ -28,24 +33,35 @@ import android.view.Gravity
 
 class ShareClient(val activity: Activity, val shareBean: ShareBean) {
 
+
+    val WX_APP_ID by lazy { ShareSDK.getMetaData(activity, "WX_APP_ID") }
+
     val QQ_APP_ID = ShareSDK.getMetaData(activity, "QQ_APP_ID")
 
     private val tencent by lazy { Tencent.createInstance(QQ_APP_ID, activity.applicationContext) }
 
     private val wbShareHandler by lazy { WbShareHandler(activity).apply { registerApp() } }
 
+    private val wxApi by lazy { createIWXAPI() }
+
+    private fun createIWXAPI(): IWXAPI {
+        Log.d("JAM", "WX_APP_ID" + WX_APP_ID)
+        val api = WXAPIFactory.createWXAPI(activity, WX_APP_ID, true)
+        api.registerApp(WX_APP_ID)
+        return api
+    }
 
     var isShowDialog = true
 
     private val shareEventLsitener by lazy {
         object : ShareEventListener {
             override fun toWxCricle() {
-                Toast.makeText(activity, "审核中...", Toast.LENGTH_SHORT).show()
+                shareToWx(shareBean, false)
                 dismiss()
             }
 
             override fun toWxFirends() {
-                Toast.makeText(activity, "审核中...", Toast.LENGTH_SHORT).show()
+                shareToWx(shareBean, true)
                 dismiss()
             }
 
@@ -105,6 +121,63 @@ class ShareClient(val activity: Activity, val shareBean: ShareBean) {
 
     fun didNewIntent(intent: Intent?) {
         wbShareHandler.doResultIntent(intent, shareBean.wbShareCallback)
+    }
+
+
+    fun shareToWx(isToFriends: Boolean) {
+        shareToWx(shareBean, isToFriends)
+    }
+
+    fun shareToWx(shareBean: ShareBean, isToFriends: Boolean) {
+
+
+        object : AsyncTask<String, Void, Bitmap>() {
+            override fun doInBackground(vararg params: String?): Bitmap? {
+
+                val url = URL(params[0])//这里输入图片地址
+                var bitmap: Bitmap? = null
+                try {
+                    bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+                    if (bitmap!!.byteCount > 4096000) {
+                        val options = BitmapFactory.Options()
+                        options.inSampleSize = bitmap.byteCount / 4096000//缩放比例
+                        options.inJustDecodeBounds = false
+                        bitmap = BitmapFactory.decodeStream(url.openConnection().getInputStream(), null, options)
+                    }
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+
+                return bitmap
+
+            }
+
+
+            override fun onPostExecute(result: Bitmap?) {
+                val req = SendMessageToWX.Req()
+                val webpage = WXWebpageObject()
+                webpage.webpageUrl = shareBean.targetUrl
+
+
+                val msg = WXMediaMessage(webpage)
+                msg.title = shareBean.title
+                msg.description = shareBean.summary
+                //这里替换一张自己工程里的图片资源
+                msg.setThumbImage(result)
+
+                req.transaction = System.currentTimeMillis().toString()
+                req.message = msg
+
+                req.scene = if (isToFriends) SendMessageToWX.Req.WXSceneSession else SendMessageToWX.Req.WXSceneTimeline
+
+                req.scene = SendMessageToWX.Req.WXSceneSession
+                wxApi.sendReq(req)
+
+            }
+
+        }.execute(shareBean.imageUrl)
+
+
     }
 
     /**

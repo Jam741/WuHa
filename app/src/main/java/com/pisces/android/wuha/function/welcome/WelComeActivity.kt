@@ -16,6 +16,7 @@ class WelComeActivity : JBaseActivity() {
         setContentView(R.layout.welcome_act)
 
         Handler().postDelayed({
+            close()
             MainActivity.statr(this)
         }, 3000)
     }

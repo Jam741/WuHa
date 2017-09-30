@@ -70,12 +70,17 @@ dependencies {
     compile project(':CameraSDK')
     compile project(':flowlayout-lib')
     compile project(':sharesdk')
+    /*热更新*/
+    compile 'com.taobao.android:alisdk-hotfix:2.0.9'
 
 }
 repositories {
     mavenCentral()
     flatDir {
         dirs 'libs' //就是你放aar的目录地址
+    }
+    maven {
+        url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories"
     }
 }
 
