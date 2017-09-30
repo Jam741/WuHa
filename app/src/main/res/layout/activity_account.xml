@@ -68,7 +68,6 @@
             android:layout_marginLeft="@dimen/margin_size_26"
             android:layout_weight="1"
             android:background="@null"
-
             android:text="我就是用户名"
             android:textColor="@color/colorBlackC1"
             android:textSize="@dimen/text_size_16" />
@@ -81,5 +80,18 @@
             android:src="@mipmap/mine_icon_delete" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/account_btn"
+            style="@style/btn_style"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/horizontal_margin"
+            android:text="确定" />
+
+    </RelativeLayout>
 
 </LinearLayout>

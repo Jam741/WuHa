@@ -5,11 +5,12 @@
     android:background="@color/colorBackGroundGrayC1"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_layout" />
+
+
 
     <EditText
         android:id="@+id/message"
-        android:padding="@dimen/margin_size_12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_left_right"
@@ -18,19 +19,17 @@
         android:background="@color/colorBackGroundWhiteC1"
         android:gravity="left|top"
         android:inputType="textMultiLine"
-        android:minLines="8" />
+        android:minLines="8"
+        android:padding="@dimen/margin_size_12" />
 
     <Button
         android:id="@+id/put_in"
-        android:layout_width="match_parent"
+        style="@style/btn_style"
         android:layout_height="@dimen/actionBarSize"
         android:layout_marginLeft="@dimen/margin_size_36"
         android:layout_marginRight="@dimen/margin_size_36"
         android:layout_marginTop="@dimen/margin_size_40"
-        android:background="@drawable/btn_selector_yellow"
-        android:text="提交"
-        android:textColor="@color/colorTextWhite"
-        android:textSize="@dimen/text_size_16" />
+        android:text="提交" />
 
 
 </LinearLayout>

@@ -27,4 +27,8 @@
 
     <color name="colorTextMain">#1a1a1a</color>
     <color name="colorTextWhite">#ffffff</color>
+
+    <color name="dividerColor">#E9E9E9</color>
+
+    <color name="bg_white">#FFFFFF</color>
 </resources>

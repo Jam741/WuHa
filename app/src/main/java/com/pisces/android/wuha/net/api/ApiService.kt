@@ -7,9 +7,12 @@ import com.pisces.android.wuha.function.collect.BodyCollect
 
 import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.function.search.BodySearch
+import com.pisces.android.wuha.function.setting.bean.BodyPhoto
+import com.pisces.android.wuha.function.setting.bean.BodyUserName
 import com.pisces.android.wuha.function.setting.bean.FeedBack
 import com.pisces.android.wuha.function.shop.BodyForCollect
 import com.pisces.android.wuha.function.shop.bean.BodyAddViewingCount
+import com.pisces.android.wuha.function.shop.bean.BodySendSmsCode
 
 import com.pisces.android.wuha.function.user.BodyForLogin
 import retrofit2.http.Body
@@ -120,7 +123,7 @@ interface ApiService {
      * 取消收藏
      */
     @POST("UserInfo/RemoveUserFavorite")
-    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect):Observable<Int>
+    fun cancelCollect(@Body bodyForCancelCollect: BodyForCollect): Observable<Int>
 
     /**
      * 添加各个服务商的浏览量
@@ -128,5 +131,36 @@ interface ApiService {
     @POST("ServiceProvider/AddViewingCountForServiceProvider")
     fun addViewingCountForServiceProvider(@Body bodyAddViewingCount: BodyAddViewingCount): Observable<Any>
 
+
+    /**
+     * 修改用户名
+     */
+    @POST("UserInfo/ModifyUserInfoByNickName")
+    fun modifyUserInfoByNickName(@Body bodyUserName: BodyUserName): Observable<Any>
+
+    /**
+     * 修改用户头像
+     */
+    @POST("UserInfo/ModifyUserInfoByPhoto")
+    fun modifyUserInfoByPhoto(@Body bodyPhoto: BodyPhoto): Observable<Any>
+
+    /**
+     *  发送短信验证码
+     */
+    @POST("Account/GetVerificationCode")
+    fun sendSmsCode(@Body bodySendSmsCode: BodySendSmsCode): Observable<Int>
+
+
+    /**
+     * 获取上传七牛token
+     */
+    @POST("UserInfo/GetQiniuToken")
+    fun getUpLoadToken(): Observable<String>
+
+    /**
+     * 检查是否收藏过
+     */
+    @POST("UserInfo/CheckIsMyFavotite")
+    fun checkCollectForServiceProvider(@Body bodyForCollect: BodyForCollect): Observable<Int>
 
 }

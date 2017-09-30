@@ -22,4 +22,5 @@ object Config {
     val ALI_HOTFIX_AES_KEY = "123456789x654321"
 
 
+    val BASE_QINIU_URL = "http://qn.wuhapets.com/"
 }

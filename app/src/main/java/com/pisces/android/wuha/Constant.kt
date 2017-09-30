@@ -10,6 +10,8 @@ object Constant {
     val KEY_USER_ID_CACHE = "KEY_USER_ID_CACHE"
     val KEY_USER_INFO_CACHE = "KEY_USER_INFO_CACHE"
     val KEY_CURRENT = "KEY_CURRENT"
+    val KEY_CURRENT2 = "KEY_CURRENT2"
+    val KEY_VIEW_GUIDE = "KEY_VIEW_GUIDE"
 
 
     //广播  Action

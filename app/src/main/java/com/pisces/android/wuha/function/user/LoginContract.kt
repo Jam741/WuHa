@@ -24,7 +24,7 @@ interface LoginContract {
     interface Presenter : JBasePresenter {
 
 
-        fun login(phone: String)
+        fun login(phone: String,smsCode:String)
 
         fun sendSmsCode(phone: String)
 

@@ -5,27 +5,67 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import com.jcodecraeer.xrecyclerview.XRecyclerView
-import com.pisces.android.locationlibrary.Constant
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.entity.bean.ServiceProvider
 import com.pisces.android.wuha.function.shop.ShopDetailsActivity
-import com.pisces.android.wuha.net.HttpUtli
-import com.pisces.android.wuha.net.api.Api
-import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
+import com.pisces.android.wuha.function.user.UserController
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.CommonRecyclerAdapter
 import com.yingwumeijia.commonlibrary.utils.adapter.recyclerview.RecyclerViewHolder
 import kotlinx.android.synthetic.main.activity_collect.*
-import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 /**
  * Created by Chris Li on 2017/9/1.
  * 我的收藏界面
  */
 
-class CollectActivity : LBaseActivity() {
+class CollectActivity : LBaseActivity(), CollectContract.View {
+
+
     val mAdapter by lazy { createAdapter() }
+
+    val userId by lazy { UserController.getUserInfoBean(this)!!.id }
+
+    val bodyForCollect by lazy { BodyCollect(userId) }
+
+    val presenter by lazy { CollectPresenter(this, this) }
+
+
+    companion object {
+        fun start(context: Context) {
+            val intent = Intent(context, CollectActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_collect)
+        topLeft.setOnClickListener { close() }
+        topTitle.text = "我的收藏"
+
+        recycler_view.run {
+            layoutManager = LinearLayoutManager(this@CollectActivity)
+            adapter = mAdapter
+        }
+
+        presenter.getCollectList(bodyForCollect)
+    }
+
+    override fun onResponse(data: ArrayList<ServiceProvider>) {
+        mAdapter.refresh(data)
+    }
+
+    override fun onLoadCompleted(page: Int, empty: Boolean) {
+    }
+
+    override fun showEmpty(empty: Boolean) {
+        empty_layout.visibility = if (empty) View.VISIBLE else View.GONE
+        recycler_view.visibility = if (!empty) View.VISIBLE else View.GONE
+    }
+
+
     private fun createAdapter(): CommonRecyclerAdapter<ServiceProvider> {
         return object : CommonRecyclerAdapter<ServiceProvider>(this, null, R.layout.i_collect) {
             override fun convert(holder: RecyclerViewHolder, t: ServiceProvider, position: Int) {
@@ -52,54 +92,5 @@ class CollectActivity : LBaseActivity() {
                 }
             }
         }
-    }
-
-    companion object {
-        fun start(context: Context) {
-            val intent = Intent(context, CollectActivity::class.java)
-            context.startActivity(intent)
-        }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_collect)
-        toolbar.setOnClickListener {
-            finish()
-        }
-        topTitle.text = "我的收藏"
-
-        recycler_view.run {
-            loadData()
-            layoutManager = LinearLayoutManager(this@CollectActivity)
-            adapter = mAdapter
-            setPullRefreshEnabled(true)
-            setLoadingMoreEnabled(false)
-            setLoadingListener(object : XRecyclerView.LoadingListener {
-                override fun onRefresh() {
-                    loadData()
-                }
-
-                override fun onLoadMore() {
-                }
-            })
-        }
-
-    }
-
-    private fun loadData() {
-        HttpUtli.toSubscribe(Api.service.getUserFavorites(BodyCollect("1", Constant.getGpsY(), Constant.getGpsX())), object : SimpleSubscriber<ArrayList<ServiceProvider>>(this) {
-            override fun onSuccess(t: ArrayList<ServiceProvider>?) {
-                recycler_view.refreshComplete()
-                if (t == null) return Unit
-                mAdapter.refresh(t)
-            }
-
-            override fun onError(e: Throwable?) {
-                super.onError(e)
-                recycler_view.refreshComplete()
-            }
-
-        })
     }
 }

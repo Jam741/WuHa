@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
-import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 /**
  * Created by Chris Li on 2017/9/2.
@@ -23,7 +23,7 @@ class AboutUsActivity : LBaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
 
-        toolbar.setOnClickListener { finish() }
+        topLeft.setOnClickListener { finish() }
         topTitle.text = "关于我们"
     }
 

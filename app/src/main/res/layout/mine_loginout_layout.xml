@@ -23,13 +23,13 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="127dp"
+            android:layout_height="43dp"
             android:layout_below="@+id/ivPortrait"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/colorAccent"
-            android:text="登录"
+            android:backgroundTint="#44FFFFFF"
+            android:text="立即登录"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/text_size_16" />
 

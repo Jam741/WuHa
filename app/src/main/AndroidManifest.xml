@@ -33,8 +33,7 @@
         <!--启动页面-->
         <activity
             android:name=".function.welcome.WelComeActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,6 +42,12 @@
             </intent-filter>
 
         </activity>
+
+        
+        <!--引导页-->
+        <activity
+            android:name=".function.guide.GuideActivity"
+            android:screenOrientation="portrait" />
 
         <!--主页面-->
         <activity

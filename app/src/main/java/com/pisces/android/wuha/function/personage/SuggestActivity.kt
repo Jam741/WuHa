@@ -5,17 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-
 import com.pisces.android.wuha.R
 import com.pisces.android.wuha.base.LBaseActivity
 import com.pisces.android.wuha.function.setting.bean.FeedBack
-//import com.pisces.android.wuha.function.user.UserControler
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.SimpleSubscriber
-import com.yingwumeijia.baseywmj.utils.VerifyUtils
 import kotlinx.android.synthetic.main.activity_report.*
-import kotlinx.android.synthetic.main.toolbar.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 
 /**
  * Created by Chris Li on 2017/9/1.
@@ -39,8 +36,8 @@ class SuggestActivity : LBaseActivity() {
     }
 
     private fun initView() {
-        toolbar.setOnClickListener {
-            finish()
+        topLeft.setOnClickListener {
+            close()
         }
         topTitle.text = "意见建议"
 

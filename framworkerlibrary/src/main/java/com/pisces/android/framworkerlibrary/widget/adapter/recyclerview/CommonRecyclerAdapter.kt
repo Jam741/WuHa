@@ -9,7 +9,7 @@ import android.view.ViewGroup
 /**
  * Created by jamisonline on 2017/5/31.
  */
-abstract class CommonRecyclerAdapter<T>(var activity: Activity?, var fragment: Fragment?,var context: Context?, dataList: List<T>?, var layoutId: Int) : RecyclerView.Adapter<RecyclerViewHolder>() {
+abstract class CommonRecyclerAdapter<T>(var activity: Activity?, var fragment: Fragment?, var context: Context?, dataList: List<T>?, var layoutId: Int) : RecyclerView.Adapter<RecyclerViewHolder>() {
 
     var data: ArrayList<T>? = null
 
@@ -17,11 +17,11 @@ abstract class CommonRecyclerAdapter<T>(var activity: Activity?, var fragment: F
         data = if (dataList == null) null else dataList as ArrayList<T>
     }
 
-    constructor(fragment: Fragment, data: List<T>?, layoutId: Int) : this(null, fragment,null, data, layoutId)
+    constructor(fragment: Fragment, data: List<T>?, layoutId: Int) : this(null, fragment, null, data, layoutId)
 
-    constructor(activity: Activity, data: List<T>?, layoutId: Int) : this(activity, null,null, data, layoutId)
+    constructor(activity: Activity, data: List<T>?, layoutId: Int) : this(activity, null, null, data, layoutId)
 
-    constructor(context: Context,data: List<T>?,layoutId: Int):this(null,null,context,data,layoutId)
+    constructor(context: Context, data: List<T>?, layoutId: Int) : this(null, null, context, data, layoutId)
 
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerViewHolder {
@@ -62,21 +62,19 @@ abstract class CommonRecyclerAdapter<T>(var activity: Activity?, var fragment: F
 
     fun refresh(dataArray: ArrayList<T>) {
         if (data == null) {
-            data = dataArray
-        } else {
-            data!!.clear()
-            data!!.addAll(dataArray)
+            data = ArrayList<T>()
         }
+        data!!.clear()
+        data!!.addAll(dataArray)
         notifyDataSetChanged()
     }
 
 
     fun addRange(dataArray: ArrayList<T>) {
         if (data == null) {
-            data = dataArray
-        } else {
-            data!!.addAll(dataArray)
+            data = ArrayList<T>()
         }
+        data!!.addAll(dataArray)
         notifyDataSetChanged()
     }
 

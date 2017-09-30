@@ -1,6 +1,6 @@
 package com.pisces.android.wuha
 
-import com.mob.MobSDK
+
 import com.pisces.android.framworkerlibrary.JBaseApplication
 import com.pisces.android.locationlibrary.GDLocationUtil
 import com.pisces.android.sharesdk.ShareSDK
@@ -14,7 +14,6 @@ class App : JBaseApplication() {
     override fun onCreate() {
         super.onCreate()
         hotFixConfig()
-        MobSDK.init(this, Config.MOB_APP_KEY, Config.MOB_APP_SECRET)
         GDLocationUtil.init(this)
         ShareSDK.initSDK(this)
     }

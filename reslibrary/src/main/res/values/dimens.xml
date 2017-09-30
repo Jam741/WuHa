@@ -30,12 +30,22 @@
     <dimen name="margin_size_40">40dp</dimen>
 
 
+    <dimen name="horizontal_margin">12dp</dimen>
+    <dimen name="vertical_margin">12dp</dimen>
+
+
     <dimen name="font_input">14sp</dimen>
     <dimen name="font_normal">14sp</dimen>
+    <dimen name="font_tab">16sp</dimen>
     <dimen name="font_title">18sp</dimen>
 
+    <dimen name="button_height">42dp</dimen>
 
     <dimen name="actionBarSize">48dp</dimen>
+
+    <dimen name="dividerSize">1dp</dimen>
+
+    <dimen name="tabHeight">56dp</dimen>
 
 </resources>
 
