@@ -26,6 +26,7 @@ class LoginOutFragment : BaseMineContentFragment() {
             parent.removeAllViews()
         }
         frame_menus.addView(menusView)
+        ivPortrait.setImageResource(R.mipmap.mine_top_photo)
         ivPortrait.setOnClickListener { LoginActivity.start(context) }
         btnLogin.setOnClickListener { LoginActivity.start(context) }
     }

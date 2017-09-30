@@ -48,7 +48,7 @@ class LoggedFragment : BaseMineContentFragment() {
             userName = t.name
             portraitUrl = t.photoPath
             if (!TextUtils.isEmpty(t.photoPath))
-                Picasso.with(context).load(t.photoPath).into(ivPortrait)
+                Picasso.with(context).load(t.photoPath).placeholder(R.mipmap.mine_top_photo).into(ivPortrait)
             tv_username.text = t.name
         })
     }
