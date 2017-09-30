@@ -3,6 +3,7 @@ package com.pisces.android.wuha.base
 import android.widget.Toast
 import com.pisces.android.framworkerlibrary.core.JBaseActivity
 import com.pisces.android.wuha.widget.WuHaProgressDialog
+import com.umeng.analytics.MobclickAgent
 
 
 /**
@@ -33,5 +34,15 @@ open class LBaseActivity : JBaseActivity() {
 
     fun dismissDialog(){
         progressDialog.dismiss()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        MobclickAgent.onResume(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        MobclickAgent.onPause(this)
     }
 }

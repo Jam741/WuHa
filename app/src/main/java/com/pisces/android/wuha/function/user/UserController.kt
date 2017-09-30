@@ -13,6 +13,7 @@ import com.pisces.android.wuha.function.mine.BodyForUserInfo
 import com.pisces.android.wuha.net.HttpUtli
 import com.pisces.android.wuha.net.api.Api
 import com.pisces.android.wuha.net.subscriber.ProgressSubscriber
+import com.umeng.analytics.MobclickAgent
 import okhttp3.ResponseBody
 import rx.functions.Action1
 
@@ -58,8 +59,8 @@ object UserController {
      * 获取UserId
      */
     fun userId(context: Context): Int {
-        val userId =  SPUtils.get(context, Constant.KEY_USER_ID_CACHE, 0) as Int
-        Log.d("JAM","=====UserId:"+userId)
+        val userId = SPUtils.get(context, Constant.KEY_USER_ID_CACHE, 0) as Int
+        Log.d("JAM", "=====UserId:" + userId)
         return userId
     }
 
@@ -93,6 +94,7 @@ object UserController {
                 AccountManager.refreshIdentityToken(context, t.identityToken)
                 subscriber.call(t)
                 sendLoginStatusChangedBroadCast(context, true)
+                MobclickAgent.onProfileSignIn(t.id.toString())
             }
         })
     }
@@ -120,6 +122,7 @@ object UserController {
         SPUtils.remove(context, Constant.KEY_USER_ID_CACHE)
         //发送用户登录状态改变的广播
         sendLoginStatusChangedBroadCast(context, false)
+        MobclickAgent.onProfileSignOff()
     }
 
 
