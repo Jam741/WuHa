@@ -107,6 +107,12 @@
             android:screenOrientation="portrait" />
 
 
+        <!--========友盟统计==========-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59cf666f766613333b00011a"></meta-data>
+
+
         <!--========分享配置开始=========-->
         <!--微信-->
         <meta-data

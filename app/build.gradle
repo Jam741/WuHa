@@ -39,6 +39,29 @@ android {
         }
     }
 
+
+    productFlavors {
+        ywmjtest {}
+        ywmj {}
+        xiaomi {}
+        ali {}
+        toutiao {}
+        baidu {}
+        yingyongbao {}
+        meizu {}
+        huawei {}
+        qihu360 {}
+
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+
+    }
+
+
+
     lintOptions {
         checkReleaseBuilds false
         // Or, if you prefer, you can continue to check for errors in release builds,
@@ -74,6 +97,8 @@ dependencies {
     /*热更新*/
     compile 'com.taobao.android:alisdk-hotfix:2.0.9'
     compile 'com.qiniu:qiniu-android-sdk:7.3.10'
+    compile 'com.umeng.analytics:analytics:6.1.2'
+
 }
 repositories {
     mavenCentral()
