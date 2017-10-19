@@ -20,11 +20,6 @@ import kotlinx.android.synthetic.main.search_frag.*
 class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotKeyWordsListener {
 
     override fun didLoadHistoryKeyWords(data: List<String>?) {
-        Log.d("JAM", data!!.size.toString())
-
-        for (s in data) {
-            Log.d("JAM", s)
-        }
 
         if (ListUtil.isEmpty(data))
             history_layout.visibility = View.GONE
@@ -32,7 +27,6 @@ class SearchForActivity : LBaseActivity(), SearchController.OnLoadHistoryAndHotK
             history_layout.visibility = View.VISIBLE
             controller.historyKeyWordsAdapter.refresh(data)
         }
-
     }
 
     override fun didLoadHotKeyWords(data: List<String>?) {

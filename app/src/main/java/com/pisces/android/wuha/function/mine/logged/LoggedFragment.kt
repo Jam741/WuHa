@@ -1,6 +1,7 @@
 package com.pisces.android.wuha.function.mine.logged
 
 import android.os.Bundle
+import android.os.Handler
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -45,15 +46,22 @@ class LoggedFragment : BaseMineContentFragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
 
     fun refreshUserData() {
-        UserController.getUserInfo(context, Action1 { t ->
-            userName = t.name
-            portraitUrl = t.photoPath
-            if (!TextUtils.isEmpty(t.photoPath))
-                Picasso.with(context).load(t.photoPath).placeholder(R.mipmap.mine_top_photo).into(ivPortrait)
-            tv_username.text = t.name
-        })
+        if (activity != null)
+            Handler().postDelayed({
+                UserController.getUserInfo(activity, Action1 { t ->
+                    userName = t.name
+                    portraitUrl = t.photoPath
+                    if (!TextUtils.isEmpty(t.photoPath))
+                        Picasso.with(context).load(t.photoPath).placeholder(R.mipmap.mine_top_photo).into(ivPortrait)
+                    tv_username.text = t.name
+                })
+            }, 500)
     }
 
 

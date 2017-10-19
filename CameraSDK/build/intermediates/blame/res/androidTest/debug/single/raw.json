@@ -1,14 +1,6 @@
 [
     {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/res/merged/androidTest/debug/raw/tone_cuver_sample.acv",
-        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/CameraSDK/build/intermediates/bundles/debug/res/raw/tone_cuver_sample.acv"
-    },
-    {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\tone_cuver_sample.acv",
-        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\tone_cuver_sample.acv"
-    },
-    {
-        "merged": "/Users/jamisonline/Documents/WUHA/project/WuHa/F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\tone_cuver_sample.acv",
-        "source": "/Users/jamisonline/Documents/WUHA/project/WuHa/F:\\WuHa\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\tone_cuver_sample.acv"
+        "merged": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw\\tone_cuver_sample.acv",
+        "source": "D:\\Project\\WuHa\\CameraSDK\\build\\intermediates\\bundles\\debug\\res\\raw\\tone_cuver_sample.acv"
     }
 ]
